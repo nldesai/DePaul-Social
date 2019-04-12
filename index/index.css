@@ -1,0 +1,33 @@
+/*navbar*/
+.nav-item a:hover {
+    color: #FFFFFF !important;
+    cursor: pointer;
+}
+
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+}
+
+.text-block {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    text-align: center;
+    background-color: #1034A6;
+    color: #FFF;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    
+    margin: auto;
+    width: 50%;
+}
