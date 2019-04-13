@@ -10,6 +10,7 @@ a.meetups {
     text-decoration: none;
 }
 
+
 .jumbotron {
     background-color: transparent !important;
 }
@@ -19,7 +20,7 @@ a.meetups {
     max-width: 330px;
 }
 
-#joinMeetUpPic {
+#studentPicture {
     max-width: 250px;
     max-height: 550px;
 }
