@@ -23,3 +23,12 @@ a.cardStudyGroup {
     color: black;
     background-color: white;
 }
+
+.card-deck {
+    margin-bottom: 30px;
+}
+
+/* Removes the Jumbotron color. */
+.jumbotron {
+    background-color:transparent !important;
+}
