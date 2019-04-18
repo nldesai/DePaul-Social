@@ -10,4 +10,5 @@ This course covers the design and development of single-page web applications an
   <li>Tuan Nguyen</li>
   <li>Alexanderson Reyes</li>
   <li>Heather Duke</li>
+  <li>Olajide Edmund Abatti</li>
  </ul>
