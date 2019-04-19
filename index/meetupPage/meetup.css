@@ -13,6 +13,7 @@ a.meetups {
 
 .jumbotron {
     background-color: transparent !important;
+    height: 140px;
 }
 
 #studyGroupIMG {
@@ -24,4 +25,5 @@ a.meetups {
     max-width: 250px;
     max-height: 550px;
 }
+
 
