@@ -31,4 +31,5 @@ a.cardStudyGroup {
 /* Removes the Jumbotron color. */
 .jumbotron {
     background-color:transparent !important;
+    height: 170px;
 }
