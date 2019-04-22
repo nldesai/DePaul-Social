@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Swap Your Book!</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Swap Your Book!</title>
 
-    <link href="bootstrap-4.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="bootstrap-4.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="../index.css" rel="stylesheet">
+        <link href="index.css" rel="stylesheet">
 
-    <!-- font aweasome for home icon -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-</head>
-<body>
+        <!-- font aweasome for home icon -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #1034A6">
+            <a class="navbar-icon" href="homepage.html">
+                <i class="fa fa-home" style="font-size: 40px"></i>
+            </a>
 
-<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #1034A6">
-    <a class="navbar-icon" href="index.html" style="color: #000000"><i class="fa fa-home"
-                                                                       style="font-size: 40px"></i></a>
+            <a class="navbar-brand" style="color: #FFFFFF; position: absolute; left: 50%; margin-right: 50px; transform: translateX(-50%);">DePaul Social</a>
 
-    <!-- looks a little weird when collapse -->
-    <a class="navbar-brand mx-auto" style="color: #FFFFFF">DePaul Social Book Swap</a>
+            <a class="navbar-icon ml-auto" href="profile.html" style="color: #FFFFFF">
+                <i class="fa fa-user" style="font-size: 40px"></i>
+            </a>
+        </nav>
+        
+        <!-- Heather's code -->
+        <h2 align="center" style="padding-top: 30px"> What book are you looking for?</h2>
 
-    <button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
-            data-target="#navbarCollapse" data-toggle="collapse" type="button">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="navbar-collapse collapse" id="navbarCollapse">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="" style="color: #FF0000">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="" style="color: #FF0000">Register</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-<h1 align="center"> What book are you looking for?</h1>
-
-<div align="center" class="InputField">
-    <p>  <input placeholder="Title/ISBN/CLASS" type="text"></p>
-
-</div>
-<p align="center"><input onclick="" type="button" value="Search"></p>
-
-</body>
+        <div align="center" class="InputField">
+            <p>  <input placeholder="Title/ISBN/CLASS" type="text"></p>
+        </div>
+        
+        <p align="center"><input onclick="" type="button" value="Search"></p>
+        
+        <!-- Footer -->
+        <nav class="navbar fixed-bottom navbar-dark" style="background-color: #1034A6">
+            <span style="color:white">Twitter Feed:</span>
+        </nav>
+        
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="jquery-slim.min.js"><\/script>')</script>
+        <script src="bootstrap-4.1.1-dist/js/popper.min.js"></script>
+        <script src="bootstrap-4.1.1-dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
