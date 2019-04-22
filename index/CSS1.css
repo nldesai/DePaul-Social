@@ -1,0 +1,13 @@
+html{
+    height: 100%;
+    background: -webkit-linear-gradient( #4169e1, #000000);
+    background: -moz-linear-gradient( #0000aa, #00ff00);
+    background: -ms-linear-gradient( #0000aa, #00ff00);
+    background: -o-linear-gradient( #0000aa, #00ff00);
+}
+
+H1{text-align:center;}
+p{text-align:left;}
+
+.white{color:white;}
+.red{color:red;}
