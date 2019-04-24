@@ -12,7 +12,8 @@ import { FooterTwitterFeedComponent } from './footer-twitter-feed/footer-twitter
     AppComponent,
     MeetupComponent,
     NavigationComponent,
-    FooterTwitterFeedComponent
+    FooterTwitterFeedComponent,
+    MeetupComponent,
   ],
   imports: [
     BrowserModule,
