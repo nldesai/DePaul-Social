@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53ad9855-9158-428d-9947-e3c9720c81a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/depaulSocial/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/depaulSocial/src/app/app.module.ts" afterDir="false" />
-    </list>
+
+    <list default="true" id="53ad9855-9158-428d-9947-e3c9720c81a5" name="Default Changelist" comment="" />
+
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,16 +184,21 @@
       <workItem from="1555793190008" duration="232000" />
       <workItem from="1555793427885" duration="1188000" />
       <workItem from="1555794994032" duration="125000" />
+      <workItem from="1555961825697" duration="292000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20606000" />
+
+    <option name="totallyTimeSpent" value="20641000" />
+
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
+
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
