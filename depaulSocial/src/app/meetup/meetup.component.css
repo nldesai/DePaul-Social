@@ -1,0 +1,29 @@
+.card-title {
+  color: black;
+  background-color: white;
+}
+
+/* Removes the anchor tag default properties. */
+a.meetups {
+  /* Child inherits the color of its parent. */
+  color:inherit;
+  text-decoration: none;
+}
+
+
+.jumbotron {
+  background-color: transparent !important;
+  height: 140px;
+}
+
+#studyGroupIMG {
+  max-height: 220px;
+  max-width: 330px;
+}
+
+#studentPicture {
+  max-width: 250px;
+  max-height: 550px;
+}
+
+
