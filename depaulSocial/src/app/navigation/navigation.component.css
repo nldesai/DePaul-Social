@@ -1,0 +1,17 @@
+/*DePaul Social on the Navbar*/
+#depaulSocialNavbarBrand {
+  color: white;
+}
+
+/* No underlined links*/
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* To override and customize the navbar properties. */
+.navbar-default {
+  background-color: #1034A6;
+}
+
