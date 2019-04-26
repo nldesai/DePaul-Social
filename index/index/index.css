@@ -1,0 +1,83 @@
+/*navbar*/
+.nav-item a:hover {
+    color: #FFFFFF !important;
+    cursor: pointer;
+}
+
+/* Color of the links */
+.nav-link {
+    color: white;
+}
+
+
+
+/*.navbar-brand {*/
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*margin-right: 50px;*/
+    /*transform: translateX(-50%);*/
+    /*color: #FFFFFF;*/
+/*}*/
+
+
+h1 {
+    background-color: #1034A6;
+    color: #FFF;
+    width: fit-content;
+}
+
+/* The container that has the group list members. */
+.container-fluid {
+    margin-top: 20px;
+}
+
+/* The color of the Font-Awesome icon home */
+.fa-home {
+    color: #FFFFFF;
+}
+
+/* List group container that has the members */
+.list-group {
+    width: fit-content;
+}
+
+body, html {
+    /*height: 100%;*/
+    /*margin: 0;*/
+    font: 400 15px/1.8 "Lato", sans-serif;
+}
+
+/*Style for social media icons on profile page*/
+.fa {
+  font-size: 100px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+/*.text-block {*/
+    /*position: absolute;*/
+    /*top: 30%;*/
+    /*left: 25%;*/
+    /*text-align: center;*/
+    /*background-color: #1034A6;*/
+    /*color: #FFF;*/
+    /*padding-left: 20px;*/
+    /*padding-right: 20px;*/
+    /*font-size: 25px;*/
+    /*letter-spacing: 10px;*/
+    /**/
+    /*margin: auto;*/
+    /*width: 50%;*/
+/*}*/
+
+
+/*.container-groupMembers {*/
+    /*!*Add a little space from top*!*/
+    /*margin-top: 20px;*/
+/*}*/

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create Study Group!</title>
+        
+        <link href="../bootstrap-4.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <link href="../index.css" rel="stylesheet">
+        
+        <!-- font aweasome for home icon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>        
+        <!--Top navbar-->
+        <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #1034A6">
+            <a class="navbar-icon" href="../homepage.html" style="color: #FFFFFF">
+                <i class="fa fa-home" style="font-size: 40px"></i>
+            </a>
+
+            <a class="navbar-brand" style="color: #FFFFFF; position: absolute; left: 50%; margin-right: 50px; transform: translateX(-50%);">DePaul Social</a>
+
+            <a class="navbar-icon ml-auto" href="../profile.html" style="color: #FFFFFF">
+                <i class="fa fa-user" style="font-size: 40px"></i>
+            </a>
+        </nav>
+
+        <!-- Alex's code -->
+        <!-- Content -->
+        <div class="container-fluid" align="center">                
+            <h1>Create Study Group!</h1>
+            <form>
+
+                <!-- Create Meetup -->
+                <div class="form-group">
+                    <label for="GrouppNameFormControlInput">Group Name:</label>
+                    <input type="text" class="form-control" id="GroupNameFormControlInput" placeholder="Class Name">
+                </div>
+
+                <!-- Date -->
+                <div class="form-group">
+                    <label for="dateFormControlInput">Date:</label>
+                    <input type="date" class="form-control" id="dateFormControlInput" value="2019-04-17">
+                </div>
+
+                <!-- Time -->
+                <div class="form-group">
+                        <label for="timeFormControlInput">Time:</label>
+                        <input type="time" class="form-control" id="timeFormControlInput" value="12:00:00">
+                    </div>
+            
+                <!-- Class of Group -->
+                <div class="createGroup">
+                    <label for="classInput">Class for Study Group:</label>
+                    <input type="text" class="form-control" id="classInput" placeholder="CSC360, CSC301, SE350...">
+                </div>
+                
+                <!-- Location -->
+                <div class="form-group">
+                    <label for="locationFormControlInput">Location:</label>
+                    <select class="form-control" id="locationFormControlInput">
+                        <option selected>Open this to select Location</option>
+                        <option value="campus">Campus</option>
+                        <option value="library">Library</option>
+                        <option value="dorm">Dorm</option>
+                        <option value="offcampus">Off Campus</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Create Study Group</button>
+
+            </form>
+        </div>
+
+
+        <!-- Footer -->
+        <nav class="navbar fixed-bottom navbar-dark" style="background-color: #1034A6">
+            <span style="color:white">Twitter Feed:</span>
+        </nav>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="jquery-slim.min.js"><\/script>')</script>
+        <script src="bootstrap-4.1.1-dist/js/popper.min.js"></script>
+        <script src="bootstrap-4.1.1-dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
