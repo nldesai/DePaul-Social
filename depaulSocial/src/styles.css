@@ -7,8 +7,3 @@ html {
 .active-link {
   color: crimson;
 }
-
-/*For all containers to have a little space from top*/
-.container {
-  margin-top: 80px;
-}

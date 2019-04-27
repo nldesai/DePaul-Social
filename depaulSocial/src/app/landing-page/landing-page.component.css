@@ -8,3 +8,60 @@ h1 {
   width: fit-content;
 }
 
+.container {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  margin-bottom: 20px;
+}
+
+
+
+#rightBtn {
+  margin-left: 5px;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    align-content: center;
+  }
+}
+
+/*Desktop Layout Sizes (Can range from 960-1140 depending on your layout.)*/
+@media only screen and (min-width:1025px) {
+  #imageContainer {
+    display: block;
+  }
+}
+
+/*Tablet (Landscape)*/
+@media only screen and (min-width:769px) and (max-width:1024px) {
+  #imageContainer {
+    display: block;
+  }
+}
+
+/*Tablet (Portrait)*/
+@media only screen and (min-width:581px) and (max-width:768px) {
+  #imageContainer {
+    display: block;
+  }
+}
+
+/*Phone (Landscape)*/
+@media only screen and (min-width:321px) and (max-width:580px) {
+  #imageContainer {
+    display: none;
+  }
+}
+
+/*Typical Phone (Portrait)*/
+@media only screen and (max-width:320px) {
+  #imageContainer {
+    display: none;
+  }
+}
