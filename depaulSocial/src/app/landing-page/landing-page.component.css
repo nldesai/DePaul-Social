@@ -23,13 +23,7 @@ h1 {
   margin-left: 5px;
 }
 
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .container {
-    align-content: center;
-  }
-}
+/* Media Queries for DePaul picture. */
 
 /*Desktop Layout Sizes (Can range from 960-1140 depending on your layout.)*/
 @media only screen and (min-width:1025px) {
@@ -39,7 +33,7 @@ h1 {
 }
 
 /*Tablet (Landscape)*/
-@media only screen and (min-width:769px) and (max-width:1024px) {
+@media only screen and (min-width:768px) and (max-width:1024px) {
   #imageContainer {
     display: block;
   }
@@ -48,9 +42,11 @@ h1 {
 /*Tablet (Portrait)*/
 @media only screen and (min-width:581px) and (max-width:768px) {
   #imageContainer {
-    display: block;
+    display: none;
   }
 }
+
+
 
 /*Phone (Landscape)*/
 @media only screen and (min-width:321px) and (max-width:580px) {

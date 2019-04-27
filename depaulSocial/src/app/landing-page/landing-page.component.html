@@ -1,38 +1,23 @@
-<!--<div class="container" align="center">-->
-  <!--<h1> Welcome to DePaul Social!</h1>-->
-  <!--<h1>Our team members are:</h1>-->
-  <!--<br/>-->
-  <!--<br/>-->
-  <!--<div class="col-sm-4">-->
-  <!--<ul class="list-group list-group-flush" *ngFor="let member of groupMembers">-->
-  <!--<li class="col-sm list-group-item ">{{member}}</li>-->
-  <!--</ul>-->
-  <!--</div>-->
-  <!--<div class="button-box col-lg-12" align="center">-->
-    <!--<a href="mylink.php" class="btn btn-outline-primary" role="button">Login</a>-->
-    <!--<a id="rightBtn" href="mylink.php" class="btn btn-outline-primary" role="button">Register</a>-->
-  <!--</div>-->
-<!--</div>-->
-
-<div class="container">
-  <div class="container-fluid">
+<div class="container" align="center">
     <div class="row">
       <div class="col">
         <h1>Welcome to <br/>
-          DePaul Social</h1>
+          DePaul Social
+        </h1>
         <h5>Team members</h5>
         <ul class="list-group list-group-flush" *ngFor="let member of groupMembers">
           <li class="list-group-item"> {{ member }} </li>
         </ul>
         <br/>
+        <!--Anchor tags with Button shape. -->
         <div class="buttons">
-          <a href="#" class="btn btn-outline-primary">Login</a>
-          <a id="rightBtn" href="#" class="btn btn-outline-primary">Register</a>
+          <a routerLink="#" routerLinkActive="active-link" class="btn btn-outline-primary">Login</a>
+          <a id="rightBtn"  routerLink="#" routerLinkActive="active-link" class="btn btn-outline-primary">Register</a>
         </div>
       </div>
+      <!-- DePaul Image -->
       <div class="col-lg-8" id="imageContainer">
-      <img src="../../assets/depaul.jpg" class="img-fluid" alt="Responsive image">
+        <img src="../../assets/depaul.jpg" class="img-fluid" alt="Responsive image">
       </div>
     </div>
-  </div>
 </div>
