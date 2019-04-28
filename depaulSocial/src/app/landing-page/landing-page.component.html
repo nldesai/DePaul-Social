@@ -1,18 +1,23 @@
-<div class="container">
-  <div class="container-fluid" align="center">
-    <h1>
-      Welcome to our group, Getitdone's project <br/>
-      Our members are:
-    </h1>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Alexanderson Reyes</li>
-      <li class="list-group-item">Collin De Kalb</li>
-      <li class="list-group-item">Heather Duke</li>
-      <li class="list-group-item">Julio Lama Chusan</li>
-      <li class="list-group-item">Linh Huynh</li>
-      <li class="list-group-item">Neal Desai</li>
-      <li class="list-group-item">Olajide Abatti</li>
-      <li class="list-group-item">Tuan Nguyen</li>
-    </ul>
-  </div>
+<div class="container" align="center">
+    <div class="row">
+      <div class="col">
+        <h1>Welcome to <br/>
+          DePaul Social
+        </h1>
+        <h5>Team members</h5>
+        <ul class="list-group list-group-flush" *ngFor="let member of groupMembers">
+          <li class="list-group-item"> {{ member }} </li>
+        </ul>
+        <br/>
+        <!--Anchor tags with Button shape. -->
+        <div class="buttons">
+          <a routerLink="#" routerLinkActive="active-link" class="btn btn-light">Login</a>
+          <a id="rightBtn"  routerLink="#" routerLinkActive="active-link" class="btn btn-light">Register</a>
+        </div>
+      </div>
+      <!-- DePaul Image -->
+      <div class="col-lg-8" id="imageContainer">
+        <img src="../../assets/depaul.jpg" class="img-fluid" alt="Responsive image">
+      </div>
+    </div>
 </div>

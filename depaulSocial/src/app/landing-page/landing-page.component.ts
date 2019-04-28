@@ -7,7 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
+  groupMembers: Array <string> = [
+    "Alexanderson Reyes",
+    "Collin De Kalb",
+    "Heather Duke",
+    "Julio Lama",
+    "Linh Huynh",
+    "Neal Desai",
+    "Olajide Abatti",
+    "Tuan Nguyen"
+  ];
+
   constructor() { }
+
 
   ngOnInit() {
   }
