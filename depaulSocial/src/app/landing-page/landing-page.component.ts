@@ -11,7 +11,7 @@ export class LandingPageComponent implements OnInit {
     "Alexanderson Reyes",
     "Collin De Kalb",
     "Heather Duke",
-    "Julio Lama Chusan",
+    "Julio Lama",
     "Linh Huynh",
     "Neal Desai",
     "Olajide Abatti",
