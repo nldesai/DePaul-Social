@@ -1,8 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule} from "@angular/forms";
 import { NgModule } from '@angular/core';
 import { NgbModule} from "@ng-bootstrap/ng-bootstrap";
-
+import { FormsModule} from "@angular/forms";
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,8 +22,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
+    AppRoutingModule,
     NgbModule
   ],
   providers: [],
