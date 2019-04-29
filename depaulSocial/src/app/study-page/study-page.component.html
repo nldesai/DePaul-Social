@@ -1,5 +1,54 @@
 <!-- Navigation bar component -->
 <app-navigation></app-navigation>
-<p>
-  study-page works!
-</p>
+
+<div class="container-fluid" align="center">
+  <div class="jumbotron jumbotron-fluid">
+      <h1>DEPAUL SOCIAL STUDY</h1>
+    <p class="lead">
+      Looking to meet new people, network? <br/>
+      DePaul has more than 350 study groups
+      dedicated to professional development!
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <div class="card-deck">
+      <!-- Create Study Group card -->
+      <a routerLink="#" class="card cardStudyGroup  shadow p-3 mb-5">
+        <div class="card-body" align="center">
+          <img class="card-img studentPicture" src="../../assets/student.jpg" alt="A DePaul student.">
+          <h1 class="card-title">Create Study Group</h1>
+          <p class="card-text">
+            Create your own study group with other DePaul students that are currently or have taken
+            the same course as you!
+          </p>
+        </div>
+      </a>
+
+      <!-- Join Study Group card -->
+      <a routerLink="#" class="card cardStudyGroup  shadow p-3 mb-5">
+        <div class="card-body" align="center">
+          <img id="studyGroupIMG" class="card-img" src="../../assets/studyGroup.jpg" alt="Group of DePaul Students.">
+          <h1 class="card-title">Join Study Group</h1>
+          <p class="card-text">
+            Join thousands of existing study groups at DePaul!
+          </p>
+        </div>
+      </a>
+
+      <!-- Find Study Partner card -->
+      <a routerLink="#" class="card cardStudyGroup  shadow p-3 mb-5">
+        <div class="card-body" align="center">
+          <img class="card-img studentPicture" src="../../assets/student.jpg" alt="A DePaul student.">
+          <h1 class="card-title">Find Study Partner</h1>
+          <p class="card-text">
+            Join hundreds of existing students looking for study partners at DePaul!
+          </p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>

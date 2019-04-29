@@ -4,8 +4,8 @@ import {LandingPageComponent} from "./landing-page/landing-page.component";
 import {StudyPageComponent} from "./study-page/study-page.component";
 
 const routes: Routes = [
-  {path: 'landingPage', component: LandingPageComponent},
-  {path: '', redirectTo: '/landingPage', pathMatch: 'full'},
+  {path: 'depaulSocial', component: LandingPageComponent},
+  {path: '', redirectTo: '/depaulSocial', pathMatch: 'full'},
   {path: 'study', component: StudyPageComponent}
 ];
 
