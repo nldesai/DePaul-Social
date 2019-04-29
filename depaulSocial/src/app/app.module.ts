@@ -9,6 +9,7 @@ import { MeetupComponent } from './meetup/meetup.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterTwitterFeedComponent } from './footer-twitter-feed/footer-twitter-feed.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { StudyPageComponent } from './study-page/study-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     NavigationComponent,
     FooterTwitterFeedComponent,
     MeetupComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    StudyPageComponent
   ],
   imports: [
     BrowserModule,
