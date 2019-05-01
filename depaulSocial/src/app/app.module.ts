@@ -10,6 +10,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { FooterTwitterFeedComponent } from './footer-twitter-feed/footer-twitter-feed.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { StudyPageComponent } from './study-page/study-page.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { TextPageComponent } from './text-page/text-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { StudyPageComponent } from './study-page/study-page.component';
     FooterTwitterFeedComponent,
     MeetupComponent,
     LandingPageComponent,
-    StudyPageComponent
+    StudyPageComponent,
+    HomepageComponent,
+    TextPageComponent
   ],
   imports: [
     BrowserModule,
