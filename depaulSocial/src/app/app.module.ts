@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from "@angular/forms";
-import  { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import  { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +9,7 @@ import { MeetupComponent } from './meetup/meetup.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterTwitterFeedComponent } from './footer-twitter-feed/footer-twitter-feed.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { TextbookBuyComponent } from './textbook-buy/textbook-buy.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     NavigationComponent,
     FooterTwitterFeedComponent,
     MeetupComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    TextbookBuyComponent
   ],
   imports: [
     BrowserModule,
