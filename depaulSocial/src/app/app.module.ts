@@ -10,6 +10,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { FooterTwitterFeedComponent } from './footer-twitter-feed/footer-twitter-feed.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { TextbookBuyComponent } from './textbook-buy/textbook-buy.component';
+import { TextbookSellComponent } from './textbook-sell/textbook-sell.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TextbookBuyComponent } from './textbook-buy/textbook-buy.component';
     FooterTwitterFeedComponent,
     MeetupComponent,
     LandingPageComponent,
-    TextbookBuyComponent
+    TextbookBuyComponent,
+    TextbookSellComponent
   ],
   imports: [
     BrowserModule,
