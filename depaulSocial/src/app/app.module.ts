@@ -13,6 +13,7 @@ import { TextbookBuyComponent } from './textbook-buy/textbook-buy.component';
 import { TextbookSellComponent } from './textbook-sell/textbook-sell.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { TeamCardComponent } from './team-card/team-card.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TeamCardComponent } from './team-card/team-card.component';
     TextbookBuyComponent,
     TextbookSellComponent,
     AboutUsComponent,
-    TeamCardComponent
+    TeamCardComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
