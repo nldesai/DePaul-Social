@@ -1,3 +1,65 @@
-<p>
-  profile works!
-</p>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #1034A6">
+            <a class="navbar-icon" href="homepage.html">
+                <i class="fa fa-home" style="font-size: 40px"></i>
+            </a>
+
+            <a class="navbar-brand" style="color: #FFFFFF; position: absolute; left: 50%; margin-right: 50px; transform: translateX(-50%);">DePaul Social</a>
+
+            <a class="navbar-icon ml-auto" href="profile.html" style="color: #FFFFFF">
+                <i class="fa fa-user" style="font-size: 40px"></i>
+            </a>
+        </nav>
+        
+        <!-- Collin's code -->
+        <div class="container-fluid" id = "profile" align = "center">
+           <div class="text-center">
+               <img src={{defaultPic}} class="rounded" height=200 alt="profile pic"> 
+               <h2>NAME</h2>
+               
+               <div id="social">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-snapchat"></a>
+            </div>
+               
+           </div>
+            
+            <div id="classList" class="container-fluid">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-secondary"*ngFor="let class of classes">{{class}}</button>
+                </div>
+            </div>
+            
+            <div id="bio" class="container-fluid">
+                <p>My name is NAME, and I love to study. Study study study, that's all that I like to do. Please I'm failing all my classes</p>
+            </div>
+            <div id="preferences" class="container-fluid">
+                <h4 align="left">Preferred Locations</h4>
+                <div class="progress location mb-2">
+                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Campus</div>
+                </div>
+                <div class="progress location mb-2">
+                    <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Library</div>
+                </div>
+                <div class="progress location mb-2">
+                    <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Dorm</div>
+                </div>
+                <div class="progress location mb-2">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Off Campus</div>
+                </div>
+            </div>
+        </div>              
+
+        <!-- Footer -->
+        <nav class="navbar fixed-bottom navbar-dark" style="background-color: #1034A6">
+            <span style="color:white">Twitter Feed:</span>
+        </nav>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="jquery-slim.min.js"><\/script>')</script>
+        <script src="bootstrap-4.1.1-dist/js/popper.min.js"></script>
+        <script src="bootstrap-4.1.1-dist/js/bootstrap.min.js"></script>

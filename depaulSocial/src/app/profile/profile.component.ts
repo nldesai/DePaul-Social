@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-
-  constructor() { }
+	defaultPic: string;
+	classes: string[];
+  constructor() { 
+	this.defaultPic = "assets/t2.jpg";
+	this.classes = ['Class 1','Class 2','Class 3','Class 4']
+}
 
   ngOnInit() {
   }
