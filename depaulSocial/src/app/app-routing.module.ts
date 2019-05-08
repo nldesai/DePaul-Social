@@ -7,8 +7,8 @@ import { TextbookSellComponent} from "./textbook-sell/textbook-sell.component";
 const routes: Routes = [
   {path: 'landingPage', component: LandingPageComponent},
   {path: '', redirectTo: '/landingPage', pathMatch: 'full'},
-  { path: 'TextbookSellComponent', component: TextbookSellComponent },
-  { path: 'TextbookBuyComponent', component: TextbookBuyComponent }
+  { path: 'booksell', component: TextbookSellComponent },
+  { path: 'bookbuy', component: TextbookBuyComponent }
 ];
 
 @NgModule({
