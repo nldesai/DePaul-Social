@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from "@angular/forms";
-import  { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import  { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +14,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { TextPageComponent } from './text-page/text-page.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
 import { SearchPartnerComponent } from './search-partner/search-partner.component';
+import { TextbookBuyComponent } from './textbook-buy/textbook-buy.component';
+import { TextbookSellComponent } from './textbook-sell/textbook-sell.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { SearchPartnerComponent } from './search-partner/search-partner.componen
     HomepageComponent,
     TextPageComponent,
     CreateGroupComponent,
-    SearchPartnerComponent
+    SearchPartnerComponent,
+    TextbookBuyComponent,
+    TextbookSellComponent
   ],
   imports: [
     BrowserModule,
