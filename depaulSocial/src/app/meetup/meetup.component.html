@@ -1,51 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DePaul Social - Meetups</title>
-  <!--<link href="../bootstrap-4.1.1-dist/css/bootstrap.min.css" rel="stylesheet">-->
-
-  <!--<link href="../index.css" rel="stylesheet">-->
-
-  <!--&lt;!&ndash;Index css.&ndash;&gt;-->
-  <!--<link href="../index.css" rel="stylesheet">-->
-  <!--&lt;!&ndash;Meetup css.&ndash;&gt;-->
-  <!--<link href="meetup.css" rel="stylesheet">-->
-
-  <!-- font aweasome for home icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
-<body>
-<!--Top navbar-->
-<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #1034A6">
-  <a class="navbar-icon" href="../homepage.html">
-    <i class="fa fa-home" style="font-size: 40px"></i>
-  </a>
-
-  <a class="navbar-brand" style="color: #FFFFFF; position: absolute; left: 50%; margin-right: 50px; transform: translateX(-50%);">DePaul Social</a>
-
-  <a class="navbar-icon ml-auto" href="../profile.html" style="color: #FFFFFF">
-    <i class="fa fa-user" style="font-size: 40px"></i>
-  </a>
-</nav>
-
-<!-- Julio's code -->
+<!--Navigation component-->
+<app-navigation></app-navigation>
 <div class="container-fluid" align="center" style="padding-bottom: 30px">
   <div class="jumbotron">
     <h1>DEPAUL SOCIAL  MEETUPS</h1>
 
-    <p>Join thousands of meetups!</p>
-
+    <p class="lead">
+      Join thousands of meetups!
+    </p>
   </div>
+
   <div class="row">
     <div class="col-12">
       <div class="card-deck">
         <!-- Meetup Group card -->
         <a href="../create-meetup.html" class="card meetups  shadow p-3 mb-5">
           <div class="card-body">
-            <img id="studentPicture" class="card-img" src="./assets/students.png" alt="A DePaul student.">
+            <img id="studentPicture" class="card-img" src="../../assets/students.png" alt="A DePaul student.">
             <h1 class="card-title">Create Meetup</h1>
             <p class="card-text">
               Create your own study group with other DePaul students that are currently or have taken
@@ -58,7 +28,7 @@
         <!-- Join Study Group card -->
         <a href="../find-meetup.html" class="card meetups  shadow p-3 mb-5">
           <div class="card-body">
-            <img id="studyGroupIMG" class="card-img" src="./assets/studyGroup.jpg" alt="Group of DePaul Students.">
+            <img id="studyGroupIMG" class="card-img" src="../../assets/studentGroups.jpg" alt="Group of DePaul Students.">
             <h1 class="card-title">Find Meetup</h1>
             <p class="card-text">
               Join thousands of existing study groups at DePaul!
@@ -70,18 +40,3 @@
     </div>
   </div>
 </div>
-
-<!-- Footer -->
-<nav class="navbar fixed-bottom navbar-dark" style="background-color: #1034A6">
-  <span style="color:white">Twitter Feed:</span>
-</nav>
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="jquery-slim.min.js"><\/script>')</script>
-<script src="bootstrap-4.1.1-dist/js/popper.min.js"></script>
-<script src="bootstrap-4.1.1-dist/js/bootstrap.min.js"></script>
-</body>
-</html>
