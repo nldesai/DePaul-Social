@@ -1,6 +1,10 @@
 /*DePaul Social on the Navbar*/
 #depaulSocialNavbarBrand {
   color: white;
+  position: absolute;
+  left: 50%;
+  margin-right: 50px;
+  transform: translateX(-50%);
 }
 
 /* No underlined links*/
