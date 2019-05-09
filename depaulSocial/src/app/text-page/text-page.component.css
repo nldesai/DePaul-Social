@@ -1,0 +1,35 @@
+.cards {
+    margin-top: 30px;
+}
+  
+h1 {
+    background-color: #1034A6;
+    color: #FFF;
+    width: fit-content;
+    margin-top: 80px;
+}
+
+.row {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+a.cards   {
+    text-decoration: none; 
+    color: inherit;
+}
+
+.card-title {
+    color: black;
+    background-color: white;
+}
+
+.card-deck {
+    margin-bottom: 30px;
+}
+
+.card-img {
+    max-height: 220px;
+    max-width: 330px;
+}
