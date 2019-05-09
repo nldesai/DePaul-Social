@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MeetupComponent} from "./meetup/meetup.component";
+import { LandingPageComponent } from "./landing-page/landing-page.component";
+import { TextbookBuyComponent } from "./textbook-buy/textbook-buy.component";
+import { TextbookSellComponent} from "./textbook-sell/textbook-sell.component";
 import {LandingPageComponent} from "./landing-page/landing-page.component";
 import {AboutUsComponent} from "./about-us/about-us.component";
 import {ProfileComponent} from "./profile/profile.component";
@@ -15,6 +18,9 @@ import {SearchPartnerComponent} from "./search-partner/search-partner.component"
 const routes: Routes = [
   {path: '', redirectTo: '/landingPage', pathMatch: 'full'},
   {path: 'landingPage', component: LandingPageComponent},
+  {path: '', redirectTo: '/landingPage', pathMatch: 'full'},
+  { path: 'booksell', component: TextbookSellComponent },
+  { path: 'bookbuy', component: TextbookBuyComponent },
   {path: 'aboutUs', component: AboutUsComponent},
   {path: 'profile', component: ProfileComponent},
   {path: '', redirectTo: '/landingPage', pathMatch: 'full'},
