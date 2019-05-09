@@ -11,6 +11,7 @@ import { FooterTwitterFeedComponent } from './footer-twitter-feed/footer-twitter
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { TextbookBuyComponent } from './textbook-buy/textbook-buy.component';
 import { TextbookSellComponent } from './textbook-sell/textbook-sell.component';
+import { FindMeetupComponent } from './find-meetup/find-meetup.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TextbookSellComponent } from './textbook-sell/textbook-sell.component';
     MeetupComponent,
     LandingPageComponent,
     TextbookBuyComponent,
-    TextbookSellComponent
+    TextbookSellComponent,
+    FindMeetupComponent
   ],
   imports: [
     BrowserModule,
