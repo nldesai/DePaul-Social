@@ -16,6 +16,7 @@ import { CreateGroupComponent } from './create-group/create-group.component';
 import { SearchPartnerComponent } from './search-partner/search-partner.component';
 import { TextbookBuyComponent } from './textbook-buy/textbook-buy.component';
 import { TextbookSellComponent } from './textbook-sell/textbook-sell.component';
+import { CreateMeetupComponent } from './create-meetup/create-meetup.component';
 import { FindMeetupComponent } from './find-meetup/find-meetup.component';
 
 @NgModule({
@@ -33,6 +34,7 @@ import { FindMeetupComponent } from './find-meetup/find-meetup.component';
     SearchPartnerComponent,
     TextbookBuyComponent,
     TextbookSellComponent,
+    CreateMeetupComponent,
     FindMeetupComponent
   ],
   imports: [
