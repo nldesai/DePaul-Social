@@ -4,7 +4,6 @@ import { MeetupComponent} from "./meetup/meetup.component";
 import { LandingPageComponent } from "./landing-page/landing-page.component";
 import { TextbookBuyComponent } from "./textbook-buy/textbook-buy.component";
 import { TextbookSellComponent} from "./textbook-sell/textbook-sell.component";
-import {LandingPageComponent} from "./landing-page/landing-page.component";
 import {AboutUsComponent} from "./about-us/about-us.component";
 import {ProfileComponent} from "./profile/profile.component";
 import { CreateMeetupComponent } from './create-meetup/create-meetup.component';
@@ -29,7 +28,7 @@ const routes: Routes = [
   {path: 'depaulSocial', component: LandingPageComponent},
   {path: '', redirectTo: '/depaulSocial', pathMatch: 'full'},
   {path: 'study', component: StudyPageComponent},
-  {path: 'meetup', component: MeetupComponent}
+  {path: 'meetup', component: MeetupComponent},
   {path: 'home', component: HomepageComponent},
   {path: 'text', component: TextPageComponent},
   {path: 'creategroup', component: CreateGroupComponent},
