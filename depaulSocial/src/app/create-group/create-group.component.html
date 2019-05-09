@@ -1,0 +1,50 @@
+<!--Navbar component-->
+<app-navigation></app-navigation>
+
+<!-- Alex's code -->
+<div class="container-fluid" align="center">                
+    <h1>Create Study Group!</h1>
+    <form>
+        <!-- Create Meetup -->
+        <div class="form-group">
+            <label for="GrouppNameFormControlInput">Group Name:</label>
+            <input type="text" class="form-control" id="GroupNameFormControlInput" placeholder="Class Name">
+        </div>
+
+        <!-- Date -->
+        <div class="form-group">
+            <label for="dateFormControlInput">Date:</label>
+            <input type="date" class="form-control" id="dateFormControlInput" value="2019-04-17">
+        </div>
+
+        <!-- Time -->
+        <div class="form-group">
+                <label for="timeFormControlInput">Time:</label>
+                <input type="time" class="form-control" id="timeFormControlInput" value="12:00:00">
+            </div>
+    
+        <!-- Class of Group -->
+        <div class="createGroup">
+            <label for="classInput">Class for Study Group:</label>
+            <input type="text" class="form-control" id="classInput" placeholder="CSC360, CSC301, SE350...">
+        </div>
+        
+        <!-- Location -->
+        <div class="form-group">
+            <label for="locationFormControlInput">Location:</label>
+            <select class="form-control" id="locationFormControlInput">
+                <option selected>Open this to select Location</option>
+                <option value="campus">Campus</option>
+                <option value="library">Library</option>
+                <option value="dorm">Dorm</option>
+                <option value="offcampus">Off Campus</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create Study Group</button>
+
+    </form>
+</div>
+
+<!--Twitter component-->
+<app-footer-twitter-feed></app-footer-twitter-feed>
