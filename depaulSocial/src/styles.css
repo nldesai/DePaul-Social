@@ -3,9 +3,11 @@
 
 html {
   font: 400 15px/1.8 "Lato", sans-serif;
+  min-height: 100%;
 }
 
 /*Will highlight the link with red when the user is on some view/path.*/
 .active-link {
   color: crimson;
 }
+
