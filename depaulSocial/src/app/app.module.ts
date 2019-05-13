@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -49,7 +49,7 @@ import { JoinStudyComponent} from './join-study/join-study.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    NgbModule
+    // NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
