@@ -22,6 +22,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { CreateMeetupComponent } from './create-meetup/create-meetup.component';
 import { FindMeetupComponent } from './find-meetup/find-meetup.component';
 import { JoinStudyComponent} from './join-study/join-study.component';
+import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { JoinStudyComponent} from './join-study/join-study.component';
     ProfileComponent,
     CreateMeetupComponent,
     FindMeetupComponent,
-    JoinStudyComponent
+    JoinStudyComponent,
+    TextbookSwapComponent
   ],
   imports: [
     BrowserModule,
