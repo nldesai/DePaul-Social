@@ -1,1 +1,10 @@
-<router-outlet></router-outlet>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <!--  <span>HOME</span> -->
+       <span><a href="/">DEPAUL SOCIAL HOME</a></span>
+       <span class="spacer"></span>
+       <a mat-button routerLink="/register">Register</a>
+       <a mat-button routerLink="/login">Login</a>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <router-outlet></router-outlet>

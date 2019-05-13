@@ -22,6 +22,12 @@ import { ProfileComponent } from './profile/profile.component';
 import { CreateMeetupComponent } from './create-meetup/create-meetup.component';
 import { FindMeetupComponent } from './find-meetup/find-meetup.component';
 import { JoinStudyComponent} from './join-study/join-study.component';
+import { RegistrationComponentComponent } from './registration-component/registration-component.component';
+import { LoginComponentComponent } from './login-component/login-component.component';
+import { MyMaterialModule } from  './material.module';
+import { RouterModule, Routes } from '@angular/router';
+ 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -43,13 +49,24 @@ import { JoinStudyComponent} from './join-study/join-study.component';
     ProfileComponent,
     CreateMeetupComponent,
     FindMeetupComponent,
-    JoinStudyComponent
+    JoinStudyComponent,
+    RegistrationComponentComponent,
+    LoginComponentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    NgbModule
+    MyMaterialModule,
+    RouterModule.forRoot([
+      { path: '', redirectTo: '/', pathMatch: 'full' },
+      { path: 'register', component: RegistrationComponentComponent },
+      { path: 'login', component: LoginComponentComponent },
+       
+     
+    ]),
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
