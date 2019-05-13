@@ -14,6 +14,7 @@ import { TextPageComponent} from './text-page/text-page.component';
 import { CreateGroupComponent} from './create-group/create-group.component';
 import { SearchPartnerComponent} from './search-partner/search-partner.component';
 import { JoinStudyComponent} from './join-study/join-study.component';
+import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/landingPage', pathMatch: 'full'},
@@ -36,7 +37,8 @@ const routes: Routes = [
   {path: 'searchpartner', component: SearchPartnerComponent},
   {path: 'join-study-group', component: JoinStudyComponent},
   {path: 'create-meetup', component: CreateMeetupComponent},
-  {path: 'find-meetup', component: FindMeetupComponent}
+  {path: 'find-meetup', component: FindMeetupComponent},
+  {path: 'bookswap', component: TextbookSwapComponent}
 ];
 
 @NgModule({
