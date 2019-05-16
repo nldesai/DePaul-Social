@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TwitterService} from '../services/twitter.service';
 
 @Component({
   selector: 'app-footer-twitter-feed',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterTwitterFeedComponent implements OnInit {
 
-  constructor() { }
+  constructor(private twitterService: TwitterService) { }
 
   ngOnInit() {
   }
