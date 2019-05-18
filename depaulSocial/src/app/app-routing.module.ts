@@ -15,6 +15,7 @@ import { CreateGroupComponent} from './create-group/create-group.component';
 import { SearchPartnerComponent} from './search-partner/search-partner.component';
 import { JoinStudyComponent} from './join-study/join-study.component';
 import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 const routes: Routes = [
   {path: '', redirectTo: '/landingPage', pathMatch: 'full'},
@@ -42,7 +43,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), AngularFontAwesomeModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
