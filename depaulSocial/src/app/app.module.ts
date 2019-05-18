@@ -25,7 +25,7 @@ import { CreateMeetupComponent } from './create-meetup/create-meetup.component';
 import { FindMeetupComponent } from './find-meetup/find-meetup.component';
 import { JoinStudyComponent} from './join-study/join-study.component';
 import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
-import {TwitterService} from './services/twitter.service';
+import { TwitterService} from './services/twitter.service';
 
 @NgModule({
   declarations: [
