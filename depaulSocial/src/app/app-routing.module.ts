@@ -29,13 +29,19 @@ const routes: Routes = [
   {path: 'findMeetup', component: FindMeetupComponent},
   {path: 'depaulSocial', component: LandingPageComponent},
   {path: '', redirectTo: '/depaulSocial', pathMatch: 'full'},
-  {path: 'study', component: StudyPageComponent},
+  {
+    path: 'study',
+    component: StudyPageComponent,
+    children: [
+
+      {path: 'join-study-group', component: JoinStudyComponent},
+      {path: 'create-group', component: CreateGroupComponent},
+      {path: 'searchpartner', component: SearchPartnerComponent}
+    ]
+  },
   {path: 'meetup', component: MeetupComponent},
   {path: 'home', component: HomepageComponent},
   {path: 'text', component: TextPageComponent},
-  {path: 'creategroup', component: CreateGroupComponent},
-  {path: 'searchpartner', component: SearchPartnerComponent},
-  {path: 'join-study-group', component: JoinStudyComponent},
   {path: 'create-meetup', component: CreateMeetupComponent},
   {path: 'find-meetup', component: FindMeetupComponent},
   {path: 'bookswap', component: TextbookSwapComponent}

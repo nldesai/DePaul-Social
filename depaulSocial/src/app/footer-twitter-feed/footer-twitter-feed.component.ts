@@ -18,6 +18,7 @@ export class FooterTwitterFeedComponent implements OnInit {
 
   ngOnInit() {
     // get the tweets from Twitter first.
+    // hardcoded hashTag
     this.twitterService.getAllTweetsBasedOnHashTag('depaulSocial')
       .subscribe((value: TweeterUser[]) => {
         this.tweets = value;
@@ -33,7 +34,7 @@ export class FooterTwitterFeedComponent implements OnInit {
     let index = 0;
     let timerId = setInterval(() => {
       if (index >= this.tweets.length) {
-        index = 0;
+        index = 0;  // infinite loop
       }
       else {
         this.theTweet = this.tweets[index++];
