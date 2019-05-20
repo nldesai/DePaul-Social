@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
-// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +23,7 @@ import { CreateMeetupComponent } from './create-meetup/create-meetup.component';
 import { FindMeetupComponent } from './find-meetup/find-meetup.component';
 import { JoinStudyComponent} from './join-study/join-study.component';
 import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
+import { MeetupsService } from './meetups.service';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,7 @@ import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    // NgbModule
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
