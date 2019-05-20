@@ -8,22 +8,18 @@ export class MeetupsService {
 
   constructor() { }
 
-  x: Array<Meetup> = [];
+  meetups: Array<Meetup> = [];
 
   addMeetup(meetup: Meetup) {
-    this.x.push(meetup);
-  }
-
-  get getLength() {
-    return this.x.length;
+    this.meetups.push(meetup);
   }
 
   filterWithoutInterests(major: string, location: string) {
-    return this.x.filter(meetup => meetup.majors.includes(major) && meetup.location === location);
+    return this.meetups.filter(meetup => meetup.majors.includes(major) && meetup.location === location);
   }
 
   filterWithInterests(major: string, interests: string, location: string) {
-    return this.x.filter(meetup => meetup.majors.includes(major) && meetup.purpose === interests && meetup.location === location);
+    return this.meetups.filter(meetup => meetup.majors.includes(major) && meetup.purpose === interests && meetup.location === location);
   }
 
 }

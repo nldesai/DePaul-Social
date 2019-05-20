@@ -8,6 +8,7 @@ import { Meetup } from '../meetup';
   templateUrl: './find-meetup.component.html',
   styleUrls: ['./find-meetup.component.css']
 })
+
 export class FindMeetupComponent implements OnInit {
 
   majors = MAJORS;
