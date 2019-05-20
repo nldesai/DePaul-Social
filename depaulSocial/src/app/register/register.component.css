@@ -1,0 +1,10 @@
+.jumbotron {
+    background-color: transparent !important;
+    height: 140px;
+  }
+    
+h1 {
+    background-color: #1034A6;
+    color: #FFF;
+    width: fit-content;
+}

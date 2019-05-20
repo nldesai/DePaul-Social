@@ -15,6 +15,8 @@ import { CreateGroupComponent} from './create-group/create-group.component';
 import { SearchPartnerComponent} from './search-partner/search-partner.component';
 import { JoinStudyComponent} from './join-study/join-study.component';
 import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
+import { LoginComponent} from './login/login.component';
+import { RegisterComponent} from './register/register.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/landingPage', pathMatch: 'full'},
@@ -38,7 +40,9 @@ const routes: Routes = [
   {path: 'join-study-group', component: JoinStudyComponent},
   {path: 'create-meetup', component: CreateMeetupComponent},
   {path: 'find-meetup', component: FindMeetupComponent},
-  {path: 'bookswap', component: TextbookSwapComponent}
+  {path: 'bookswap', component: TextbookSwapComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent}
 ];
 
 @NgModule({

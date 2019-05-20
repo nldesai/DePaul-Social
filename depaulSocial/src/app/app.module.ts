@@ -24,6 +24,7 @@ import { FindMeetupComponent } from './find-meetup/find-meetup.component';
 import { JoinStudyComponent} from './join-study/join-study.component';
 import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
 import { MeetupsService } from './meetups.service';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { MeetupsService } from './meetups.service';
     CreateMeetupComponent,
     FindMeetupComponent,
     JoinStudyComponent,
-    TextbookSwapComponent
+    TextbookSwapComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
