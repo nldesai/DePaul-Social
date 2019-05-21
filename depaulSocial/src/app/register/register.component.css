@@ -1,10 +1,54 @@
-.jumbotron {
-    background-color: transparent !important;
-    height: 140px;
-  }
+.heading {
+  padding-top: 75px;
+  padding-bottom: 20px;
+}
     
 h1 {
     background-color: #1034A6;
     color: #FFF;
     width: fit-content;
+}
+
+.form-group {
+  padding-bottom: .1px;
+}
+
+.label {
+  padding-right: 1em;
+}
+
+.login {
+  padding-top: 1em;
+}
+
+.user {
+  padding-right: 1.5em;
+}
+
+.pass {
+  padding-right: 1.7em;
+}
+
+.gender {
+  padding-right: 1em;
+  padding-left: .7em;
+}
+
+.male {
+  padding-right: 1em;
+  padding-left: .3em;
+}
+
+.female {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.age {
+  padding-right: 2.9em;
+  padding-left: 1.7em;
+}
+
+.bday {
+  padding-right: 2.4em;
 }

@@ -1,6 +1,5 @@
-.formstyle {
-    padding-top: 30px; 
-    padding-bottom: 30px;
+.content-all {
+    padding-top: 8%;
 }
 
 .jumbotron {
@@ -12,4 +11,20 @@ h1 {
     background-color: #1034A6;
     color: #FFF;
     width: fit-content;
+}
+
+.form-group {
+    padding-bottom: .5em;
+}
+
+.user {
+    padding-right: 1em;
+}
+
+.pass {
+    padding-right: 1.2em;
+}
+
+.reg {
+    padding-top: 1em;
 }
