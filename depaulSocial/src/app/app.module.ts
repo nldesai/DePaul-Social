@@ -1,14 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
-<<<<<<< HEAD
+
 import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule} from '@angular/common/http';
-=======
 import { ReactiveFormsModule} from "@angular/forms";
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
->>>>>>> 1dd87859f3c8da998ec8e4040775dee72a7c633a
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,15 +27,13 @@ import { CreateMeetupComponent } from './create-meetup/create-meetup.component';
 import { FindMeetupComponent } from './find-meetup/find-meetup.component';
 import { JoinStudyComponent} from './join-study/join-study.component';
 import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
-<<<<<<< HEAD
+
 import { TwitterService} from './services/twitter.service';
-=======
+
 import { MeetupsService } from './meetups.service';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LocationBarComponent } from './location-bar/location-bar.component';
-import { RegisterComponent } from './register/register.component';
->>>>>>> 1dd87859f3c8da998ec8e4040775dee72a7c633a
 
 @NgModule({
   declarations: [
@@ -71,17 +66,11 @@ import { RegisterComponent } from './register/register.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-<<<<<<< HEAD
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [TwitterService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
-=======
-    ReactiveFormsModule,
-    NgbModule
-  ],
-  providers: [MeetupsService],
->>>>>>> 1dd87859f3c8da998ec8e4040775dee72a7c633a
+  providers: [TwitterService, MeetupsService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
