@@ -11,6 +11,11 @@ import { StudyPageComponent} from './study-page/study-page.component';
 import { CreateGroupComponent} from './create-group/create-group.component';
 import { SearchPartnerComponent} from './search-partner/search-partner.component';
 import { JoinStudyComponent} from './join-study/join-study.component';
+import { RegisterComponent} from "./register/register.component";
+import {LoginComponent} from "./login/login.component";
+import {HomepageComponent} from "./homepage/homepage.component";
+import {TextPageComponent} from "./text-page/text-page.component";
+import {TextbookSwapComponent} from "./textbook-swap/textbook-swap.component";
 
 const routes: Routes = [
   {path: 'landingPage', component: LandingPageComponent},
@@ -22,6 +27,12 @@ const routes: Routes = [
   {path: 'createMeetup', component: CreateMeetupComponent},
   {path: 'findMeetup', component: FindMeetupComponent},
   {path: 'depaulSocial', component: LandingPageComponent},
+  {path: 'register', component: RegisterComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'home', component: HomepageComponent},
+  {path: 'text', component: TextPageComponent},
+  {path: 'bookswap', component: TextbookSwapComponent},
+
   {
     path: 'study',
     component: StudyPageComponent,
