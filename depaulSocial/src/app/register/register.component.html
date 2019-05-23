@@ -1,0 +1,59 @@
+<!-- Jide's code -->
+<div class="class-all" align="center">
+    <div class="heading">
+        <h1>Register</h1>
+    </div>
+    
+    <form style="padding-bottom: 80px">
+        <div class="form-group">
+            <label class="label">First Name: </label>
+            <input type="text" name="fName">
+        </div> 
+
+        <div class="form-group">
+            <label class="label">Last Name: </label>
+            <input type="text" name="lName">
+        </div>
+
+        <div class="form-group">
+            <label class="gender">Gender: </label>
+            <label class="male">Male: </label>
+            <input type="Radio"name="maleorfemale" value="Male">
+            <label class="female">Female: </label>
+            <input type="Radio" name="maleorfemale" value="Female">
+        </div>
+
+        <div class="form-group">
+            <label class="age">Age: </label>
+            <input type="number">
+        </div>
+
+        <div class="form-group">
+            <label class="bday">Birthday: </label>
+            <input type="date" name="bday">
+        </div>
+        
+        <div class="form-group">
+            <label class="user">Username:</label> 
+            <input type= "text" name="username">
+        </div>
+
+        <div class="form-group">
+            <label class="pass">Password:</label>
+            <input type= "password" name="password">
+        </div>
+
+        <!--<input type="submit" value="Register" formaction="homepage.html"> <br><br>-->
+        <button type="submit" class="btn btn-primary" routerLink="/home">Register</button>
+
+        <div>
+            <label class="login"> Already a member? <a routerLink="/login" class="link">click to log in to account</a> </label>
+        </div>
+    </form>
+</div>
+
+</div>
+
+<!-- Twitter component -->
+<app-footer-twitter-feed></app-footer-twitter-feed>
+
