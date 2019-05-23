@@ -1,23 +1,23 @@
 <div class="container" align="center">
-    <div class="row">
-      <div class="col">
-        <h1>Welcome to <br/>
-          DePaul Social
-        </h1>
-        <h5>Team members</h5>
-        <ul class="list-group list-group-flush" *ngFor="let member of groupMembers">
-          <li class="list-group-item"> {{ member }} </li>
-        </ul>
-        <br/>
-        <!--Anchor tags with Button shape. -->
-        <div class="buttons">
-          <a routerLink="/login" routerLinkActive="active-link" class="btn btn-light">Login</a>
-          <a id="rightBtn"  routerLink="/register" routerLinkActive="active-link" class="btn btn-light">Register</a>
-        </div>
-      </div>
-      <!-- DePaul Image -->
-      <div class="col-lg-8" id="imageContainer">
-        <img src="../../assets/depaul.jpg" class="img-fluid" alt="Responsive image">
+  <div class="row">
+    <div class="col">
+      <h1>Welcome to <br/>
+        DePaul Social
+      </h1>
+      <h5>Team members</h5>
+      <ul class="list-group list-group-flush" *ngFor="let member of groupMembers">
+        <li class="list-group-item"> {{ member }} </li>
+      </ul>
+      <br/>
+      <!--Anchor tags with Button shape. -->
+      <div class="buttons">
+        <a routerLink="/login" routerLinkActive="active-link" class="btn btn-light">Login</a>
+        <a id="rightBtn"  routerLink="/register" routerLinkActive="active-link" class="btn btn-light">Register</a>
       </div>
     </div>
+    <!-- DePaul Image -->
+    <div class="col-lg-8" id="imageContainer">
+      <img src="../../assets/depaul.jpg" class="img-fluid" alt="Responsive image">
+    </div>
+  </div>
 </div>
