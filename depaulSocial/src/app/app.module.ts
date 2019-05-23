@@ -59,8 +59,7 @@ import { LocationBarComponent } from './location-bar/location-bar.component';
     TextbookSwapComponent,
     RegisterComponent,
     LoginComponent,
-    LocationBarComponent,
-    RegisterComponent
+    LocationBarComponent
   ],
   imports: [
     BrowserModule,
