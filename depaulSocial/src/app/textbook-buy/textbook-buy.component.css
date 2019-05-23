@@ -11,22 +11,10 @@ h1 {
   margin-bottom: 20px;
 }
 
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
-
-
 p.table{
   font-size: 14pt;
   padding: 2px;
   text-align: center;
-}
-.tr {
-
 }
 
 .table{
