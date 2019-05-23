@@ -62,7 +62,7 @@ import { RegisterComponent } from './register/register.component';
     AppRoutingModule,
     NgbModule
   ],
-  providers: [],
+  providers: [MeetupsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
