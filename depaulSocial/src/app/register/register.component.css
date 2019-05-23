@@ -53,6 +53,15 @@ h1 {
   padding-right: 2.4em;
 }
 
+.btn {
+  background-color: #1034A6;
+}
+
+.link {
+  text-decoration: none;
+  color: #ff0000;
+}
+
 .my-form{
     min-width: 150px;
     max-width: 500px;

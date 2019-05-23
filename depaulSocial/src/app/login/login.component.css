@@ -28,3 +28,12 @@ h1 {
 .reg {
     padding-top: 1em;
 }
+
+.btn {
+    background-color: #1034A6;
+}
+
+.link {
+    text-decoration: none;
+    color: #ff0000;
+}
