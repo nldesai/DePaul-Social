@@ -2,33 +2,43 @@
 <app-navigation></app-navigation>
 
 <div class="container">
-  <div>
-    <h1 align="center" style="padding-top: 30px"> Waddup D-d-d-Demons,</h1>
-    <p class="h3" align="center"> Fill out these to fields to place your books on the cloud!</p>
+  <div align="center">
+    <h1 style="padding: 10px"> Need some money? Sell your books!</h1>
+    <p class="h3"> Fill out these boxes to place your books on the cloud!</p>
+  </div>
 
+  <div>
     <form>
-      <div class="form-row">
+      <div class="form-row" style="padding: 20px;">
+
+        <!--field1-->
         <div class="form-group col-md-6">
           <label for="inputCourseSection">Enter Course Section</label>
           <input type="text" class="form-control" id="inputCourseSection" placeholder="Course Section">
         </div>
+
+        <!--field2-->
         <div class="form-group col-md-6">
           <label for="inputISBN">Enter ISBN</label>
           <input type="number" class="form-control" id="inputISBN" placeholder="ISBN">
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Search</button>
-        <div class="form-group">
-          <label for="exampleFormControlFile1"> <br> Upload an Instagram worthy photo of that book</label>
-          <input type="file" class="form-control-file" id="exampleFormControlFile1">
-        </div>
-    </form>
 
+      <!--button-->
+      <div align="center">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </div>
+
+    </form>
+  </div>
+
+  <div style="padding: 20px;">
     <p align="center"> Need to view your class schedule? <br>
       <a href="https://campusconnect.depaul.edu/psp/CSPRD92/?cmd=login"
          class="badge badge-primary">Click here to redirect to campusconnect!</a>
     </p>
   </div>
+
 </div>
 
 <!-- Twitter component -->
