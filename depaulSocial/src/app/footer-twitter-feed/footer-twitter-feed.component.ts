@@ -13,7 +13,7 @@ export class FooterTwitterFeedComponent implements OnInit {
   tweets: Array<TweeterUser> = [];
   theTweet: TweeterUser = null;
 
-  constructor(private twitterService: TwitterService, private router: Router){}
+  constructor(private twitterService: TwitterService, public router: Router){}
 
 
   ngOnInit() {

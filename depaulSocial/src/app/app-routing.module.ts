@@ -28,7 +28,6 @@ const routes: Routes = [
   {path: 'createMeetup', component: CreateMeetupComponent},
   {path: 'findMeetup', component: FindMeetupComponent},
   {path: 'depaulSocial', component: LandingPageComponent},
-  {path: '', redirectTo: '/depaulSocial', pathMatch: 'full'},
   {
     path: 'study',
     component: StudyPageComponent,

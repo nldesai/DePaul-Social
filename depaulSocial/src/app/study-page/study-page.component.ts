@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
 export class StudyPageComponent implements OnInit {
 
   // dependency injection to use Router.
-  constructor(private router: Router) { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }
