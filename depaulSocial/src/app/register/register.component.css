@@ -52,3 +52,13 @@ h1 {
 .bday {
   padding-right: 2.4em;
 }
+
+.my-form{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+   
+  .full-width {
+    width: 100%;
+  }

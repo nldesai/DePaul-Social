@@ -26,6 +26,8 @@ import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
 import { MeetupsService } from './meetups.service';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { LocationBarComponent } from './location-bar/location-bar.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { LoginComponent } from './login/login.component';
     JoinStudyComponent,
     TextbookSwapComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    LocationBarComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
