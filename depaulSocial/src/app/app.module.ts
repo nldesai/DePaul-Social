@@ -24,6 +24,7 @@ import { FindMeetupComponent } from './find-meetup/find-meetup.component';
 import { JoinStudyComponent} from './join-study/join-study.component';
 import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
 import { LocationBarComponent } from './location-bar/location-bar.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { LocationBarComponent } from './location-bar/location-bar.component';
     JoinStudyComponent,
     TextbookSwapComponent,
     LocationBarComponent
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

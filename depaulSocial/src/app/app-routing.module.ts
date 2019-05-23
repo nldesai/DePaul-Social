@@ -16,6 +16,7 @@ import { SearchPartnerComponent} from './search-partner/search-partner.component
 import { JoinStudyComponent} from './join-study/join-study.component';
 import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { LonginComponent} from './longin/longin.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/landingPage', pathMatch: 'full'},
@@ -39,7 +40,8 @@ const routes: Routes = [
   {path: 'join-study-group', component: JoinStudyComponent},
   {path: 'create-meetup', component: CreateMeetupComponent},
   {path: 'find-meetup', component: FindMeetupComponent},
-  {path: 'bookswap', component: TextbookSwapComponent}
+  {path: 'bookswap', component: TextbookSwapComponent},
+  {path: 'login', component: LonginComponent}
 ];
 
 @NgModule({
