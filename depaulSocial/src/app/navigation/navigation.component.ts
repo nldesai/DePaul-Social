@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router} from "@angular/router";
 
 @Component({
   selector: 'app-navigation',
@@ -7,14 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  navbarOpen = false;
+  constructor(public router: Router) {}
 
-  constructor() { }
-
-  ngOnInit() {}
-
-
-  toggleNavbar() {
-    this.navbarOpen = !this.navbarOpen;
+  ngOnInit() {
   }
+
 }

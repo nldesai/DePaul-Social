@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-study-page',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudyPageComponent implements OnInit {
 
-  constructor() { }
+  // dependency injection to use Router.
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }
