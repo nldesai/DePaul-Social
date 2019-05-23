@@ -15,22 +15,20 @@ import { CreateGroupComponent} from './create-group/create-group.component';
 import { SearchPartnerComponent} from './search-partner/search-partner.component';
 import { JoinStudyComponent} from './join-study/join-study.component';
 import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
+import { LoginComponent} from './login/login.component';
+import { RegisterComponent} from './register/register.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { LonginComponent} from './longin/longin.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/landingPage', pathMatch: 'full'},
   {path: 'landingPage', component: LandingPageComponent},
   {path: '', redirectTo: '/landingPage', pathMatch: 'full'},
   {path: 'booksell', component: TextbookSellComponent },
   {path: 'bookbuy', component: TextbookBuyComponent },
   {path: 'aboutUs', component: AboutUsComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: '', redirectTo: '/landingPage', pathMatch: 'full'},
   {path: 'createMeetup', component: CreateMeetupComponent},
   {path: 'findMeetup', component: FindMeetupComponent},
   {path: 'depaulSocial', component: LandingPageComponent},
-  {path: '', redirectTo: '/depaulSocial', pathMatch: 'full'},
   {path: 'study', component: StudyPageComponent},
   {path: 'meetup', component: MeetupComponent},
   {path: 'home', component: HomepageComponent},
@@ -41,7 +39,8 @@ const routes: Routes = [
   {path: 'create-meetup', component: CreateMeetupComponent},
   {path: 'find-meetup', component: FindMeetupComponent},
   {path: 'bookswap', component: TextbookSwapComponent},
-  {path: 'login', component: LonginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent}
 ];
 
 @NgModule({
