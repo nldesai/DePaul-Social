@@ -54,7 +54,7 @@ import { MeetupsService } from './meetups.service';
     AppRoutingModule,
     NgbModule
   ],
-  providers: [],
+  providers: [MeetupsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
