@@ -1,5 +1,5 @@
 <!-- Show navBar if current route is not equal to the landingPage. -->
-<nav class="navbar navbar-default fixed-top" *ngIf="router.url != '/landingPage'">
+<nav class="navbar navbar-default fixed-top" *ngIf="router.url != '/landingPage' && router.url != '/login' && router.url != '/register'">
   <a routerLink="/home" routerLinkActive="active-link">
     <i class="fa fa-home fa-2x"></i>
   </a>

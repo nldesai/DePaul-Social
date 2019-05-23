@@ -1,5 +1,5 @@
 <!-- Show navBar if current route is not equal to the landingPage. -->
-<footer class="navbar navbar-default fixed-bottom" *ngIf="router.url != '/landingPage'">
+<footer class="navbar navbar-default fixed-bottom" *ngIf="router.url != '/landingPage' && router.url != '/login' && router.url != '/register'">
   <i class="fab fa-twitter fa-2x" id="twitterFeed">
     <span> {{ theTweet.userName + ': ' + theTweet.tweet}}</span>
   </i>
