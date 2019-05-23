@@ -2,35 +2,69 @@
 <app-navigation></app-navigation>
 
 <div class="container">
+
+  <!--Header-->
   <div align="center" >
     <h1 style="padding: 10px">Need a book for a class?</h1>
     <p class="h3" align="center"> Buy your books from other classmates here!</p>
   </div>
-    <div style="padding: 20px">
-    <form>
+
+  <div style="padding: 20px">
+    <form [formGroup]="buyBooks">
       <div class="form-row">
+        <!--course field-->
         <div class="form-group col-md-6">
-          <label for="inputCourseSection">Enter Course Section</label>
-          <input type="text" class="form-control" id="inputCourseSection" placeholder="Course Section">
+          <label for="courseSection">Enter Course Section</label>
+          <input formControlName="courseSection" type="text" class="form-control" id="courseSection" placeholder="csc360" value="">
         </div>
+
+        <!--isbn field-->
         <div class="form-group col-md-6">
           <label for="inputISBN">Enter ISBN</label>
-          <input type="number" class="form-control" id="inputISBN" placeholder="ISBN">
+          <input formControlName="iSBN" type="number" class="form-control" id="inputISBN" placeholder="123456789" value="">
         </div>
       </div>
+
+      <!--button-->
       <div align="center">
-      <button type="submit" class="btn btn-primary">Search</button>
+        <button type="submit" class="btn btn-primary" (click)="searchDB()">Search</button>
       </div>
     </form>
+  </div>
+
+  <!--db check-->
+  <div class= "container" align="center" style="padding: 30px">
+    <div *ngIf="submit == true">
+     <table>
+       <tr style="font-weight: bold">
+         <td><p class="table">Title</p></td>
+         <td><p class="table">ISBN</p></td>
+         <td><p class="table">Price</p></td>
+       </tr>
+       <tr *ngFor="let b of books">
+         <td><p class="table">{{b.title.toLocaleUpperCase()}}</p></td>
+         <td><p class="table">{{b.isbn}}</p></td>
+         <td><p class="table">{{b.price}}</p></td>
+       </tr>
+     </table>
     </div>
-    <div>
-      <p align="center" style="padding: 10px;"> Need to view your class schedule? <br>
+
+    <div *ngIf="submit == false">
+      <h3> Something is wrong :(</h3>
+      {{error}}
+    </div>
+  </div>
+
+
+</div>
+<div class="footer">
+  <footer>
+    <p align="center" style="padding: 10px;"> Need to view your class schedule? <br>
       <a href="https://campusconnect.depaul.edu/psp/CSPRD92/?cmd=login"
          class="badge badge-primary">Click here to redirect to campusconnect!</a>
-      </p>
-    </div>
+    </p>
+  </footer>
 </div>
-
 
 
 <!-- Twitter component -->

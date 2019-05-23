@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule} from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -51,6 +52,7 @@ import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    ReactiveFormsModule
     // NgbModule
   ],
   providers: [],
