@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MeetupsService } from '../meetups.service';
+import { MAJORS } from '../meetup-majors';
+import { Meetup } from '../meetup';
 
 @Component({
   selector: 'app-create-meetup',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateMeetupComponent implements OnInit {
 
-  constructor() { }
+  majors = MAJORS;
+  model = new Meetup();
+
+  constructor(private meetupsService: MeetupsService) { }
 
   ngOnInit() {
   }
 
+  addMeetup() {
+    this.meetupsService.addMeetup(this.model);
+  }
+
+  get print() {
+    return console.table(this.model);
+  }
 }

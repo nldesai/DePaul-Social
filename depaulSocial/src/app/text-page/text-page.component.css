@@ -1,16 +1,18 @@
-.cards {
-    margin-top: 30px;
+.jumbotron {
+    margin-bottom: 80px;
+    background-color: transparent !important;
+    height: 140px;
+    margin-top: 40px;
 }
-  
+
 h1 {
     background-color: #1034A6;
     color: #FFF;
     width: fit-content;
-    margin-top: 80px;
 }
 
 .row {
-    margin-top: 10px;
+    margin-top: 68px;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -32,4 +34,16 @@ a.cards   {
 .card-img {
     max-height: 220px;
     max-width: 330px;
+}
+
+p.card-text {
+    word-break: break-word;
+}
+
+p {
+   width: 300px;
+}
+
+.cards {
+    margin-left: .5em;
 }

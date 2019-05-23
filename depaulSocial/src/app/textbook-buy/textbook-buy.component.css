@@ -1,12 +1,9 @@
 
 h1 {
-  /*
   background-color: #1034A6;
-  color: white;
-  */
-  width: 100%;
-  padding: 30px;
-
+  color: #FFF;
+  width: fit-content;
+  margin-top: 80px;
 }
 
 .container {
@@ -14,6 +11,24 @@ h1 {
   margin-bottom: 20px;
 }
 
-/*#sub_header {*/
-  /*font-size: 1.5em;*/
-/*}*/
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+
+p.table{
+  font-size: 14pt;
+  padding: 2px;
+  text-align: center;
+}
+.tr {
+
+}
+
+.table{
+  padding-bottom: 100%;
+}

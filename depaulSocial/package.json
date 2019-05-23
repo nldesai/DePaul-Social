@@ -21,8 +21,15 @@
     "@angular/platform-browser-dynamic": "^7.2.14",
     "@angular/router": "^7.2.14",
     "@ng-bootstrap/ng-bootstrap": "^4.1.2",
+    "bootstrap": "^4.3.1",
+    "angular-font-awesome": "^3.1.2",
     "core-js": "^2.5.4",
+<<<<<<< HEAD
     "firebase": "^6.0.2",
+=======
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1",
+>>>>>>> 1dd87859f3c8da998ec8e4040775dee72a7c633a
     "rxjs": "~6.3.3",
     "tar": "^4.4.8",
     "tslib": "^1.9.0",

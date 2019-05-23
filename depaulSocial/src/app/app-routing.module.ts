@@ -15,19 +15,21 @@ import { CreateGroupComponent} from './create-group/create-group.component';
 import { SearchPartnerComponent} from './search-partner/search-partner.component';
 import { JoinStudyComponent} from './join-study/join-study.component';
 import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
+import { LoginComponent} from './login/login.component';
+import { RegisterComponent} from './register/register.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/landingPage', pathMatch: 'full'},
   {path: 'landingPage', component: LandingPageComponent},
   {path: '', redirectTo: '/landingPage', pathMatch: 'full'},
   {path: 'booksell', component: TextbookSellComponent },
   {path: 'bookbuy', component: TextbookBuyComponent },
   {path: 'aboutUs', component: AboutUsComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: '', redirectTo: '/landingPage', pathMatch: 'full'},
   {path: 'createMeetup', component: CreateMeetupComponent},
   {path: 'findMeetup', component: FindMeetupComponent},
   {path: 'depaulSocial', component: LandingPageComponent},
+<<<<<<< HEAD
   {
     path: 'study',
     component: StudyPageComponent,
@@ -38,16 +40,21 @@ const routes: Routes = [
       {path: 'searchpartner', component: SearchPartnerComponent}
     ]
   },
+=======
+  {path: 'study', component: StudyPageComponent},
+>>>>>>> 1dd87859f3c8da998ec8e4040775dee72a7c633a
   {path: 'meetup', component: MeetupComponent},
   {path: 'home', component: HomepageComponent},
   {path: 'text', component: TextPageComponent},
   {path: 'create-meetup', component: CreateMeetupComponent},
   {path: 'find-meetup', component: FindMeetupComponent},
-  {path: 'bookswap', component: TextbookSwapComponent}
+  {path: 'bookswap', component: TextbookSwapComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), AngularFontAwesomeModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
