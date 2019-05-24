@@ -1,10 +1,7 @@
+<!--Neal's code-->
 {{print}}
-<!--Navbar component-->
-<!--<app-navigation></app-navigation>-->
-
 <!-- Content -->
 <div class="container-fluid" align="center">
-
   <div class="jumbotron">
     <h1>Find Meetup!</h1>
   </div>
@@ -34,11 +31,12 @@
         <option value="Dorm">Dorm</option>
         <option value="Off Campus">Off Campus</option>
       </select>
-    </div><br>
+    </div>
 
     <!-- Search -->
     <button type="submit" class="btn btn-primary" (click)="search()">Find Meetups</button>
-    <div>
+    
+    <div class="table">
       <table class="table table-striped">
         <thead>
           <tr>
@@ -66,6 +64,3 @@
 
   </form>
 </div>
-
-<!-- Twitter component -->
-<!--<app-footer-twitter-feed></app-footer-twitter-feed>-->
