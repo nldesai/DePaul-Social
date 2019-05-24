@@ -1,12 +1,16 @@
-<!-- Alex's code -->    
-<div class="content-fluid" align="center">
+<!-- Alex's code -->
+<div class="container-fluid" align="center">
     <div class="jumbotron">
         <h1>Looking for a study partner?</h1>
     </div>
 
-    <div class="InputField">
-        <p>Search by class here: <input placeholder="CSC 333, CSC 350, ..." type="text"></p>
-    </div>
+    <form>
+        <!-- Create Meetup -->
+        <div class="form-group">
+            <label for="ClassNameFormControlInput">Search by class here:</label>
+            <input type="text" class="form-control" id="ClassNameFormControlInput" placeholder="CSC 333, CSC 350, ...">
+        </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
 </div>

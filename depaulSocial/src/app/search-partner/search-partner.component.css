@@ -13,3 +13,7 @@ h1 {
 .btn {
     background-color: #1034A6;
 }
+
+.form-group {
+    width: 50%;
+}

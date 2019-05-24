@@ -8,7 +8,7 @@ h1 {
 
 .container {
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 p.table{
@@ -19,4 +19,20 @@ p.table{
 
 .table{
   padding-bottom: 100%;
+}
+
+.form-group {
+  padding: 20px;
+}
+
+.btn {
+  background-color: #1034A6;
+}
+
+.badge {
+  color: #ff0000;
+}
+
+.footer {
+  padding-bottom: 60px;
 }
