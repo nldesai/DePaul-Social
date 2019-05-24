@@ -1,14 +1,11 @@
-
-
-<div class="container">
-
-  <!--Header-->
-  <div align="center" >
-    <h1 style="padding: 10px">Need a book for a class?</h1>
-    <p class="h3" align="center"> Buy your books from other classmates here!</p>
+<!--Tuan's code-->
+<div class="container" align="center">
+  <div>
+    <h1>Need a book for a class?</h1>
+    <!--<p class="h3" align="center"> Buy your books from other classmates here!</p>-->
   </div>
 
-  <div style="padding: 20px">
+  <div class="form-group">
     <form [formGroup]="buyBooks">
       <div class="form-row">
         <!--course field-->
@@ -24,15 +21,12 @@
         </div>
       </div>
 
-      <!--button-->
-      <div align="center">
-        <button type="submit" class="btn btn-primary" (click)="searchDB()">Search</button>
-      </div>
+      <button type="submit" class="btn btn-primary" (click)="searchDB()">Search</button>
     </form>
   </div>
 
   <!--db check-->
-  <div class= "container" align="center" style="padding: 30px">
+  <div class= "container" align="center">
     <div *ngIf="submit == true">
      <table>
        <tr style="font-weight: bold">
@@ -53,18 +47,13 @@
       {{error}}
     </div>
   </div>
-
-
 </div>
+
 <div class="footer">
   <footer>
-    <p align="center" style="padding: 10px;"> Need to view your class schedule? <br>
+    <p align="center"> Need to view your class schedule? <br>
       <a href="https://campusconnect.depaul.edu/psp/CSPRD92/?cmd=login"
-         class="badge badge-primary">Click here to redirect to campusconnect!</a>
+         class="badge">Click here to redirect to campusconnect!</a>
     </p>
   </footer>
 </div>
-
-
-<!-- Twitter component -->
-<!--<app-footer-twitter-feed></app-footer-twitter-feed>-->

@@ -1,9 +1,7 @@
-<!--Navigation component-->
-<!--<app-navigation></app-navigation>-->
 <div *ngIf="router.url == '/meetup';">
   <div class="container-fluid" align="center" style="padding-bottom: 30px">
     <div class="jumbotron">
-      <h1>DEPAUL SOCIAL MEETUPS</h1>
+      <h1>DEPAUL SOCIAL  MEETUPS</h1>
 
       <p class="lead">
         Join thousands of meetups!
@@ -29,12 +27,10 @@
           <!-- Join Study Group card -->
           <a [routerLink]="['findMeetup']" class="card meetups  shadow p-3 mb-5">
             <div class="card-body">
-              <img id="studyGroupIMG" class="card-img" src="../../assets/studentGroups.jpg"
-                alt="Group of DePaul Students.">
+              <img id="studyGroupIMG" class="card-img" src="../../assets/studentGroups.jpg" alt="Group of DePaul Students.">
               <h1 class="card-title">Find Meetup</h1>
               <p class="card-text">
                 Join thousands of existing study groups at DePaul!
-
               </p>
             </div>
           </a>
@@ -43,4 +39,5 @@
     </div>
   </div>
 </div>
+
 <router-outlet></router-outlet>

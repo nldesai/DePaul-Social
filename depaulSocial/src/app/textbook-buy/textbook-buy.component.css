@@ -8,27 +8,31 @@ h1 {
 
 .container {
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
-
 
 p.table{
   font-size: 14pt;
   padding: 2px;
   text-align: center;
 }
-.tr {
-
-}
 
 .table{
   padding-bottom: 100%;
+}
+
+.form-group {
+  padding: 20px;
+}
+
+.btn {
+  background-color: #1034A6;
+}
+
+.badge {
+  color: #ff0000;
+}
+
+.footer {
+  padding-bottom: 60px;
 }

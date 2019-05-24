@@ -1,3 +1,15 @@
+.jumbotron {
+  background-color: transparent !important;
+  height: 140px;
+}
+
 .container-fluid {
-  margin-top: 70px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+  
+h1 {
+  background-color: #1034A6;
+  color: #FFF;
+  width: fit-content;
 }

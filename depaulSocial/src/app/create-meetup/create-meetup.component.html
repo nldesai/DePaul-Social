@@ -1,15 +1,12 @@
-<!--Navbar component-->
-<!--<app-navigation></app-navigation>-->
-
+<!--Neal's code-->
 <!-- Content -->
 {{print}}
 <div class="container-fluid" align="center">
-
   <div class="jumbotron">
     <h1>Create Meetup!</h1>
   </div>
 
-  <form style="padding-bottom: 60px">
+  <form class="form">
     <!-- Create Meetup -->
     <div class="form-group">
       <label for="meetupNameFormControlInput">Meetup Name:</label>
@@ -30,7 +27,7 @@
     </div>
 
     <!-- Time -->
-    <div class="form-group" align="center">
+    <div class="form-group">
       <label for="timeFormControlInput">Time:</label>
       <ngb-timepicker [(ngModel)]="model.time" name="time" [meridian]=true></ngb-timepicker>
     </div>
@@ -64,6 +61,3 @@
     <button type="submit" class="btn btn-primary" (click)="addMeetup()">Create Meetup</button>
   </form>
 </div>
-
-<!-- Twitter component -->
-<!--<app-footer-twitter-feed></app-footer-twitter-feed>-->
