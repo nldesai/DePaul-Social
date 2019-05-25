@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TwitterService} from '../services/twitter.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -18,9 +19,13 @@ export class LandingPageComponent implements OnInit {
     'Tuan Nguyen'
   ];
 
-  constructor() { }
+  constructor(private twitter: TwitterService) { }
 
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.twitter.getDePaulSocialTweets().subscribe(value =>  {
+      console.log(value);
+    })
+  }
 
 }

@@ -7,6 +7,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule} from "@angular/forms";
 
+// Firebase's Angular module.
+import { AngularFireModule} from "@angular/fire";
+import { AngularFireFunctionsModule} from "@angular/fire/functions";
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MeetupComponent } from './meetup/meetup.component';
@@ -30,10 +34,11 @@ import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
 
 import { TwitterService} from './services/twitter.service';
 
-import { MeetupsService } from './meetups.service';
+import { MeetupsService} from "./services/meetups.service";
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LocationBarComponent } from './location-bar/location-bar.component';
+import {environment} from "../environments/environment";
 
 @NgModule({
   declarations: [
@@ -67,7 +72,9 @@ import { LocationBarComponent } from './location-bar/location-bar.component';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireFunctionsModule
   ],
   providers: [TwitterService, MeetupsService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
