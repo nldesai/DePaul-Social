@@ -1,17 +1,15 @@
-<!--<app-navigation></app-navigation>-->
-
-        <!-- Collin's code -->
-        <div class="container-fluid mb-5" id = "teamBox" align = "center">
-            <h1>
-                Meet the Team!
-            </h1>
-          <div id="cardHolder" class="d-flex flex-wrap justify-content-center">
-            <div class="teamCard p-2" *ngFor="let teamMember of names">
+<!-- Collin's code -->
+<div class="container-fluid mb-5" id = "teamBox" align = "center">
+  <div>
+    <h1>
+      Meet the Team!
+    </h1>
+  </div>
+  
+  <div id="cardHolder" class="d-flex flex-wrap justify-content-center">
+    <div class="teamCard p-2" *ngFor="let teamMember of names">
 <!-- want to eventually pass picture path too, but it breaks when I try-->
-              <app-team-card [name] = "teamMember"></app-team-card>
-					</div>
-          </div>
-        </div>
-
-<!-- Footer -->
-<!--<app-footer-twitter-feed></app-footer-twitter-feed>-->
+      <app-team-card [name] = "teamMember"></app-team-card>
+    </div>
+  </div>
+</div>

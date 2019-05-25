@@ -1,21 +1,45 @@
-<!--Navbar component-->
-<!--<app-navigation></app-navigation>-->
-
 <!-- Heather's code -->
 <div class="container-fluid" align="center">
-  
   <div class="jumbotron">
-    <h1>Look for a Study Group</h1>
+      <h1>Look for a Study Group!</h1>
   </div>
 
-  <p> Course Section:
-    <br> <input placeholder="csc360" type="text"></p>
-  <p> Study Topic: <br>
-    <input placeholder="Website Designs" type="text"></p>
-  <p> Select Preferred campus to study:</p>
-  <input type="checkbox" name="campus1" value="Loop"> Loop Campus Only<br>
-  <input type="checkbox" name="campus2" value="LP"> Lincoln Park Campus Only<br>
-  <input type="checkbox" name="campus3" value="Any" checked> Either Campus<br>
-</div>
+  <form>
+      <div class="form-group">
+          <label for="ClassNameFormControlInput">Course Section:</label>
+          <input type="text" class="form-control" id="ClassNameFormControlInput" placeholder="CSC360">
+      </div>
 
-<p align="center"><input onclick="" type="button" value="Search"></p>
+      <div class="form-group">
+          <label for="StudyTopicControlInput">Study Topic:</label>
+          <input type="text" class="form-control" id="studyTopicControlInput" value="Website Designs">
+      </div>
+
+      <div class="form-group">
+          <label for="campusInput">Select Preferred campus to study:</label>
+          
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="loop">
+            <label class="form-check-label" for="check1">
+              Loop Campus Only
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="lpc">
+            <label class="form-check-label" for="check2">
+              Lincoln Park Campus Only
+            </label>
+          </div>
+    
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="either">
+            <label class="form-check-label" for="check3">
+              Either Campus
+            </label>
+          </div>
+        </div>
+
+      <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+</div>
