@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyDfTg0NcD6XIrKEgTQxlf6nr_OvSzvGklo",
-    authDomain: "test-23459.firebaseapp.com",
-    databaseURL: "https://test-23459.firebaseio.com",
-    projectId: "test-23459",
-    storageBucket: "test-23459.appspot.com",
-    messagingSenderId: "994499235267",
-    appId: "1:994499235267:web:02dcdea2a35cf057"
+    apiKey: "AIzaSyAbEUyzdzNxfK7dGfnbRwhU4A_ZmPzSneM",
+    authDomain: "depaulsocial-c76a3.firebaseapp.com",
+    databaseURL: "https://depaulsocial-c76a3.firebaseio.com",
+    projectId: "depaulsocial-c76a3",
+    storageBucket: "depaulsocial-c76a3.appspot.com",
+    messagingSenderId: "92498946152",
+    appId: "1:92498946152:web:2891e9c9bda68dbe"
   }
 };
 
