@@ -5,11 +5,11 @@ import { FormsModule} from '@angular/forms';
 import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule} from '@angular/common/http';
-import { ReactiveFormsModule} from "@angular/forms";
+import { ReactiveFormsModule} from '@angular/forms';
 
 // Firebase's Angular module.
-import { AngularFireModule} from "@angular/fire";
-import { AngularFireFunctionsModule} from "@angular/fire/functions";
+import { AngularFireModule} from '@angular/fire';
+import { AngularFireFunctionsModule} from '@angular/fire/functions';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,7 +38,7 @@ import { MeetupsService} from "./services/meetups.service";
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LocationBarComponent } from './location-bar/location-bar.component';
-import {environment} from "../environments/environment";
+// import {environment} from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -72,9 +72,7 @@ import {environment} from "../environments/environment";
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireFunctionsModule
+    ReactiveFormsModule
   ],
   providers: [TwitterService, MeetupsService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

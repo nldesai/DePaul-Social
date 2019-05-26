@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TwitterService} from '../services/twitter.service';
 import { TweeterUser} from '../models/tweeter-user';
-import { Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-footer-twitter-feed',
@@ -10,10 +10,11 @@ import { Router} from '@angular/router';
 })
 export class FooterTwitterFeedComponent implements OnInit {
 
-  tweets: Array<TweeterUser> = [];
+  tweets: TweeterUser[] = [];
   theTweet: TweeterUser = null;
 
-  constructor(private twitterService: TwitterService, public router: Router){}
+  constructor(private twitterService: TwitterService, public router: Router,
+              private activatedRoute: ActivatedRoute) {}
 
 
   ngOnInit() {
@@ -37,7 +38,8 @@ export class FooterTwitterFeedComponent implements OnInit {
         index = 0;  // infinite loop
       } else {
         this.theTweet = this.tweets[index++];
-        console.log(this.theTweet);
+        // console.log(this.theTweet);
+        console.log(this.tweets);
       }
     }, 2000);
   }

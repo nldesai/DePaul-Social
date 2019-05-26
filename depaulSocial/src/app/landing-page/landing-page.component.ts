@@ -22,10 +22,6 @@ export class LandingPageComponent implements OnInit {
   constructor(private twitter: TwitterService) { }
 
 
-  ngOnInit() {
-    this.twitter.getDePaulSocialTweets().subscribe(value =>  {
-      console.log(value);
-    })
-  }
+  ngOnInit() {}
 
 }

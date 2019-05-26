@@ -12,21 +12,21 @@ import { StudyPageComponent } from './study-page/study-page.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
 import { SearchPartnerComponent } from './search-partner/search-partner.component';
 import { JoinStudyComponent } from './join-study/join-study.component';
-import { RegisterComponent } from "./register/register.component";
-import { LoginComponent } from "./login/login.component";
-import { HomepageComponent } from "./homepage/homepage.component";
-import { TextPageComponent } from "./text-page/text-page.component";
-import { TextbookSwapComponent } from "./textbook-swap/textbook-swap.component";
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { TextPageComponent } from './text-page/text-page.component';
+import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
 
 const routes: Routes = [
   { path: 'landingPage', component: LandingPageComponent },
-  { path: '', redirectTo: '/landingPage', pathMatch: 'full' },
+  { path: '', redirectTo: '/landingPage', pathMatch: 'full'},
   { path: 'aboutUs', component: AboutUsComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'depaulSocial', component: LandingPageComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomepageComponent },
+  { path: 'home', component: HomepageComponent},
 
   {
     path: 'text',
