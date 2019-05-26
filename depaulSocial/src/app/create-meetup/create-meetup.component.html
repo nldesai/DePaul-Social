@@ -6,11 +6,13 @@
     <h1>Create Meetup!</h1>
   </div>
 
-  <form class="form">
+
+  <!--<form class="form">-->
+    <form [formGroup]="meetup" (ngSubmit)="addMeetup()" novalidate>
     <!-- Create Meetup -->
     <div class="form-group">
       <label for="meetupNameFormControlInput">Meetup Name:</label>
-      <input type="text" class="form-control" id="name" required placeholder="CS Club" [(ngModel)]="model.name"
+      <input type="text" class="form-control" id="name" required placeholder="CS Club" formControlName="name"
         name="name">
     </div>
 
@@ -18,7 +20,7 @@
     <div class="form-group">
       <label for="dateFormControlInput">Date:</label>
       <div class="input-group">
-        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model.date" ngbDatepicker
+        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" formControlName="date" ngbDatepicker
           #d="ngbDatepicker">
         <div class="input-group-append">
           <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
@@ -29,13 +31,13 @@
     <!-- Time -->
     <div class="form-group">
       <label for="timeFormControlInput">Time:</label>
-      <ngb-timepicker [(ngModel)]="model.time" name="time" [meridian]=true></ngb-timepicker>
+      <ngb-timepicker formControlName="time" name="time" [meridian]=true></ngb-timepicker>
     </div>
 
     <!-- Select Majors -->
     <div class="form-group">
       <label for="majorFormControlInput">Select Major(s) Relevant to Meetup:</label>
-      <select multiple [(ngModel)]="model.majors" name="majors" class="form-control" id="majors" required>
+      <select multiple formControlName="majors" name="majors" class="form-control" id="majors" required>
         <option *ngFor="let major of majors" [value]="major">{{major}}</option>
       </select>
     </div>
@@ -44,13 +46,13 @@
     <div class="form-group">
       <label for="purposeFormControlInput">Purpose of Meetup:</label>
       <input type="text" class="form-control" id="purpose" required
-        placeholder="Sports, Coding, Mock Interviews...(1 Word)" [(ngModel)]="model.purpose" name="purpose">
+        placeholder="Sports, Coding, Mock Interviews...(1 Word)" formControlName="purpose" name="purpose">
     </div>
 
     <!-- Location -->
     <div class="form-group">
       <label for="locationFormControlInput">Location:</label>
-      <select class="form-control" id="location" required [(ngModel)]="model.location" name="location">
+      <select class="form-control" id="location" required formControlName="location" name="location">
         <option value="Campus">Campus</option>
         <option value="Library">Library</option>
         <option value="Dorm">Dorm</option>
@@ -58,6 +60,7 @@
       </select>
     </div>
 
-    <button type="submit" class="btn btn-primary" (click)="addMeetup()">Create Meetup</button>
+    <button type="button" class="btn btn-secondary gap-right" (click)="resetForm()">Reset</button>
+    <button type="submit" class="btn btn-success" [disabled]="!meetup.valid">Create Meetup</button>
   </form>
 </div>

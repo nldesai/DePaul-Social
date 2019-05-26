@@ -37,7 +37,6 @@ import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
-    MeetupComponent,
     NavigationComponent,
     FooterTwitterFeedComponent,
     MeetupComponent,
