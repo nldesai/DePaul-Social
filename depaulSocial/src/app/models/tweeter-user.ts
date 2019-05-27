@@ -1,4 +1,4 @@
 export interface TweeterUser {
-  userName: string;
-  tweet: string;
+  userName?: string;
+  tweet?: string;
 }

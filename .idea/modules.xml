@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/DePaulSocial.iml" filepath="$PROJECT_DIR$/.idea/DePaulSocial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudFunctions/cloudFunctions.iml" filepath="$PROJECT_DIR$/cloudFunctions/cloudFunctions.iml" />
     </modules>
   </component>
 </project>

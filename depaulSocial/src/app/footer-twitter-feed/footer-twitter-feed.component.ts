@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TwitterService} from '../services/twitter.service';
 import { TweeterUser} from '../models/tweeter-user';
-import { Router} from "@angular/router";
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-footer-twitter-feed',
@@ -10,16 +10,17 @@ import { Router} from "@angular/router";
 })
 export class FooterTwitterFeedComponent implements OnInit {
 
-  tweets: Array<TweeterUser> = [];
+  tweets: TweeterUser[] = [];
   theTweet: TweeterUser = null;
 
-  constructor(private twitterService: TwitterService, public router: Router){}
+  constructor(private twitterService: TwitterService, public router: Router,
+              private activatedRoute: ActivatedRoute) {}
 
 
   ngOnInit() {
     // get the tweets from Twitter first.
     // hardcoded hashTag
-    this.twitterService.getAllTweetsBasedOnHashTag('depaulSocial')
+    this.twitterService.getAllTweetsBasedOnHashTag('DePaulSocial')
       .subscribe((value: TweeterUser[]) => {
         this.tweets = value;
     });
@@ -32,14 +33,14 @@ export class FooterTwitterFeedComponent implements OnInit {
    */
   changeTweets() {
     let index = 0;
-    let timerId = setInterval(() => {
+    const timerId = setInterval(() => {
       if (index >= this.tweets.length) {
         index = 0;  // infinite loop
-      }
-      else {
+      } else {
         this.theTweet = this.tweets[index++];
-        console.log(this.theTweet);
+        // console.log(this.theTweet);
+        console.log(this.tweets);
       }
-    }, 2000)
+    }, 2000);
   }
 }

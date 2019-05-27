@@ -1,6 +1,6 @@
 {
-  "/depaulSocial/*": {
-    "target": "http://localhost:8080",
+  "/DUTwitter/*": {
+    "target": "https://depaulsocial.herokuapp.com",
     "secure": false,
     "logLevel": "debug"
   },
