@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MeetupsService} from "../services/meetups.service";
-import { MAJORS} from "../meetup/meetup-majors";
-import { Meetup} from "../meetup/meetup";
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { MeetupsService} from '../services/meetups.service';
+import { MAJORS} from '../meetup/meetup-majors';
 
 @Component({
   selector: 'app-create-meetup',
@@ -11,18 +11,36 @@ import { Meetup} from "../meetup/meetup";
 export class CreateMeetupComponent implements OnInit {
 
   majors = MAJORS;
-  model = new Meetup();
+  public meetup: FormGroup;
 
-  constructor(private meetupsService: MeetupsService) { }
+  constructor(private meetupsService: MeetupsService, public fb: FormBuilder) { }
 
   ngOnInit() {
+    this.meetupsService.getMeetupsList();
+    this.showForm();
+  }
+
+  showForm() {
+    this.meetup = this.fb.group({
+      name: [''],
+      date: [''],
+      time: [''],
+      majors: [''],
+      purpose: [''],
+      location: ['']
+    })
   }
 
   addMeetup() {
-    this.meetupsService.addMeetup(this.model);
+    this.meetupsService.addMeetup(this.meetup.value);
+    this.resetForm();
+  }
+  
+  resetForm() {
+    this.meetup.reset();
   }
 
   get print() {
-    return console.table(this.model);
+    return console.table(this.meetup.value);
   }
 }

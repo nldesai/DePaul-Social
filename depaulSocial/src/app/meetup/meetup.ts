@@ -1,8 +1,9 @@
-export class Meetup {
+export interface Meetup {
     name: string;
     date;
     time;
-    majors: string[];
+    majors;
     purpose: string;
     location: string;
+    $key: string;
 }
