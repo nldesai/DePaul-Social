@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MeetupsService } from '../meetups.service';
-import { MAJORS } from '../meetup-majors';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { MeetupsService} from '../services/meetups.service';
+import { MAJORS} from '../meetup/meetup-majors';
 
 @Component({
   selector: 'app-create-meetup',

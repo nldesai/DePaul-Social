@@ -4,7 +4,7 @@ import { FormsModule} from '@angular/forms';
 import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule} from '@angular/common/http';
-import { ReactiveFormsModule} from "@angular/forms";
+import { ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MeetupComponent } from './meetup/meetup.component';
@@ -26,13 +26,13 @@ import { FindMeetupComponent } from './find-meetup/find-meetup.component';
 import { JoinStudyComponent} from './join-study/join-study.component';
 import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
 import { TwitterService} from './services/twitter.service';
-import { MeetupsService } from './meetups.service';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LocationBarComponent } from './location-bar/location-bar.component';
-import { AngularFireModule }  from 'angularfire2';
+import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
+import { MeetupsService} from './services/meetups.service';
 
 @NgModule({
   declarations: [

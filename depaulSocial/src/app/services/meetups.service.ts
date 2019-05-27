@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Meetup } from './meetup';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';  // Firebase modules for Database, Data list and Single object
+import { Meetup } from '../meetup/meetup';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,6 @@ export class MeetupsService {
 
   constructor(private db: AngularFireDatabase) { }
 
-  //meetups: Array<Meetup> = [];
   meetups: AngularFireList<any>;
   meetup: AngularFireObject<any>;
 
