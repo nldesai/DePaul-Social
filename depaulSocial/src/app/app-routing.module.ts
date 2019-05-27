@@ -17,6 +17,7 @@ import { LoginComponent } from "./login/login.component";
 import { HomepageComponent } from "./homepage/homepage.component";
 import { TextPageComponent } from "./text-page/text-page.component";
 import { TextbookSwapComponent } from "./textbook-swap/textbook-swap.component";
+import { DiscountPageComponent } from './discount-page/discount-page.component';
 
 const routes: Routes = [
   { path: 'landingPage', component: LandingPageComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomepageComponent },
+  {path: 'discounts', component: DiscountPageComponent},
 
   {
     path: 'text',

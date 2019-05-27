@@ -34,6 +34,7 @@ import { MeetupsService } from './meetups.service';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LocationBarComponent } from './location-bar/location-bar.component';
+import { DiscountPageComponent } from './discount-page/discount-page.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { LocationBarComponent } from './location-bar/location-bar.component';
     TextbookSwapComponent,
     RegisterComponent,
     LoginComponent,
-    LocationBarComponent
+    LocationBarComponent,
+    DiscountPageComponent
   ],
   imports: [
     BrowserModule,
