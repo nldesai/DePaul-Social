@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MeetupsService } from '../meetups.service';
-import { MAJORS } from '../meetup-majors';
-import { Meetup } from '../meetup';
+import { MeetupsService} from "../services/meetups.service";
+import { MAJORS} from "../meetup/meetup-majors";
+import { Meetup} from "../meetup/meetup";
 
 @Component({
   selector: 'app-find-meetup',
