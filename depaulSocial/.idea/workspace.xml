@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7901568-04df-4f4d-9229-22abf92f3a4a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/depaulSocial/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/depaulSocial/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/depaulSocial/main.0d9372e587d48b97b089.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/discount-page/discount-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/discount-page/discount-page.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/discount-page/discount-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/discount-page/discount-page.component.html" afterDir="false" />
-    </list>
+    <list default="true" id="b7901568-04df-4f4d-9229-22abf92f3a4a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -101,23 +93,13 @@
     <panes>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="depaulSocial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="depaulSocial" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559063170075" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559063173497" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -181,16 +163,15 @@
       <workItem from="1558928895110" duration="940000" />
       <workItem from="1558979507212" duration="315000" />
       <workItem from="1558999841490" duration="368000" />
-      <workItem from="1559055225859" duration="2717000" />
+      <workItem from="1559055225859" duration="2793000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34381000" />
+    <option name="totallyTimeSpent" value="34457000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="724" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27786753" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
