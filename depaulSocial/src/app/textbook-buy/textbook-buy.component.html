@@ -6,46 +6,46 @@
   </div>
 
   <div class="form-group">
-    <form [formGroup]="buyBooks">
+    <form>
       <div class="form-row">
         <!--course field-->
         <div class="form-group col-md-6">
           <label for="courseSection">Enter Course Section</label>
-          <input formControlName="courseSection" type="text" class="form-control" id="courseSection" placeholder="csc360" value="">
+          <input type="text" class="form-control" id="courseSection" placeholder="csc360" required [(ngModel)]="class" name="class">
         </div>
 
         <!--isbn field-->
         <div class="form-group col-md-6">
           <label for="inputISBN">Enter ISBN</label>
-          <input formControlName="iSBN" type="number" class="form-control" id="inputISBN" placeholder="123456789" value="">
+          <input type="number" class="form-control" id="inputISBN" placeholder="123456789" required [(ngModel)]="isbn" name="isbn">
         </div>
       </div>
 
-      <button type="submit" class="btn btn-primary" (click)="searchDB()">Search</button>
+      <button type="submit" class="btn btn-primary" (click)="search()">Search</button>
     </form>
   </div>
 
   <!--db check-->
-  <div class= "container" align="center">
-    <div *ngIf="submit == true">
-     <table>
-       <tr style="font-weight: bold">
-         <td><p class="table">Title</p></td>
-         <td><p class="table">ISBN</p></td>
-         <td><p class="table">Price</p></td>
-       </tr>
-       <tr *ngFor="let b of books">
-         <td><p class="table">{{b.title.toLocaleUpperCase()}}</p></td>
-         <td><p class="table">{{b.isbn}}</p></td>
-         <td><p class="table">{{b.price}}</p></td>
-       </tr>
-     </table>
-    </div>
-
-    <div *ngIf="submit == false">
-      <h3> Something is wrong :(</h3>
-      {{error}}
-    </div>
+  <div class="table">
+    <table class="table table-striped table-responsive">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Class</th>
+          <th scope="col">ISBN</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let textBook of filtered">
+          <td>{{ textBook.title }}</td>
+          <td>{{ textBook.class }}</td>
+          <td>{{ textBook.isbn }}</td>
+          <td>{{ textBook.price }}</td>
+          <td><button type="button" class="btn btn-primary">Buy</button></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 
