@@ -39,6 +39,6 @@ export class FooterTwitterFeedComponent implements OnInit {
       } else {
         this.theTweet = this.tweets[index++];
       }
-    }, 2000);
+    }, 4000);
   }
 }
