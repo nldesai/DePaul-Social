@@ -9,6 +9,16 @@ firebase-debug.log*
 # Firebase cache
 .firebase/
 
+
+# dist folder
+dist
+
+
+# others
+package-lock.json
+.vscode
+.editorconfig
+
 # Firebase config
 
 # Uncomment this if you'd like others to create their own Firebase project.
