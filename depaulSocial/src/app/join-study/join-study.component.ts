@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StudyGroupService } from '../services/studygroup.service';
 
 @Component({
   selector: 'app-join-study',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JoinStudyComponent implements OnInit {
 
-  constructor() { }
+  
+
+  constructor(private studyGroupService: StudyGroupService) { }
 
   ngOnInit() {
   }

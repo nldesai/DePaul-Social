@@ -7,23 +7,23 @@
   <form>
       <div class="form-group">
           <label for="ClassNameFormControlInput">Course Section:</label>
-          <input type="text" class="form-control" id="ClassNameFormControlInput" placeholder="CSC360">
+          <input type="text" class="form-control" id="ClassNameFormControlInput" placeholder="CSC360" [(ngModel)]="class">
       </div>
 
       <div class="form-group">
           <label for="StudyTopicControlInput">Study Topic:</label>
-          <input type="text" class="form-control" id="studyTopicControlInput" value="Website Designs">
+          <input type="text" class="form-control" id="studyTopicControlInput" value="Website Designs" [(ngModel)]="topic">
       </div>
 
       <div class="form-group">
-          <label for="campusInput">Select Preferred campus to study:</label>
-          
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="loop">
-            <label class="form-check-label" for="check1">
-              Loop Campus Only
-            </label>
-          </div>
+        <label for="locationFormControlInput">Location:</label>
+        <select class="form-control" id="location" required [(ngModel)]="location" name="location">
+          <option value="Campus">Campus</option>
+          <option value="Library">Library</option>
+          <option value="Dorm">Dorm</option>
+          <option value="Off Campus">Off Campus</option>
+        </select>
+      </div>
     
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="lpc">
