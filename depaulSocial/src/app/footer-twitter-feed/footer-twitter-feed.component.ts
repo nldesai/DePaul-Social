@@ -38,8 +38,6 @@ export class FooterTwitterFeedComponent implements OnInit {
         index = 0;  // infinite loop
       } else {
         this.theTweet = this.tweets[index++];
-        // console.log(this.theTweet);
-        console.log(this.tweets);
       }
     }, 2000);
   }
