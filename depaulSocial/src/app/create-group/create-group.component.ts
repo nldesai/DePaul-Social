@@ -25,6 +25,7 @@ export class CreateGroupComponent implements OnInit {
       date: [''],
       time: [''],
       class: [''],
+      topic: [''],
       location: ['']
     })
   }
