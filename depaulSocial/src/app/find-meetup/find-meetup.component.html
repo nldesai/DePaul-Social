@@ -6,11 +6,11 @@
     <h1>Find Meetup!</h1>
   </div>
 
-  <form>
+  <form [formGroup]="meetup" (ngSubmit)="search()" novalidate>
     <!-- Select Major -->
     <div class="form-group">
       <label for="majorFormControlInput">Select Major:</label>
-      <select class="form-control" id="majors" required [(ngModel)]="major" name="majors">
+      <select class="form-control" id="majors" required formControlName="major" name="majors">
         <option *ngFor="let major of majors" [value]="major">{{major}}</option>
       </select>
     </div>
@@ -19,13 +19,13 @@
     <div class="form-group">
       <label for="interestsFormControlInput">Interests: (Optional)</label>
       <input type="text" class="form-control" id="interests" placeholder="Sports, Coding, Mock Interviews...(1 Word)"
-        [(ngModel)]="interests" name="interests">
+        formControlName="interests" name="interests">
     </div>
 
     <!-- Preferred Location -->
     <div class="form-group">
       <label for="locationFormControlInput">Location:</label>
-      <select class="form-control" id="location" required [(ngModel)]="location" name="location">
+      <select class="form-control" id="location" required formControlName="location" name="location">
         <option value="Campus">Campus</option>
         <option value="Library">Library</option>
         <option value="Dorm">Dorm</option>
@@ -34,9 +34,14 @@
     </div>
 
     <!-- Search -->
-    <button type="submit" class="btn btn-primary" (click)="search()">Find Meetups</button>
-    
-    <div class="table">
+    <div class="buttons">
+      <button type="button" class="btn btn-secondary gap-right" (click)="resetForm()">Reset</button>
+      <button type="submit" class="btn btn-success" [disabled]="!meetup.valid">Find Meetups</button>
+    </div>
+    <!--<button type="submit" class="btn btn-primary" (click)="search()">Find Meetups</button>-->
+  </form>
+
+  <!--<div class="table" *ngIf="submitted">
       <table class="table table-striped table-responsive">
         <thead>
           <tr>
@@ -60,7 +65,58 @@
           </tr>
         </tbody>
       </table>
+    </div> -->
+
+  <div class="card-deck-horizontal test" *ngIf="submitted">
+
+    <div align="center" class="studyGroupCard last" *ngFor="let meetup of filtered">
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="../../assets/JavaConcepts.png" class="card-img" alt="Responsive image">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="studygroup-title">{{ meetup.name }}</h5>
+              <div class="class-info">
+                <p class="class-number">{{ printArray(meetup) }}</p>
+              </div>
+              <div class="meeting-info">
+                <p class="campus">{{ meetup.location }}</p>
+                <div class="row">
+                  <div class="column">
+                    <p class="day">{{ meetup.date.month }}-{{ meetup.date.day }}-{{ meetup.date.year }}</p>
+                  </div>
+                  <div class="column">
+                    <p class="times">{{ meetup.time.hour}}:{{ meetup.time.minute}}</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-bottom">
+                <div class="row">
+                  <div class="column">
+                    <h5 class="student">Heather Duke</h5>
+                    <div id="social">
+                      <a href="#" class="fa fa-facebook"></a>
+                      <a href="#" class="fa fa-twitter"></a>
+                      <a href="#" class="fa fa-snapchat"></a>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div align="center">
+                      <button type="button" class="btn btn-primary">Join Group</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-  </form>
-</div>
+
+  </div>
