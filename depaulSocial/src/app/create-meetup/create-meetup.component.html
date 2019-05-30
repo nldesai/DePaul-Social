@@ -60,7 +60,9 @@
       </select>
     </div>
 
-    <button type="button" class="btn btn-secondary gap-right" (click)="resetForm()">Reset</button>
-    <button type="submit" class="btn btn-success" [disabled]="!meetup.valid">Create Meetup</button>
+    <div class="buttons">
+      <button type="button" class="btn btn-secondary gap-right" (click)="resetForm()">Reset</button>
+      <button type="submit" class="btn btn-success" [disabled]="!meetup.valid">Create Meetup</button>
+    </div>
   </form>
 </div>

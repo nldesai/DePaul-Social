@@ -39,4 +39,7 @@ h1 {
     display: table;
     clear: both;
   }
-  
+
+.last {
+  padding-bottom: 80px;
+}
