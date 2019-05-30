@@ -1,44 +1,117 @@
 <!-- Heather's code -->
 <div class="container-fluid" align="center">
   <div class="jumbotron">
-      <h1>Look for a Study Group!</h1>
+    <h1>Look for a Study Group!</h1>
   </div>
 
-  <form>
-      <div class="form-group">
-          <label for="ClassNameFormControlInput">Course Section:</label>
-          <input type="text" class="form-control" id="ClassNameFormControlInput" placeholder="CSC360">
-      </div>
+  <form [formGroup]="studyGroup" (ngSubmit)="search()" novalidate>
+    <div class="form-group">
+      <label for="ClassNameFormControlInput">Course Section:</label>
+      <input type="text" class="form-control" id="ClassNameFormControlInput" placeholder="CSC360"
+        formControlName="class" required name="class">
+    </div>
 
-      <div class="form-group">
-          <label for="StudyTopicControlInput">Study Topic:</label>
-          <input type="text" class="form-control" id="studyTopicControlInput" value="Website Designs">
-      </div>
+    <div class="form-group">
+      <label for="StudyTopicControlInput">Study Topic: (Optional)</label>
+      <input type="text" class="form-control" id="studyTopicControlInput" value="Website Designs"
+        formControlName="topic" name="topic">
+    </div>
 
-      <div class="form-group">
-          <label for="campusInput">Select Preferred campus to study:</label>
-          
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="loop">
-            <label class="form-check-label" for="check1">
-              Loop Campus Only
-            </label>
+    <div class="form-group">
+      <label for="locationFormControlInput">Location:</label>
+      <select class="form-control" id="location" required formControlName="location" name="location" required>
+        <option value="Loop Campus">Loop Campus</option>
+        <option value="Lincoln Park Campus">Lincoln Park Campus</option>
+        <option value="Either Campus">Either Campus</option>
+      </select>
+    </div>
+
+    <div class="buttons">
+      <button type="button" class="btn btn-secondary gap-right" (click)="resetForm()">Reset</button>
+      <button type="submit" class="btn btn-success" [disabled]="!studyGroup.valid">Find Study Groups</button>
+    </div>
+
+  </form>
+
+  <!--<div class="table" *ngIf="submitted">
+    <table class="table table-striped table-responsive">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Class</th>
+          <th scope="col">Topic</th>
+          <th scope="col">Date</th>
+          <th scope="col">Time</th>
+          <th scope="col">Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let studyGroup of filtered">
+          <td>{{ studyGroup.name }}</td>
+          <td>{{ studyGroup.class }}</td>
+          <td>{{ studyGroup.topic }}</td>
+          <td>{{ studyGroup.date.month }}-{{ studyGroup.date.day }}-{{ studyGroup.date.year }}</td>
+          <td>{{ studyGroup.time.hour}}:{{ studyGroup.time.minute}}</td>
+          <td>{{ studyGroup.location }}</td>
+          <td><button type="button" class="btn btn-primary">Join</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>-->
+
+  <div class="card-deck-horizontal cards" *ngIf="submitted">
+
+    <div align="center" class="studyGroupCard cards" *ngFor="let studyGroup of filtered">
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="../../assets/JavaConcepts.png" class="card-img" alt="Responsive image">
           </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="lpc">
-            <label class="form-check-label" for="check2">
-              Lincoln Park Campus Only
-            </label>
-          </div>
-    
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="either">
-            <label class="form-check-label" for="check3">
-              Either Campus
-            </label>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="studygroup-title">{{ studyGroup.name }}</h5>
+              <div class="class-info">
+                <p class="class-number">Class: {{ studyGroup.class }}</p>
+              </div>
+              <div class="meeting-topic">
+                <p class="class-number">Topic: {{ studyGroup.topic }}</p>
+              </div>
+              <div class="meeting-info">
+                <p class="campus">Location: {{ studyGroup.location }}</p>
+                <div class="row">
+                  <div class="column">
+                    <p class="day">Date: {{ studyGroup.date.month }}-{{ studyGroup.date.day }}-{{ studyGroup.date.year }}</p>
+                  </div>
+                  <div class="column">
+                    <p class="times">Time: {{ studyGroup.time.hour}}:{{ studyGroup.time.minute}}</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-bottom">
+                <div class="row">
+                  <div class="column">
+                    <h5 class="student">Heather Duke</h5>
+                    <div id="social">
+                      <a href="#" class="fa fa-facebook"></a>
+                      <a href="#" class="fa fa-twitter"></a>
+                      <a href="#" class="fa fa-snapchat"></a>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div align="center">
+                      <button type="button" class="btn btn-primary">Join Group</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
           </div>
         </div>
+      </div>
+    </div>
 
     <div align="center">
       <button type="button" class="btn btn-primary">Search</button>

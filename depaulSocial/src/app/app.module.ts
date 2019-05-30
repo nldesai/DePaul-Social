@@ -34,6 +34,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { MeetupsService} from './services/meetups.service';
+import { StudyGroupService } from './services/studygroup.service';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,7 @@ import { MeetupsService} from './services/meetups.service';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule
   ],
-  providers: [TwitterService, MeetupsService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [TwitterService, MeetupsService, StudyGroupService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
