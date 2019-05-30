@@ -67,9 +67,9 @@
       </table>
     </div> -->
 
-  <div class="card-deck-horizontal test" *ngIf="submitted">
+  <div class="card-deck-horizontal cards" *ngIf="submitted">
 
-    <div align="center" class="studyGroupCard last" *ngFor="let meetup of filtered">
+    <div align="center" class="studyGroupCard cards" *ngFor="let meetup of filtered">
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-4">
@@ -79,16 +79,16 @@
             <div class="card-body">
               <h5 class="studygroup-title">{{ meetup.name }}</h5>
               <div class="class-info">
-                <p class="class-number">{{ printArray(meetup) }}</p>
+                <p class="class-number">Majors: {{ printArray(meetup) }}</p>
               </div>
               <div class="meeting-info">
-                <p class="campus">{{ meetup.location }}</p>
+                <p class="campus">Location: {{ meetup.location }}</p>
                 <div class="row">
                   <div class="column">
-                    <p class="day">{{ meetup.date.month }}-{{ meetup.date.day }}-{{ meetup.date.year }}</p>
+                    <p class="day">Date: {{ meetup.date.month }}-{{ meetup.date.day }}-{{ meetup.date.year }}</p>
                   </div>
                   <div class="column">
-                    <p class="times">{{ meetup.time.hour}}:{{ meetup.time.minute}}</p>
+                    <p class="times">Time: {{ meetup.time.hour}}:{{ meetup.time.minute}}</p>
                   </div>
                 </div>
 
@@ -120,3 +120,4 @@
 
 
   </div>
+</div>

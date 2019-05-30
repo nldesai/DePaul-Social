@@ -17,21 +17,22 @@ h1 {
 
 .btn {
     background-color: #1034A6;
+    margin-bottom: 20px;
 }
 
 .table {
     padding-top: 20px;
 }
 
-.test {
-    padding-top: 20px;
+.cards {
+    padding-bottom: 20px;
 }
 
 .column {
     float: left;
     width: 50%;
     padding: 1px;
-    height: 30px; /* Should be removed. Only for demonstration */
+    /*height: 30px;  Should be removed. Only for demonstration */
   }
   
   /* Clear floats after the columns */
@@ -39,8 +40,4 @@ h1 {
     content: "";
     display: table;
     clear: both;
-  }
-  
-  .last {
-    padding-bottom: 80px;
   }
