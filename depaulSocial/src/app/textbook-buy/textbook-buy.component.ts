@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { book } from "./book";
-import {FormControl, FormGroup} from "@angular/forms";
+import { TextBooksService } from '../services/textbooks.service';
+import { TextBook } from '../text-page/textbook';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-textbook-buy',
@@ -8,37 +9,45 @@ import {FormControl, FormGroup} from "@angular/forms";
   styleUrls: ['./textbook-buy.component.css']
 })
 export class TextbookBuyComponent implements OnInit {
-  books:book[] = [];
-  error:String = "";
-  submit:boolean = null;
-  b:book;
 
-    buyBooks = new FormGroup({
-    courseSection: new FormControl(""),
-    iSBN: new FormControl(""),
-  });
+  textBooks: Array<TextBook>;
+  submitted = false;
+  filtered: Array<TextBook>;
+  public textBook: FormGroup;
 
+  constructor(private textBooksService: TextBooksService, public fb: FormBuilder) {}
 
-  searchDB(){
-    if(this.books.length == 0){
-      this.submit = false;
-      this.error = "Error with database, try again later. Populating books, search again :)";
-      this.books.push(this.b = new book("csc321", 345532438, 334.53));
-      this.books.push(this.b = new book("csc360", 123456789, 148.45));
-      this.books.push(this.b = new book("csc241", 546234321, 24.63));
-      this.books.push(this.b = new book("csc242", 956345263, 69.69));
-      this.books.push(this.b = new book("csc371", 435726782, 444.11));
-      this.books.push(this.b = new book("csc373", 454539067, 33.03));
-      this.books.push(this.b = new book("csc376", 945432357, 23.83));
-      this.books.push(this.b = new book("csc374", 312892138, 978.40));
-      this.books.push(this.b = new book("it140", 638391648, 3.50));
-    } else {
-      this.submit = true;
-    }
+  ngOnInit() {
+    let s = this.textBooksService.getTextBooksList();
+    s.snapshotChanges().subscribe(data => {
+      this.textBooks = [];
+      data.forEach(item => {
+        let a = item.payload.toJSON();
+        a['$key'] = item.key;
+        this.textBooks.push(a as TextBook);
+      })
+    });
+    this.showForm();
   }
 
+  showForm() {
+    this.textBook = this.fb.group({
+      class: [''],
+      isbn: ['']
+    })
+  }
 
+  resetForm() {
+    this.textBook.reset();
+    this.submitted = false;
+  }
 
-  constructor() {}
-  ngOnInit() {}
+  get print() {
+    return console.table(this.textBook.get('class').value, this.textBook.get('isbn').value);
+  }
+
+  search() {
+    this.filtered = this.textBooks.filter(textBook => textBook.class === this.textBook.get('class').value && textBook.isbn === this.textBook.get('isbn').value);
+    this.submitted = true;
+  }
 }
