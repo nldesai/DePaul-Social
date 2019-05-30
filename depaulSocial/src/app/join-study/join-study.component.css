@@ -18,10 +18,12 @@ h1 {
 .btn {
     background-color: #1034A6;
     margin-top: 1em;
+    margin-bottom: 20px;
+   /* padding-bottom: 20px;*/
 }
 
 .cards {
-    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .column {
@@ -38,6 +40,3 @@ h1 {
     clear: both;
   }
   
-  .last {
-    padding-bottom: 80px;
-  }

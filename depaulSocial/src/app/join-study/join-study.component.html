@@ -61,7 +61,7 @@
 
   <div class="card-deck-horizontal cards" *ngIf="submitted">
 
-    <div align="center" class="studyGroupCard last" *ngFor="let studyGroup of filtered">
+    <div align="center" class="studyGroupCard cards" *ngFor="let studyGroup of filtered">
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-4">
@@ -71,19 +71,19 @@
             <div class="card-body">
               <h5 class="studygroup-title">{{ studyGroup.name }}</h5>
               <div class="class-info">
-                <p class="class-number">{{ studyGroup.class }}</p>
+                <p class="class-number">Class: {{ studyGroup.class }}</p>
               </div>
               <div class="meeting-topic">
-                <p class="class-number">{{ studyGroup.topic }}</p>
+                <p class="class-number">Topic: {{ studyGroup.topic }}</p>
               </div>
               <div class="meeting-info">
-                <p class="campus">{{ studyGroup.location }}</p>
+                <p class="campus">Location: {{ studyGroup.location }}</p>
                 <div class="row">
                   <div class="column">
-                    <p class="day">{{ studyGroup.date.month }}-{{ studyGroup.date.day }}-{{ studyGroup.date.year }}</p>
+                    <p class="day">Date: {{ studyGroup.date.month }}-{{ studyGroup.date.day }}-{{ studyGroup.date.year }}</p>
                   </div>
                   <div class="column">
-                    <p class="times">{{ studyGroup.time.hour}}:{{ studyGroup.time.minute}}</p>
+                    <p class="times">Time: {{ studyGroup.time.hour}}:{{ studyGroup.time.minute}}</p>
                   </div>
                 </div>
 
