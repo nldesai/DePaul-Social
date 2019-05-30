@@ -6,34 +6,49 @@
   </div>
 
   <div>
-    <form>
+    <form [formGroup]="textBook" (ngSubmit)="addTextBook()" novalidate>
       <div class="form-row">
 
         <!--field1-->
         <div class="form-group col-md-6">
-          <label for="inputCourseSection">Enter Course Section</label>
-          <input type="text" class="form-control" id="inputCourseSection" placeholder="Course Section">
+          <label for="inputBookTitle">Enter Book Title</label>
+          <input type="text" class="form-control" id="inputBookTitle" placeholder="Algorithms" required
+            formControlName="title">
         </div>
 
         <!--field2-->
         <div class="form-group col-md-6">
+          <label for="inputCourseSection">Enter Course Section</label>
+          <input type="text" class="form-control" id="inputCourseSection" placeholder="Course Section" required
+            formControlName="class">
+        </div>
+
+        <!--field3-->
+        <div class="form-group col-md-6">
           <label for="inputISBN">Enter ISBN</label>
-          <input type="number" class="form-control" id="inputISBN" placeholder="ISBN">
+          <input type="number" class="form-control" id="inputISBN" placeholder="ISBN" required formControlName="isbn">
+        </div>
+
+        <!--field4-->
+        <div class="form-group col-md-6">
+          <label for="inputISBN">Enter Price</label>
+          <input type="number" class="form-control" id="inputPRICE" placeholder="20" required formControlName="price">
         </div>
       </div>
 
       <!--button-->
       <div>
-        <button type="submit" class="btn btn-primary">Search</button>
+        <button type="button" class="btn btn-secondary gap-right" (click)="resetForm()">Reset</button>
+        <button type="submit" class="btn btn-success" [disabled]="!textBook.valid">Sell TextBook</button>
       </div>
 
     </form>
   </div>
 
-  <div class="campusconnect" >
+  <div class="campusconnect">
     <p> Need to view your class schedule? <br>
-      <a href="https://campusconnect.depaul.edu/psp/CSPRD92/?cmd=login"
-         class="badge">Click here to redirect to campusconnect!</a>
+      <a href="https://campusconnect.depaul.edu/psp/CSPRD92/?cmd=login" class="badge">Click here to redirect to
+        campusconnect!</a>
     </p>
   </div>
 

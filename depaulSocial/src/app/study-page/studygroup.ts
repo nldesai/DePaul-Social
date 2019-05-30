@@ -1,9 +1,9 @@
-export interface Meetup {
+export interface StudyGroup {
     name: string;
     date;
     time;
-    majors;
-    purpose: string;
+    topic: string;
+    class: string;
     location: string;
     $key: string;
 }

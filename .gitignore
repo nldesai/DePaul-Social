@@ -4,7 +4,6 @@
 index
 
 # compiled output
-/dist
 /tmp
 /out-tsc
 # Only exists if Bazel was run
@@ -24,6 +23,13 @@ depaulSocial/.idea
 
 # IDEs and editors
 depaulSocial/.vscode
+
+
+# others
+depaulSocial/package-lock.json
+depaulSocial/dist
+depaulSocial/.vscode
+depaulSocial/.firebase
 
 
 # misc

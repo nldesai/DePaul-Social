@@ -1,25 +1,38 @@
 import { Injectable } from '@angular/core';
-import { Meetup} from "../meetup/meetup";
+import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';  // Firebase modules for Database, Data list and Single object
+import { Meetup } from '../meetup/meetup';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MeetupsService {
 
-  constructor() { }
+  constructor(private db: AngularFireDatabase) { }
 
-  meetups: Array<Meetup> = [];
+  meetups: AngularFireList<any>;
+  meetup: AngularFireObject<any>;
 
   addMeetup(meetup: Meetup) {
     this.meetups.push(meetup);
   }
 
-  filterWithoutInterests(major: string, location: string) {
-    return this.meetups.filter(meetup => meetup.majors.includes(major) && meetup.location === location);
+  // Fetch Single Meetup Object
+  getMeetup(id: string) {
+    this.meetup = this.db.object('meetups-list/' + id);
+    return this.meetup;
   }
-
-  filterWithInterests(major: string, interests: string, location: string) {
-    return this.meetups.filter(meetup => meetup.majors.includes(major) && meetup.purpose === interests && meetup.location === location);
+  // Fetch Meetups List
+  getMeetupsList() {
+    this.meetups = this.db.list('meetups-list');
+    return this.meetups;
   }
-
+  // Update Meetup
+  updateMeetup(meetup: Meetup) {
+    this.meetup.update(meetup);
+  }
+  // Delete Meetup Object
+  deleteMeetup(id: string) {
+    this.meetup = this.db.object('meetups-list/' + id);
+    this.meetup.remove();
+  }
 }

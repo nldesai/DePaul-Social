@@ -36,14 +36,6 @@ a.cards   {
     max-width: 330px;
 }
 
-p.card-text {
-    word-break: break-word;
-}
-
-p {
-   width: 300px;
-}
-
 .cards {
     margin-left: .5em;
 }

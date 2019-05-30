@@ -1,16 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule} from '@angular/forms';
-
 import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule} from '@angular/forms';
-
-// Firebase's Angular module.
-import { AngularFireModule} from '@angular/fire';
-import { AngularFireFunctionsModule} from '@angular/fire/functions';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MeetupComponent } from './meetup/meetup.component';
@@ -31,19 +25,21 @@ import { CreateMeetupComponent } from './create-meetup/create-meetup.component';
 import { FindMeetupComponent } from './find-meetup/find-meetup.component';
 import { JoinStudyComponent} from './join-study/join-study.component';
 import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
-
 import { TwitterService} from './services/twitter.service';
-
-import { MeetupsService} from "./services/meetups.service";
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LocationBarComponent } from './location-bar/location-bar.component';
-// import {environment} from '../environments/environment';
+import { DiscountPageComponent } from './discount-page/discount-page.component';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
+import { MeetupsService} from './services/meetups.service';
+import { TextBooksService } from './services/textbooks.service';
+import { StudyGroupService } from './services/studygroup.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MeetupComponent,
     NavigationComponent,
     FooterTwitterFeedComponent,
     MeetupComponent,
@@ -64,7 +60,8 @@ import { LocationBarComponent } from './location-bar/location-bar.component';
     TextbookSwapComponent,
     RegisterComponent,
     LoginComponent,
-    LocationBarComponent
+    LocationBarComponent,
+    DiscountPageComponent
   ],
   imports: [
     BrowserModule,
@@ -72,9 +69,12 @@ import { LocationBarComponent } from './location-bar/location-bar.component';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
   ],
-  providers: [TwitterService, MeetupsService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+
+  providers: [TwitterService, MeetupsService, TextBooksService,StudyGroupService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
