@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TextBooksService } from '../services/textbooks.service';
 import { TextBook } from '../text-page/textbook';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-textbook-buy',
@@ -9,13 +10,12 @@ import { TextBook } from '../text-page/textbook';
 })
 export class TextbookBuyComponent implements OnInit {
 
-  class: string;
-  isbn: number;
   textBooks: Array<TextBook>;
   submitted = false;
   filtered: Array<TextBook>;
+  public textBook: FormGroup;
 
-  constructor(private textBooksService: TextBooksService) {}
+  constructor(private textBooksService: TextBooksService, public fb: FormBuilder) {}
 
   ngOnInit() {
     let s = this.textBooksService.getTextBooksList();
@@ -26,15 +26,28 @@ export class TextbookBuyComponent implements OnInit {
         a['$key'] = item.key;
         this.textBooks.push(a as TextBook);
       })
+    });
+    this.showForm();
+  }
+
+  showForm() {
+    this.textBook = this.fb.group({
+      class: [''],
+      isbn: ['']
     })
   }
 
+  resetForm() {
+    this.textBook.reset();
+    this.submitted = false;
+  }
+
   get print() {
-    return console.table(this.class, this.isbn);
+    return console.table(this.textBook.get('class').value, this.textBook.get('isbn').value);
   }
 
   search() {
-    this.filtered = this.textBooks.filter(textBook => textBook.class === this.class && textBook.isbn === this.isbn);
+    this.filtered = this.textBooks.filter(textBook => textBook.class === this.textBook.get('class').value && textBook.isbn === this.textBook.get('isbn').value);
     this.submitted = true;
   }
 }
