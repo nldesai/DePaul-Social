@@ -21,7 +21,7 @@
       <label for="dateFormControlInput">Date:</label>
       <div class="input-group">
         <input class="form-control" placeholder="yyyy-mm-dd" name="dp" formControlName="date" ngbDatepicker
-          #d="ngbDatepicker">
+          #d="ngbDatepicker" required>
         <div class="input-group-append">
           <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
         </div>
@@ -31,7 +31,7 @@
     <!-- Time -->
     <div class="form-group">
       <label for="timeFormControlInput">Time:</label>
-      <ngb-timepicker formControlName="time" name="time" [meridian]=true></ngb-timepicker>
+      <ngb-timepicker formControlName="time" name="time" [meridian]=true required></ngb-timepicker>
     </div>
 
     <!-- Select Majors -->
@@ -52,7 +52,7 @@
     <!-- Location -->
     <div class="form-group">
       <label for="locationFormControlInput">Location:</label>
-      <select class="form-control" id="location" required formControlName="location" name="location">
+      <select class="form-control" id="location" required formControlName="location" name="location" required>
         <option value="Campus">Campus</option>
         <option value="Library">Library</option>
         <option value="Dorm">Dorm</option>
@@ -60,7 +60,9 @@
       </select>
     </div>
 
-    <button type="button" class="btn btn-secondary gap-right" (click)="resetForm()">Reset</button>
-    <button type="submit" class="btn btn-success" [disabled]="!meetup.valid">Create Meetup</button>
+    <div class="buttons">
+      <button type="button" class="btn btn-secondary gap-right" (click)="resetForm()">Reset</button>
+      <button type="submit" class="btn btn-success" [disabled]="!meetup.valid">Create Meetup</button>
+    </div>
   </form>
 </div>

@@ -29,11 +29,13 @@ import { TwitterService} from './services/twitter.service';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LocationBarComponent } from './location-bar/location-bar.component';
+import { DiscountPageComponent } from './discount-page/discount-page.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { MeetupsService} from './services/meetups.service';
 import { TextBooksService } from './services/textbooks.service';
+import { StudyGroupService } from './services/studygroup.service';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,8 @@ import { TextBooksService } from './services/textbooks.service';
     TextbookSwapComponent,
     RegisterComponent,
     LoginComponent,
-    LocationBarComponent
+    LocationBarComponent,
+    DiscountPageComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +73,8 @@ import { TextBooksService } from './services/textbooks.service';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule
   ],
-  providers: [TwitterService, MeetupsService, TextBooksService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+
+  providers: [TwitterService, MeetupsService, TextBooksService,StudyGroupService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
