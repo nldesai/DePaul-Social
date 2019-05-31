@@ -7,8 +7,8 @@ import { FormGroup} from '@angular/forms';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import {Observable} from 'rxjs';
 import UserCredential = firebase.auth.UserCredential;
-import {UserInfo} from 'firebase';
-import {book} from '../textbook-buy/book';
+import * as firebase from 'firebase';
+
 
 @Injectable({
   providedIn: 'root'
@@ -20,14 +20,15 @@ export class AuthenticationService {
 
   currentUser: UserCredential;
 
-  verifiedUser: boolean;
+  isUserVerified: boolean;
 
-  // Users collection.
+  // Users collection from Firebase.
   private userCollection: AngularFirestoreCollection<User>;
 
   constructor(private authService: AngularFireAuth,
               private database: AngularFirestore,
               private router: Router) {
+
    this.userCollection = database.collection<User>('users');
    this.userList = this.userCollection.valueChanges();
   }
@@ -62,46 +63,68 @@ export class AuthenticationService {
           currentUser.sendEmailVerification();
         });
       })
-      // 2) add the user to the DePaulSocial database.
+      // 2) add the user to DePaulSocial db.
+      .then((value => {
+        this.userCollection.add(newUser);
+      }))
       .finally(() => {
-        this.userCollection.add(newUser)
-          .catch((onFailure) => {
-            console.log('Failed adding new user to the DePaulSocial database. Reason: ' + onFailure);
-          })
-          .then((onSuccess) => {
-            console.log('Success adding new user to the DePaulSocial database.');
-          })
-          .finally(() => {
-            this.router.navigateByUrl('login');
-          });
+        this.router.navigateByUrl('login');
       });
   }
 
   /**
    * Function for the login component.
+   * @returns the current user trying to log in.
    */
-  checkUserCredentials(email: string, password: string) {
-    this.authService.auth.signInWithEmailAndPassword(email, password)
+  checkUserCredentials(email: string, password: string): Promise <UserCredential> {
+    return this.authService.auth.signInWithEmailAndPassword(email, password)
       .catch((onFailure) => {
         console.log('Failed credentials.' + onFailure);
-        this.setStatus(false);
       })
-      .then((onSuccess: UserCredential) => {
-        console.log('Hello! ' + onSuccess);
-        this.setStatus(true);
-        this.currentUser = onSuccess;
+      .then((currentUser: UserCredential) => {
+        this.authService.auth.setPersistence(firebase.auth.Auth.Persistence.SESSION); // persist the user session until it logs out.
+        console.log('Hello! ' + currentUser.user.email);
+        this.currentUser = currentUser;
+        return currentUser;
       });
   }
 
-
-  setStatus(status: boolean) {
-    this.verifiedUser = status;
+  /**
+   * @param status
+   * If the function checkUserCredentials() returns an object of UserCredential, then
+   * this function will be called from the login.component.ts to set the status to true,
+   * so that the login.guard.ts lets the user log in.
+   *
+   */
+  setVerifiedUserStatus(status: boolean) {
+    this.isUserVerified = status;
   }
-  isLoggedIn(): boolean {
-    return this.getCurrentUser() != null;
+
+  /**
+   * @returns the isVerified boolean literal.
+   *
+   */
+  get isLoggedIn() {
+    return this.isUserVerified;
   }
 
+  /**
+   * @returns the current user that is logged in.
+   */
   getCurrentUser() {
     return this.currentUser;
+  }
+
+  logout() {
+   this.authService.auth.signOut()
+     .catch((onError) => {
+       console.log('Could not log out. Reason: ' + onError);
+     })
+     .then((onSuccess) => {
+       console.log('logged out.');
+     })
+     .finally(() => {
+       this.router.navigate(['login']);
+     });
   }
 }

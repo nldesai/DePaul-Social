@@ -4,7 +4,7 @@
       <h1>Login</h1>
    </div>
 
-   <form class="formstyle" [formGroup]="loginFormGroup" (ngSubmit)="login()">
+   <form class="formstyle" [formGroup]="loginFormGroup" (ngSubmit)="login(loginFormGroup.get('email').value, loginFormGroup.get('password').value)">
       <div class="form-group">
          <label class="user" for="emailField">Email:</label>
          <input formControlName="email" class="form-control-md" type= "text" id="emailField">
