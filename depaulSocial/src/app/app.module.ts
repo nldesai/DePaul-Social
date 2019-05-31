@@ -30,12 +30,17 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { LocationBarComponent } from './location-bar/location-bar.component';
 import { DiscountPageComponent } from './discount-page/discount-page.component';
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { MeetupsService} from './services/meetups.service';
 import { TextBooksService } from './services/textbooks.service';
 import { StudyGroupService } from './services/studygroup.service';
+
+// AngularFire (Firebase modules).
+import { AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import { AngularFireModule} from '@angular/fire';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import {AuthenticationService} from './services/authentication.service';
 
 @NgModule({
   declarations: [
@@ -71,10 +76,13 @@ import { StudyGroupService } from './services/studygroup.service';
     HttpClientModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
 
-  providers: [TwitterService, MeetupsService, TextBooksService,StudyGroupService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [ TwitterService, AuthenticationService , MeetupsService, TextBooksService, StudyGroupService,
+      {provide: LocationStrategy, useClass: HashLocationStrategy} ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

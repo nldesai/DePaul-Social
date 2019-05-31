@@ -18,26 +18,28 @@ import { LoginComponent } from './login/login.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { TextPageComponent } from './text-page/text-page.component';
 import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
+import { LoginGuard} from './guards/login.guard';
+
+
 
 const routes: Routes = [
-  { path: 'landingPage', component: LandingPageComponent },
+  { path: 'landingPage', component: LandingPageComponent},
   { path: '', redirectTo: '/landingPage', pathMatch: 'full'},
-  { path: 'aboutUs', component: AboutUsComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'depaulSocial', component: LandingPageComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'aboutUs', component: AboutUsComponent},
+  { path: 'profile', component: ProfileComponent},
+  { path: 'depaulSocial', component: LandingPageComponent},
+  { path: 'register', component: RegisterComponent},
+  { path: 'login', component: LoginComponent},
   {path: 'discounts', component: DiscountPageComponent},
-  { path: 'home', component: HomepageComponent},
+  { path: 'home', component: HomepageComponent, canActivate: [LoginGuard]},
 
   {
     path: 'text',
     component: TextPageComponent,
     children: [
-
       { path: 'booksell', component: TextbookSellComponent },
       { path: 'bookbuy', component: TextbookBuyComponent },
-      { path: 'bookswap', component: TextbookSwapComponent }
+      { path: 'bookswap', component: TextbookSwapComponent },
     ]
   },
 
@@ -45,7 +47,6 @@ const routes: Routes = [
     path: 'study',
     component: StudyPageComponent,
     children: [
-
       { path: 'join-study-group', component: JoinStudyComponent },
       { path: 'create-group', component: CreateGroupComponent },
       { path: 'searchpartner', component: SearchPartnerComponent }
