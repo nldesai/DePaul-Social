@@ -13,7 +13,8 @@ export class FooterTwitterFeedComponent implements OnInit {
   tweets: TweeterUser[] = [];
   theTweet: TweeterUser = {
     userName: '',
-    tweet: ''
+    tweet: '',
+    photoUrl: ''
   };
 
   constructor(private twitterService: TwitterService, public router: Router) {}

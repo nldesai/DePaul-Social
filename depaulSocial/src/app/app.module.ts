@@ -37,12 +37,18 @@ import { StudyGroupService } from './services/studygroup.service';
 
 // AngularFire (Firebase modules).
 import { AngularFireAuthModule} from '@angular/fire/auth';
-import {AngularFirestoreModule} from '@angular/fire/firestore';
+import { AngularFirestoreModule} from '@angular/fire/firestore';
 import { AngularFireModule} from '@angular/fire';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import {AuthenticationService} from './services/authentication.service';
-import {LoginGuard} from './guards/login.guard';
-import {UserService} from './services/user.service';
+import { AuthenticationService} from './services/authentication.service';
+import { LoginGuard} from './guards/login.guard';
+import { UserService} from './services/user.service';
+
+
+// bootstrap
+import { NgbTooltipModule} from '@ng-bootstrap/ng-bootstrap';
+import { TwitterComponent } from './twitter/twitter.component';
+import {TwitterResolverService} from './resolvers/twitter-resolver.service';
 
 
 @NgModule({
@@ -69,7 +75,8 @@ import {UserService} from './services/user.service';
     RegisterComponent,
     LoginComponent,
     LocationBarComponent,
-    DiscountPageComponent
+    DiscountPageComponent,
+    TwitterComponent
   ],
   imports: [
     BrowserModule,
@@ -81,7 +88,8 @@ import {UserService} from './services/user.service';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    NgbTooltipModule
   ],
 
   providers: [
@@ -92,6 +100,7 @@ import {UserService} from './services/user.service';
     TextBooksService,
     StudyGroupService,
     UserService,
+    TwitterResolverService,
     {
       provide: LocationStrategy, useClass: HashLocationStrategy
     }],
