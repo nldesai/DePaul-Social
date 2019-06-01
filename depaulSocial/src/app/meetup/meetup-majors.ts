@@ -100,7 +100,7 @@ export const MAJORS: string[] = [
     'Theatre Arts',
     'Theatre Management',
     'Theatre Technology',
-    'User Experience Design',
+    'UserDU Experience Design',
     'Women\'s and Gender Studies',
     'World Language Education',
     'Writing, Rhetoric and Discourse'

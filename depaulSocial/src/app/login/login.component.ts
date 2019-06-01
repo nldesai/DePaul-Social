@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthenticationService} from '../services/authentication.service';
 import {FormControl, FormGroup} from '@angular/forms';
-import {LoginGuard} from '../guards/login.guard';
 import {Router} from '@angular/router';
 import UserCredential = firebase.auth.UserCredential;
+import {User} from 'firebase';
 
 
 @Component({
@@ -15,9 +15,10 @@ export class LoginComponent implements OnInit {
 
   loginFormGroup: FormGroup;
 
-  currentUser: UserCredential;
+  user: User;
 
-  constructor(private service: AuthenticationService, private router: Router) { }
+  constructor(private service: AuthenticationService,
+              private router: Router) { }
 
   ngOnInit() {
     this.loginFormGroup = new FormGroup({
@@ -33,10 +34,9 @@ export class LoginComponent implements OnInit {
         console.log('Could not get user. ' + reason);
       })
       .then((value: UserCredential) => {
-        this.currentUser = value;
+        this.user = value.user;
         this.router.navigateByUrl('/home');
         this.service.setVerifiedUserStatus(true);
-        alert(this.currentUser.user.email);
       });
   }
 }

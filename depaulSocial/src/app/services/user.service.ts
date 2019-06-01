@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {AngularFireDatabase, AngularFireList, AngularFireObject} from '@angular/fire/database';
 import {AngularFireAuth} from '@angular/fire/auth';
-import {User} from '../models/user';
+import {UserDU} from '../models/userDU';
 import {FormGroup} from '@angular/forms';
 import UserCredential = firebase.auth.UserCredential;
 
@@ -13,7 +13,7 @@ import {Router} from '@angular/router';
 export class UserService {
 
   private userList: AngularFireList<any>;
-  private user: AngularFireObject<any>;
+  private user: AngularFireObject<UserDU>;
 
   constructor(private DUSocialDB: AngularFireDatabase,
               private authService: AngularFireAuth,
@@ -22,7 +22,7 @@ export class UserService {
   }
 
   addUser(registrationForm: FormGroup) {
-    const newUser: User = {
+    const newUser: UserDU = {
       firstName: registrationForm.get('firstName').value,
       lastName: registrationForm.get('lastName').value,
       gender: registrationForm.get('gender').value,
@@ -41,7 +41,7 @@ export class UserService {
       })
       // 2) add it to the database.
       .then((onSuccess: UserCredential) => {
-        console.log('Success registering new user for Firebase authentication. User:'
+        console.log('Success registering new user for Firebase authentication. UserDU:'
           + onSuccess.additionalUserInfo.username);
         alert('Check your email for email address verification.');
         this.authService.authState.subscribe((currentUser) => {
@@ -53,11 +53,12 @@ export class UserService {
       });
   }
 
+
   get usersList() {
     return this.userList;
   }
 
-  updateUser(user: User) {
+  updateUser(user: UserDU) {
     return this.user.update(user);
   }
 }
