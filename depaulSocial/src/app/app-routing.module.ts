@@ -19,7 +19,6 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { TextPageComponent } from './text-page/text-page.component';
 import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
 import { LoginGuard} from './guards/login.guard';
-import {Log} from '@angular/core/testing/src/logger';
 
 
 

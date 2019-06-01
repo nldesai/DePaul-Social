@@ -42,6 +42,7 @@ import { AngularFireModule} from '@angular/fire';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import {AuthenticationService} from './services/authentication.service';
 import {LoginGuard} from './guards/login.guard';
+import {UserService} from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -82,8 +83,17 @@ import {LoginGuard} from './guards/login.guard';
     AngularFirestoreModule
   ],
 
-  providers: [ TwitterService, AuthenticationService, LoginGuard , MeetupsService, TextBooksService, StudyGroupService,
-      {provide: LocationStrategy, useClass: HashLocationStrategy} ],
+  providers: [
+    TwitterService,
+    AuthenticationService,
+    LoginGuard,
+    MeetupsService,
+    TextBooksService,
+    StudyGroupService,
+    UserService,
+    {
+      provide: LocationStrategy, useClass: HashLocationStrategy
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

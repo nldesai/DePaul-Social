@@ -1,14 +1,9 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth} from '@angular/fire/auth';
 import { Router} from '@angular/router';
-import { User} from '../models/user';
-import { FormGroup} from '@angular/forms';
 
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import {Observable} from 'rxjs';
 import UserCredential = firebase.auth.UserCredential;
 import * as firebase from 'firebase';
-
 
 @Injectable({
   providedIn: 'root'
@@ -16,61 +11,11 @@ import * as firebase from 'firebase';
 
 export class AuthenticationService {
 
-  userList: Observable <User[]>;
+  // current user's credentials &  its log-in verified status.
+  public currentUser: UserCredential;
+  public isUserVerified: boolean;
 
-  currentUser: UserCredential;
-
-  isUserVerified: boolean;
-
-  // Users collection from Firebase.
-  private userCollection: AngularFirestoreCollection<User>;
-
-  constructor(private authService: AngularFireAuth,
-              private database: AngularFirestore,
-              private router: Router) {
-
-   this.userCollection = database.collection<User>('users');
-   this.userList = this.userCollection.valueChanges();
-  }
-
-
-  /**
-   * Calls the db to save the info from the group form.
-   * @param registrationForm containing the User's information.
-   */
-  createUser(registrationForm: FormGroup) {
-    const newUser: User = {
-      firstName: registrationForm.get('firstName').value,
-      lastName: registrationForm.get('lastName').value,
-      gender: registrationForm.get('gender').value,
-      userName: registrationForm.get('userName').value,
-      password: registrationForm.get('password').value,
-      birthdate: registrationForm.get('birthdate').value,
-      age: registrationForm.get('age').value,
-      email: registrationForm.get('email').value.toString().trim()
-    };
-
-    // 1) add the user to Authentication Firebase.
-    this.authService.auth.createUserWithEmailAndPassword(newUser.email, newUser.password)
-      .catch((onFailure) => {
-        console.log('Failed registering new user for Firebase authentication. Reason: ' + onFailure);
-      })
-      .then((onSuccess: UserCredential) => {
-        console.log('Success registering new user for Firebase authentication. User:'
-          + onSuccess.additionalUserInfo.username);
-
-        this.authService.authState.subscribe((currentUser) => {
-          currentUser.sendEmailVerification();
-        });
-      })
-      // 2) add the user to DePaulSocial db.
-      .then((value => {
-        this.userCollection.add(newUser);
-      }))
-      .finally(() => {
-        this.router.navigateByUrl('login');
-      });
-  }
+  constructor(private authService: AngularFireAuth, private router: Router){}
 
   /**
    * Function for the login component.
@@ -83,7 +28,6 @@ export class AuthenticationService {
       })
       .then((currentUser: UserCredential) => {
         this.authService.auth.setPersistence(firebase.auth.Auth.Persistence.SESSION); // persist the user session until it logs out.
-        console.log('Hello! ' + currentUser.user.email);
         this.currentUser = currentUser;
         return currentUser;
       });
