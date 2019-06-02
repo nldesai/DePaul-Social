@@ -49,6 +49,7 @@ import { UserService} from './services/user.service';
 import { NgbTooltipModule} from '@ng-bootstrap/ng-bootstrap';
 import { TwitterComponent } from './twitter/twitter.component';
 import {TwitterResolverService} from './resolvers/twitter-resolver.service';
+import {UserDetailService} from './services/user-detail.service';
 
 
 @NgModule({
@@ -101,6 +102,7 @@ import {TwitterResolverService} from './resolvers/twitter-resolver.service';
     StudyGroupService,
     UserService,
     TwitterResolverService,
+    UserDetailService,
     {
       provide: LocationStrategy, useClass: HashLocationStrategy
     }],

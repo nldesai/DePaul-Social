@@ -4,8 +4,9 @@ import {Router} from '@angular/router';
 
 import UserCredential = firebase.auth.UserCredential;
 import * as firebase from 'firebase';
-import {User} from 'firebase';
+import {User, UserInfo} from 'firebase';
 import {LocalStorage} from '@ngx-pwa/local-storage';
+import {UserDetailsFirebase} from '../models/user-details-firebase';
 
 @Injectable({
   providedIn: 'root'
@@ -14,16 +15,16 @@ import {LocalStorage} from '@ngx-pwa/local-storage';
 export class AuthenticationService {
 
   // current user in firebase.
-  public currentUser = firebase.auth().currentUser;
+  public currentUser: User = firebase.auth().currentUser;
   // will keep track of the user's state: verified or not
   public isUserVerified: boolean;
 
-  public user: User;
 
   constructor(private authService: AngularFireAuth,
               private router: Router,
               private localStorage: LocalStorage) {
   }
+
   /**
    * Function for the login component.
    * @returns the current user trying to log in.
@@ -58,23 +59,40 @@ export class AuthenticationService {
    * @returns the isVerified boolean literal from the local storage.
    *
    */
-   getIsLoggedIn() {
-     return this.localStorage.getItem('verifiedUser');
+  getIsLoggedIn() {
+    return this.localStorage.getItem('verifiedUser');
   }
 
   /**
-   * @returns the current user that is logged in.
+   * @returns the current user that is logged in and saves it to the local storage.
    */
-  getCurrentSignInUser(): User {
-    this.authService.auth.onAuthStateChanged((user) => {
+  getCurrentSignInUser(): UserDetailsFirebase {
+    const firebaseUserx: UserDetailsFirebase = new UserDetailsFirebase();
+
+    this.authService.auth.onAuthStateChanged((user: User) => {
+      const firebaseUser: UserDetailsFirebase = new UserDetailsFirebase();
       if (user) {
-        this.currentUser = user;
+        this.localStorage.setItem('userID', user.uid).subscribe(() => {});
+        this.localStorage.setItem('email', user.email).subscribe(() => {});
       } else {
         console.log('No user is signed in.');
       }
     });
-    return this.currentUser;
+
+    this.localStorage.getItem('userID').subscribe((value =>  {
+      firebaseUserx.uid = value;
+    }), error1 =>  {
+      console.log('Could not retrieve userID from local storage.');
+    });
+    this.localStorage.getItem('email').subscribe((value =>  {
+      firebaseUserx.email = value;
+    }), error1 =>  {
+      console.log('Could not get email from local storage.');
+    });
+
+    return firebaseUserx;
   }
+
 
   sendEmailVerification() {
     this.currentUser.sendEmailVerification()
@@ -94,7 +112,17 @@ export class AuthenticationService {
       .then((success) => {
         console.log('UserDU was deleted. ' + success);
       });
-    this.localStorage.removeItem('verifiedUser');
+    this.localStorage.removeItem('verifiedUser').subscribe(user => {
+      console.log('Log in status deleted ' + user);
+    }, error1 =>  {
+      console.log('Could not delete log in status. ' + error1);
+    });
+
+    this.localStorage.removeItem('user').subscribe(user => {
+      console.log('Removed signed in user from local storage. ' + user);
+    }, error1 =>  {
+      console.log('Could not remove signed in user from local storage. ' + error1);
+    });
   }
 
   logout() {
@@ -109,7 +137,17 @@ export class AuthenticationService {
         this.router.navigate(['login']);
       });
     // delete the user from local storage.
-    this.localStorage.removeItem('verifiedUser');
+    this.localStorage.removeItem('verifiedUser').subscribe(user => {
+      console.log('Log in status deleted ' + user);
+    }, error1 =>  {
+      console.log('Could not delete log in status. ' + error1);
+    });
+
+    this.localStorage.removeItem('user').subscribe(user => {
+      console.log('Removed signed in user from local storage. ' + user);
+    }, error1 =>  {
+      console.log('Could not remove signed in user from local storage. ' + error1);
+    });
   }
 
   sendPasswordResetEmail() {
@@ -117,8 +155,13 @@ export class AuthenticationService {
       .catch(error => {
         console.log('Could not send reset password email. ' + error);
       })
-      .then((value =>  {
+      .then((value => {
         console.log('Email password reset sent to: ' + this.getCurrentSignInUser().email);
       }));
+  }
+
+  getUserId() {
+    const user: UserDetailsFirebase = this.getCurrentSignInUser();
+    return user.uid;
   }
 }

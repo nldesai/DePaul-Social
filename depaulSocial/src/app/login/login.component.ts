@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   user: User;
 
-  constructor(private service: AuthenticationService,
+  constructor(private authenticationService: AuthenticationService,
               private router: Router) { }
 
   ngOnInit() {
@@ -29,14 +29,14 @@ export class LoginComponent implements OnInit {
 
 
   login(email: string, password: string) {
-    this.service.checkUserCredentials(email, password)
+    this.authenticationService.checkUserCredentials(email, password)
       .catch((reason) => {
         console.log('Could not get user. ' + reason);
       })
       .then((value: UserCredential) => {
         this.user = value.user;
         this.router.navigateByUrl('/home');
-        this.service.setVerifiedUserStatus(true);
+        this.authenticationService.setVerifiedUserStatus(true);
       });
   }
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthenticationService} from '../services/authentication.service';
-import {User} from 'firebase';
+import {UserDetailService} from '../services/user-detail.service';
 
 @Component({
   selector: 'app-profile',
@@ -11,15 +10,14 @@ export class ProfileComponent implements OnInit {
   defaultPic: string;
   classes: string[];
 
-  user: User;
+  private email: string;
 
-  constructor(private authService: AuthenticationService) {
+  constructor(private userDetailService: UserDetailService) {
     this.defaultPic = 'assets/t2.jpg';
     this.classes = ['Class 1', 'Class 2', 'Class 3', 'Class 4'];
-}
-
-  ngOnInit() {
-    this.user = this.authService.getCurrentSignInUser();
   }
 
+  ngOnInit(): void {
+    this.email = this.userDetailService.getUserEmail();
+  }
 }
