@@ -9,15 +9,15 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class TwitterComponent implements OnInit {
 
+  // array holding twitter users.
   twitterUsers: TweeterUser[] = [];
-  imageUrls: Array<string> = [];
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
+  // on start add all the users to the array.
   ngOnInit() {
     this.activatedRoute.data.subscribe( (data: {Tweets: TweeterUser[] }) => {
       this.twitterUsers = data.Tweets;
-      console.log(this.twitterUsers);
     });
   }
 

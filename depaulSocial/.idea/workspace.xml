@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7901568-04df-4f4d-9229-22abf92f3a4a" name="Default Changelist" comment="" />
+    <list default="true" id="b7901568-04df-4f4d-9229-22abf92f3a4a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/footer-twitter-feed/footer-twitter-feed.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/footer-twitter-feed/footer-twitter-feed.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/twitter/twitter.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/twitter/twitter.component.ts" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,12 +15,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/profile/profile.component.ts">
+        <entry file="file://$PROJECT_DIR$/src/app/footer-twitter-feed/footer-twitter-feed.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="381">
+              <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/twitter/twitter.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -54,9 +70,7 @@
         <option value="$PROJECT_DIR$/src/app/footer-twitter-feed/footer-twitter-feed.component.css" />
         <option value="$PROJECT_DIR$/src/app/footer-twitter-feed/footer-twitter-feed.component.html" />
         <option value="$PROJECT_DIR$/src/app/models/tweeter-user.ts" />
-        <option value="$PROJECT_DIR$/src/app/footer-twitter-feed/footer-twitter-feed.component.ts" />
         <option value="$PROJECT_DIR$/src/app/resolvers/twitter-resolver.service.ts" />
-        <option value="$PROJECT_DIR$/src/app/twitter/twitter.component.ts" />
         <option value="$PROJECT_DIR$/src/app/twitter/twitter.component.css" />
         <option value="$PROJECT_DIR$/src/app/twitter/twitter.component.html" />
         <option value="$PROJECT_DIR$/src/app/services/twitter.service.ts" />
@@ -76,10 +90,12 @@
         <option value="$PROJECT_DIR$/src/app/services/authentication.service.ts" />
         <option value="$PROJECT_DIR$/src/app/homepage/homepage.component.ts" />
         <option value="$PROJECT_DIR$/src/app/models/user-details-firebase.ts" />
+        <option value="$PROJECT_DIR$/src/app/twitter/twitter.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/footer-twitter-feed/footer-twitter-feed.component.ts" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="724" />
@@ -92,6 +108,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -122,49 +140,7 @@
               <item name="depaulSocial" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="homepage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="depaulSocial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="depaulSocial" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="depaulSocial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="depaulSocial" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="depaulSocial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="depaulSocial" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="profile" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="depaulSocial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="depaulSocial" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="register" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="depaulSocial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="depaulSocial" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="depaulSocial" type="b2602c69:ProjectViewProjectNode" />
-              <item name="depaulSocial" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="textbook-buy" type="462c0819:PsiDirectoryNode" />
+              <item name="twitter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="depaulSocial" type="b2602c69:ProjectViewProjectNode" />
@@ -176,8 +152,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -255,17 +229,19 @@
       <workItem from="1559315675511" duration="6774000" />
       <workItem from="1559399836004" duration="14027000" />
       <workItem from="1559498486350" duration="16429000" />
+      <workItem from="1559524164641" duration="79000" />
+      <workItem from="1559607753942" duration="1027000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101488000" />
+    <option name="totallyTimeSpent" value="102594000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="724" extended-state="1" />
+    <frame x="0" y="23" width="1280" height="723" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49841774" visible="true" weight="0.19951534" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49841774" visible="true" weight="0.20597738" />
       <window_info id="Structure" order="1" sideWeight="0.50158226" side_tool="true" weight="0.19951534" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -499,16 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/twitter/twitter.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/twitter/twitter.component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -598,16 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/footer-twitter-feed/footer-twitter-feed.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/login/login.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -688,16 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/profile/profile.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/models/user-details-firebase-i.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -709,6 +655,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/profile/profile.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/twitter/twitter.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/footer-twitter-feed/footer-twitter-feed.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
