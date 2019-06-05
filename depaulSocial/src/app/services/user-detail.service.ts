@@ -3,7 +3,7 @@ import {Injectable} from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-// holds information from the local storage retrieved on home component.
+// holds information from the local storage retrieved on OnInit from: home component.
 export class UserDetailService {
   email = '';
   id = '';

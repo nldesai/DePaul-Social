@@ -132,9 +132,7 @@ export class AuthenticationService {
       })
       .then((onSuccess) => {
         console.log('logged out.');
-      })
-      .finally(() => {
-        this.router.navigate(['login']);
+        this.router.navigateByUrl('/login');
       });
     // delete the user from local storage.
     this.localStorage.removeItem('verifiedUser').subscribe(user => {
@@ -143,10 +141,15 @@ export class AuthenticationService {
       console.log('Could not delete log in status. ' + error1);
     });
 
-    this.localStorage.removeItem('user').subscribe(user => {
-      console.log('Removed signed in user from local storage. ' + user);
+    this.localStorage.removeItem('email').subscribe(user => {
+      console.log('Removed user email from local storage. ' + user);
     }, error1 =>  {
-      console.log('Could not remove signed in user from local storage. ' + error1);
+      console.log('Could not remove email from local storage. ' + error1);
+    });
+    this.localStorage.removeItem('userID').subscribe( (userID) => {
+      console.log('Removed userID from local storage.');
+    }, error1 =>  {
+      console.log('Could not remove userID from local storage.');
     });
   }
 
