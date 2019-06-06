@@ -33,11 +33,19 @@ h1 {
     background-color: #1034A6;
 }
 
-.link {
-    text-decoration: none;
-    color: #ff0000;
-}
-
 .list-group {
   width: fit-content;
 }
+
+a {
+    text-decoration: none;
+    color: #1034A6;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+li {
+    font-size: 30px;
+  }

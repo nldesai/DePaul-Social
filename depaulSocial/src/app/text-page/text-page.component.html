@@ -1,41 +1,46 @@
 <!-- Linh's code -->
 <div *ngIf="router.url == '/text';">
   <div class="container-fluid" align="center">
-    <div class="jumbotron">
-      <h1>DEPAUL SOCIAL  TEXTBOOK</h1>
+    <div class="jumbotron jumbotron-fluid">
+      <h1>DEPAUL SOCIAL TEXTBOOK</h1>
     </div>
+  </div>
 
-    <div class="row">
-      <div class="col-12">
-        <div class="card-deck">
-          <a [routerLink]="['booksell']" class="cards cardSellText shadow p-3 mb-5">
-            <div class="card-body">
-              <img class="card-img" src="../../assets/sellText.jpg">
-                <h1 class="card-title">Sell Textbook</h1>
-                <p class="card-text">
-                  Sell textbooks that you don't need anymore
-                </p>
-            </div>
-          </a>
-      
-          <a [routerLink]="['bookbuy']" class="cards cardBuyText shadow p-3 mb-5">
-            <div class="card-body"> 
-              <img class="card-img" src="../../assets/buyText.png">
-                <h1 class="card-title">Buy Textbook</h1>
-                <p class="card-text">
-                  Buy textbooks that you need for the new quarter<br><br></p>
-            </div>
-          </a>
+  <div class="row">
+    <div class="col-12">
+      <div class="card-deck">
+        <!-- Sell Textbook card -->
+        <a [routerLink]="['booksell']" class="card cardSell shadow p-3 mb-5">
+          <div class="card-body" align="center">
+            <img class="card-img sellText" src="../../assets/sellText.jpg" alt="Textbooks for sell">
+            <h1 class="card-title">Sell Textbooks</h1>
+            <p class="card-text">
+              Sell textbooks that you don't need anymore
+            </p>
+          </div>
+        </a>
 
-          <a [routerLink]="['bookswap']" class="cards cardSwapText shadow p-3 mb-5">
-            <div class="card-body">
-                <img class="card-img" src="../../assets/swapText.jpg">
-                <h1 class="card-title">Swap Textbook</h1>
-                <p class="card-text">
-                  Swap textbooks with other students</p>
-            </div>
-          </a>
-        </div>
+        <!-- Buy Textbook card -->
+        <a [routerLink]="['bookbuy']" class="card cardBuy shadow p-3 mb-5">
+          <div class="card-body" align="center">
+            <img class="card-img buyText" src="../../assets/buyText.png" alt="Textbooks to buy">
+            <h1 class="card-title">Buy Textbooks</h1>
+            <p class="card-text">
+              Buy textbooks that you need for the new quarter<br><br>
+            </p>
+          </div>
+        </a>
+
+        <!-- Swap Textbook card -->
+        <a [routerLink]="['bookswap']" class="card cardSwap shadow p-3 mb-5">
+          <div class="card-body" align="center">
+            <img class="card-img swapText" src="../../assets/swapText.jpg" alt="Textbooks to swap">
+            <h1 class="card-title">Swap Textbooks</h1>
+            <p class="card-text">
+              Swap textbooks with other students
+            </p>
+          </div>
+        </a>
       </div>
     </div>
   </div>
