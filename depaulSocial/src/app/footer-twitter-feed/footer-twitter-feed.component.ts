@@ -13,7 +13,8 @@ export class FooterTwitterFeedComponent implements OnInit {
   tweets: TweeterUser[] = [];
   theTweet: TweeterUser = {
     userName: '',
-    tweet: ''
+    tweet: '',
+    photoUrl: ''
   };
 
   constructor(private twitterService: TwitterService, public router: Router) {}
@@ -24,7 +25,7 @@ export class FooterTwitterFeedComponent implements OnInit {
       When rendering component, fetch tweets.
       hardcoded hashTag.
      */
-    this.twitterService.getAllTweetsBasedOnHashTag('DePaulSocial')
+    this.twitterService.getAllTweetsBasedOnHashTag('depaulsocial')
       .subscribe((value: TweeterUser[]) => {
         this.tweets = value;
     }, (error) => {

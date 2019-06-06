@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
+import { HttpClient, HttpParams} from '@angular/common/http';
 import { TweeterUser} from '../models/tweeter-user';
 
 @Injectable({
@@ -33,5 +33,16 @@ export class TwitterService {
     let parameters = new HttpParams();
     parameters = parameters.append('hashTag', hashTag);
     return this.http.get<TweeterUser[]>('https://depaulsocial.herokuapp.com/DUTwitter/withHashTag', {params: parameters});
+  }
+
+  /**
+   * @returns tweets with the hashTag of: #depaulsocial.
+   */
+  onlyDePaulSocialHashTagTweets() {
+    const hashTag = '#depaulsocial';
+    let parameters = new HttpParams();
+    parameters = parameters.append('hashTag', hashTag);
+    return this.http.get<TweeterUser[]>('https://depaulsocial.herokuapp.com/DUTwitter/withHashTag',
+      {params: parameters});
   }
 }

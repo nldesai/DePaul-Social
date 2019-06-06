@@ -1,43 +1,51 @@
-        <!-- Collin's code -->
-      <div class="d-flex align-items-center">
-        <div class="container" id = "profile" align = "center">
-           <div class="text-center">
-               <img src={{defaultPic}} class="rounded" height=200 alt="profile pic">
-               <h2>NAME</h2>
+<!-- Collin's code -->
+<div class="d-flex align-items-center">
+  <div class="container" id="profile" align="center">
+    <div class="text-center">
+      <img src={{defaultPic}} class="rounded" height=200 alt="profile pic">
+      <h1>Email & userID</h1>
+      <h2>{{email}}{{userID}}</h2>
+      <div id="social">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-snapchat"></a>
+      </div>
+    </div>
 
-               <div id="social">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-snapchat"></a>
-            </div>
+    <div id="classList" class="container-fluid">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary" *ngFor="let class of classes">{{class}}</button>
+        <button type="button" class="btn btn-warning" (click)="logout()">Log Out</button>
+      </div>
+    </div>
 
-           </div>
-
-            <div id="classList" class="container-fluid">
-                <div class="btn-group" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-secondary"*ngFor="let class of classes">{{class}}</button>
-                </div>
-            </div>
-
-            <div id="bio" class="container-fluid">
-                <p>My name is NAME, and I love to study. Study study study, that's all that I like to do. Please I'm failing all my classes</p>
-            </div>
-            <div id="preferences" class="container-fluid">
-                <h4 align="center">Preferred Locations</h4>
-                <!-- <app-location-bar [locationName] = "Campus" [percent] = "25"></app-location-bar> -->
-                <div class="progress location mb-2">
-                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Campus</div>
-                </div>
-                <div class="progress location mb-2">
-                    <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Library</div>
-                </div>
-                <div class="progress location mb-2">
-                    <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Dorm</div>
-                </div>
-                <div class="progress location mb-2">
-                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Off Campus</div>
-                </div>
-            </div>
+    <div id="bio" class="container-fluid">
+      <p>My name is {{email}}, and I love to study. Study study study, that's all that I like to do. Please I'm failing
+        all my classes</p>
+    </div>
+    <div id="preferences" class="container-fluid">
+      <h4 align="center">Preferred Locations</h4>
+      <!-- <app-location-bar [locationName] = "Campus" [percent] = "25"></app-location-bar> -->
+      <div class="progress location mb-2">
+        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+             aria-valuemax="100">Campus
         </div>
       </div>
-<!--<app-footer-twitter-feed></app-footer-twitter-feed>-->
+      <div class="progress location mb-2">
+        <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0"
+             aria-valuemax="100">Library
+        </div>
+      </div>
+      <div class="progress location mb-2">
+        <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="25" aria-valuemin="0"
+             aria-valuemax="100">Dorm
+        </div>
+      </div>
+      <div class="progress location mb-2">
+        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0"
+             aria-valuemax="100">Off Campus
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -5,3 +5,13 @@
 .fab.fa-twitter {
   color: white;
 }
+
+/*
+  Extra small devices (phones, 600px and down)
+  hide the footer.
+ */
+@media only screen and (max-width: 600px) {
+  .navbar.navbar-default.fixed-bottom {
+    display: none;
+  }
+}
