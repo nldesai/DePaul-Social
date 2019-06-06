@@ -18,34 +18,41 @@ import { LoginComponent } from './login/login.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { TextPageComponent } from './text-page/text-page.component';
 import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
+import { LoginGuard} from './guards/login.guard';
+import { TwitterComponent} from './twitter/twitter.component';
+import {TwitterResolverService} from './resolvers/twitter-resolver.service';
+
+
 
 const routes: Routes = [
-  { path: 'landingPage', component: LandingPageComponent },
+  { path: 'landingPage', component: LandingPageComponent},
   { path: '', redirectTo: '/landingPage', pathMatch: 'full'},
-  { path: 'aboutUs', component: AboutUsComponent },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'depaulSocial', component: LandingPageComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent },
-  {path: 'discounts', component: DiscountPageComponent},
-  { path: 'home', component: HomepageComponent},
+  { path: 'aboutUs', component: AboutUsComponent, canActivate: [LoginGuard]},
+  { path: 'profile', component: ProfileComponent, canActivate: [LoginGuard]},
+  { path: 'depaulSocial', component: LandingPageComponent},
+  { path: 'register', component: RegisterComponent},
+  { path: 'login', component: LoginComponent},
+  {path: 'discounts', component: DiscountPageComponent, canActivate: [LoginGuard]},
+  { path: 'home', component: HomepageComponent, canActivate: [LoginGuard]},
 
   {
     path: 'text',
     component: TextPageComponent,
+    canActivate: [LoginGuard],
+    canActivateChild: [LoginGuard],
     children: [
-
       { path: 'booksell', component: TextbookSellComponent },
       { path: 'bookbuy', component: TextbookBuyComponent },
-      { path: 'bookswap', component: TextbookSwapComponent }
+      { path: 'bookswap', component: TextbookSwapComponent },
     ]
   },
 
   {
     path: 'study',
     component: StudyPageComponent,
+    canActivate: [LoginGuard],
+    canActivateChild: [LoginGuard],
     children: [
-
       { path: 'join-study-group', component: JoinStudyComponent },
       { path: 'create-group', component: CreateGroupComponent },
       { path: 'searchpartner', component: SearchPartnerComponent }
@@ -55,10 +62,20 @@ const routes: Routes = [
   {
     path: 'meetup',
     component: MeetupComponent,
+    canActivate: [LoginGuard],
+    canActivateChild: [LoginGuard],
     children: [
-
       { path: 'createMeetup', component: CreateMeetupComponent },
       { path: 'findMeetup', component: FindMeetupComponent }
+    ]
+  },
+  {
+    path: 'social',
+    children: [
+      {
+        path: 'depaul-social-twitter', component: TwitterComponent,
+        resolve: {Tweets: TwitterResolverService}
+      }
     ]
   }
 ];

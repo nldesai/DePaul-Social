@@ -1,23 +1,41 @@
 <!--Jide's code-->
-<div align="center" class="content-all">
-   <div class="jumbotron">
-      <h1>Login</h1>
-   </div>
+<!--<div align="center" class="content-all">-->
+   <!--<div class="jumbotron">-->
+      <!--<h1>Login</h1>-->
+   <!--</div>-->
 
-   <form class="formstyle">
-      <div class="form-group">
-         <label class="user" for="userNameField">Username:</label>
-         <input class="form-control-md" type= "text" name="username" id="userNameField">
-      </div>
+   <!--<form class="formstyle" [formGroup]="loginFormGroup" (ngSubmit)="login(loginFormGroup.get('email').value, loginFormGroup.get('password').value)">-->
+      <!--<div class="form-group">-->
+         <!--<label class="user" for="emailField">Email:</label>-->
+         <!--<input formControlName="email" class="form-control-md" type= "text" id="emailField">-->
+      <!--</div>-->
 
-      <div class="form-group">
-         <label class="pass" for="passwordField">Password:</label>
-         <input class="form-control-md" type= "password" name="password" id="passwordField">
-      </div>
-      
-      <!--<input type="submit" value="Login" formaction="homepage.html"> <br><br> -->
-      <button type="submit" class="btn btn-primary" routerLink="/home">Login</button>
+      <!--<div class="form-group">-->
+         <!--<label class="pass" for="passwordField">Password:</label>-->
+         <!--<input formControlName="password" class="form-control-md" type= "password" id="passwordField">-->
+      <!--</div>-->
+      <!---->
+      <!--&lt;!&ndash;<input type="submit" value="Login" formaction="homepage.html"> <br><br> &ndash;&gt;-->
+      <!--<button type="submit" class="btn btn-primary">Login</button>-->
+   <!--</form>-->
+  <!--<p class="reg"> Not a member yet? <a routerLink="/register" class="link">click to create account </a> </p>-->
+<!--</div>-->
 
-      <p class="reg"> Not a member yet? <a routerLink="/register" class="link">click to create account </a> </p>
-   </form>
+<div class="container" align="center">
+  <div class="jumbotron">
+    <h1>Login</h1>
+  </div>
+  <form class="form" [formGroup]="loginFormGroup" (ngSubmit)="login(loginFormGroup.get('email').value, loginFormGroup.get('password').value)">
+    <div class="form-group">
+      <label for="userEmail" class="labels">Email: </label>
+      <input formControlName="email" class="form-control-sm" type="text" id="userEmail"/>
+    </div>
+    <div class="form-group">
+      <label for="userPassword" class="labels">Password: </label>
+      <input formControlName="password" type="password" class="form-control-sm" id="userPassword"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+  <br>
+  <p>Not a member yet? <a routerLink="/register" class="link">click to create account.</a></p>
 </div>
