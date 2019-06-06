@@ -1,6 +1,6 @@
-.content-all {
-    padding-top: 8%;
-}
+/*.content-all {*/
+    /*padding-top: 8%;*/
+/*}*/
 
 .jumbotron {
     background-color: transparent !important;
@@ -13,25 +13,41 @@ h1 {
     width: fit-content;
 }
 
-.form-group {
-    padding-bottom: .5em;
+
+.container {
+  margin-top: 100px;
 }
 
-.user {
-    padding-right: 1em;
+#userEmail {
+  margin-left: 28px;
 }
 
-.pass {
-    padding-right: 1.2em;
+.labels {
+  margin-right: 20px;
 }
 
-.reg {
-    padding-top: 1em;
-}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 
-.btn {
-    background-color: #1034A6;
-}
+
+/*.form-group {*/
+    /*padding-bottom: .5em;*/
+/*}*/
+
+/*.user {*/
+    /*padding-right: 1em;*/
+/*}*/
+
+/*.pass {*/
+    /*padding-right: 1.2em;*/
+/*}*/
+
+/*.reg {*/
+    /*padding-top: 1em;*/
+/*}*/
+
+/*.btn {*/
+    /*background-color: #1034A6;*/
+/*}*/
 
 .link {
     text-decoration: none;

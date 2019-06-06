@@ -1,0 +1,14 @@
+.container {
+  margin-top: 70px;
+}
+
+.card-img {
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 120px;
+  height: 100px;
+}
+
+.card.mb-4 {
+  width: fit-content;
+}
