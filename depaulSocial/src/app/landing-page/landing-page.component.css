@@ -8,8 +8,8 @@ h1 {
   width: fit-content;
 }
 
-.container {
-  margin-top: 30px;
+.container-fluid {
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 
@@ -41,12 +41,22 @@ h1 {
   #imageContainer {
     display: block;
   }
+
+  .btn {
+    background-color: #1034A6;
+    color: #ffffff;
+  }
 }
 
 /*Tablet (Portrait)*/
 @media only screen and (min-width:581px) and (max-width:768px) {
   #imageContainer {
     display: none;
+  }
+
+  .btn {
+    background-color: #1034A6;
+    color: #ffffff;
   }
 }
 
@@ -57,11 +67,21 @@ h1 {
   #imageContainer {
     display: none;
   }
+
+  .btn {
+    background-color: #1034A6;
+    color: #ffffff;
+  }
 }
 
 /*Typical Phone (Portrait)*/
 @media only screen and (max-width:320px) {
   #imageContainer {
     display: none;
+  }
+
+  .btn {
+    background-color: #1034A6;
+    color: #ffffff;
   }
 }
