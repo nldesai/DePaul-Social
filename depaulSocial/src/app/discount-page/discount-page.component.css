@@ -1,5 +1,6 @@
-.content-all {
-    padding-top: 80px;
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 10px;
 }
 
 .jumbotron {
