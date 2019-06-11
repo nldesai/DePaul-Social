@@ -1,5 +1,5 @@
 .content-all {
-    padding-top: 8%;
+    padding-top: 80px;
 }
 
 .jumbotron {
@@ -11,6 +11,10 @@ h1 {
     background-color: #1034A6;
     color: #FFF;
     width: fit-content;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-bottom: .1em;
+    padding-top: .1em;
 }
 
 .form-group {
