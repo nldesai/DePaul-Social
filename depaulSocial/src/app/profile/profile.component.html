@@ -1,6 +1,8 @@
 <!-- Collin's code -->
 <div class="d-flex align-items-center">
   <div class="container" id="profile" align="center">
+    <button type="button" class="btn btn-warning" (click)="logout()">Log Out</button>
+
     <div class="text-center">
       <img src={{defaultPic}} class="rounded" height=200 alt="profile pic">
       <h1>Email & userID</h1>
@@ -15,7 +17,6 @@
     <div id="classList" class="container-fluid">
       <div class="btn-group" role="group" aria-label="Basic example">
         <button type="button" class="btn btn-secondary" *ngFor="let class of classes">{{class}}</button>
-        <button type="button" class="btn btn-warning" (click)="logout()">Log Out</button>
       </div>
     </div>
 
