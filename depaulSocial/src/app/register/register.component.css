@@ -44,6 +44,10 @@ h1 {
   padding-right: 3.4em;
 }
 
+#bio {
+  width: 40%;
+}
+
 .btn {
   background-color: #1034A6;
 }
