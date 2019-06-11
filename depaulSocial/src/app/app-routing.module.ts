@@ -17,7 +17,6 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { TextPageComponent } from './text-page/text-page.component';
-import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
 import { LoginGuard} from './guards/login.guard';
 import { TwitterComponent} from './twitter/twitter.component';
 import {TwitterResolverService} from './resolvers/twitter-resolver.service';
@@ -42,8 +41,7 @@ const routes: Routes = [
     canActivateChild: [LoginGuard],
     children: [
       { path: 'booksell', component: TextbookSellComponent },
-      { path: 'bookbuy', component: TextbookBuyComponent },
-      { path: 'bookswap', component: TextbookSwapComponent },
+      { path: 'bookbuy', component: TextbookBuyComponent }    
     ]
   },
 

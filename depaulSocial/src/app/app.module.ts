@@ -24,7 +24,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { CreateMeetupComponent } from './create-meetup/create-meetup.component';
 import { FindMeetupComponent } from './find-meetup/find-meetup.component';
 import { JoinStudyComponent} from './join-study/join-study.component';
-import { TextbookSwapComponent } from './textbook-swap/textbook-swap.component';
 import { TwitterService} from './services/twitter.service';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -72,7 +71,6 @@ import {UserDetailService} from './services/user-detail.service';
     CreateMeetupComponent,
     FindMeetupComponent,
     JoinStudyComponent,
-    TextbookSwapComponent,
     RegisterComponent,
     LoginComponent,
     LocationBarComponent,
