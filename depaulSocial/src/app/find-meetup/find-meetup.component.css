@@ -24,6 +24,11 @@ h1 {
     margin-bottom: 20px;
 }
 
+.btn-secondary {
+    margin-right: 1em;
+    margin-left: 4.3em;
+  }
+
 .table {
     padding-top: 20px;
 }

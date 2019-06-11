@@ -27,6 +27,11 @@ h1 {
     background-color: #1034A6;
 }
 
+.btn-secondary {
+    margin-right: 1em;
+    margin-left: 6em;
+}
+
 .buttons {
     padding-bottom: 50px;
 }
