@@ -67,6 +67,10 @@ h1 {
     width: 100%;
   }
    
-  .full-width {
+.full-width {
     width: 100%;
-  }
+}
+
+button {
+  margin-left: 5px;
+}
