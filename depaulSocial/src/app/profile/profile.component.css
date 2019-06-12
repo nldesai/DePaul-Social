@@ -6,3 +6,11 @@
 #logOutBtn {
   padding-left: 200px;
 }
+
+.btn-warning {
+  position: absolute;
+  margin-top: 70px;
+  margin-right: 15px;
+  top: 0;
+  right: 0;
+}

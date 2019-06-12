@@ -4,6 +4,10 @@ h1 {
   color: #FFF;
   width: fit-content;
   margin-top: 80px;
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-bottom: .1em;
+  padding-top: .1em;
 }
 
 .container {
@@ -27,6 +31,11 @@ p.table{
 
 .btn {
   background-color: #1034A6;
+}
+
+.btn-secondary {
+  margin-right: 2.5em;
+  margin-left: .7em;
 }
 
 .badge {

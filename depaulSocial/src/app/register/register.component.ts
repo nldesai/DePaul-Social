@@ -18,11 +18,11 @@ export class RegisterComponent implements OnInit {
       firstName: new FormControl('', [Validators.required]),
       lastName: new FormControl('', [Validators.required]),
       gender: new FormControl(''),
-      userName: new FormControl('', [Validators.required]),
-      password: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required, Validators.minLength(5)]),
       birthdate: new FormControl(''),
       age: new FormControl(''),
-      email: new FormControl('', [Validators.required])
+      email: new FormControl('', [Validators.required, Validators.email]),
+      bio: new FormControl()
     });
   }
 

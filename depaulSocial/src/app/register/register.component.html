@@ -4,10 +4,10 @@
         <h1>Register</h1>
     </div>
     <!--Julio refactored form -->
-    <form [formGroup]="registerForm" style="padding-bottom: 80px" (ngSubmit)="createUser(registerForm.get('userName').value, registerForm.get('password').value)">
+    <form [formGroup]="registerForm" style="padding-bottom: 80px" (ngSubmit)="createUser()">
         <div class="form-group">
             <label class="label" for="firstName">First Name: </label>
-            <input class="form-control-sm" formControlName="firstName" class="form-control-sm" type="text" id="firstName">
+            <input formControlName="firstName" class="form-control-sm" type="text" id="firstName">
         </div> 
 
         <div class="form-group">
@@ -25,18 +25,8 @@
         </div>
 
         <div class="form-group">
-            <label class="age" for="ageInput">Age: </label>
-            <input class="form-control-sm" formControlName="age" type="number" id="ageInput">
-        </div>
-
-        <div class="form-group">
             <label class="bday" for="birthInput">Birthday: </label>
             <input class="form-control-sm" formControlName="birthdate" type="date" id="birthInput">
-        </div>
-        
-        <div class="form-group">
-            <label class="user" for="userName">Username:</label>
-            <input class="form-control-sm" formControlName="userName" type= "text" name="username" id="userName">
         </div>
 
         <div class="form-group">
@@ -48,10 +38,22 @@
             <label class="pass" for="password">Password:</label>
             <input class="form-control-sm" formControlName="password" type= "password" id="password">
         </div>
+        <div class="form-group">
+          <span *ngIf="!registerForm.get('password').valid &&
+          registerForm.get('password').touched" class="alert alert-danger">Password must be at least 5 characters long.</span>
+        </div>
+
+        <div class="form-group">
+            <label for="smallBio" class="bio">Add a short bio to tell people more about yourself:</label><br>
+            <!--<input class="form-control" formControlName="bio" type="text" id="bio">-->
+          <textarea class="form-control-md" rows="4" cols="50" formControlName="bio" id="smallBio"></textarea>
+        </div>
+        
         <button type="submit" class="btn btn-primary" [disabled]="!registerForm.valid">Register</button>
+        <button type="reset" class="btn btn-primary">Reset</button>
+        <div>
+            <label class="login"> Already a member? <a routerLink="/login" class="link">click to log in to account</a> </label>
+        </div>
     </form>
-  <div>
-    <label class="login"> Already a member? <a routerLink="/login" class="link">click to log in to account</a> </label>
-  </div>
 </div>
 

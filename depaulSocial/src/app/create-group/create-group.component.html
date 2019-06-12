@@ -55,7 +55,9 @@
       </select>
     </div>
 
-    <button type="button" class="btn btn-secondary gap-right" (click)="resetForm()">Reset</button>
-    <button type="submit" class="btn btn-success" [disabled]="!studyGroup.valid">Create Study Group</button>
+    <div align="center">
+      <button type="button" class="btn btn-secondary gap-right" (click)="resetForm()">Reset</button>
+      <button type="submit" class="btn btn-success" [disabled]="!studyGroup.valid">Create Study Group</button>
+    </div>
   </form>
 </div>

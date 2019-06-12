@@ -12,10 +12,19 @@ h1 {
     background-color: #1034A6;
     color: #FFF;
     width: fit-content;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-bottom: .1em;
+    padding-top: .1em;
 }
 
 .btn {
     background-color: #1034A6;
+}
+
+.btn-secondary {
+    margin-right: 1em;
+    margin-left: 7em;
 }
 
 .form-group {

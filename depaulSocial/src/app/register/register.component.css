@@ -1,5 +1,5 @@
 .heading {
-  padding-top: 75px;
+  padding-top: 100px;
   padding-bottom: 20px;
 }
     
@@ -7,22 +7,14 @@ h1 {
     background-color: #1034A6;
     color: #FFF;
     width: fit-content;
-}
-
-.form-group {
-  padding-bottom: .1px;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-bottom: .1em;
+    padding-top: .1em;
 }
 
 .label {
   padding-right: 1em;
-}
-
-.login {
-  padding-top: 1em;
-}
-
-.user {
-  padding-right: 1.5em;
 }
 
 .pass {
@@ -44,17 +36,24 @@ h1 {
   padding-left: 1em;
 }
 
-.age {
-  padding-right: 2.9em;
-  padding-left: 1.7em;
+.bday {
+  padding-right: 2em;
 }
 
-.bday {
-  padding-right: 2.4em;
+.user {
+  padding-right: 3.4em;
+}
+
+#bio {
+  width: 40%;
 }
 
 .btn {
   background-color: #1034A6;
+}
+
+.login {
+  margin-top: 1em;
 }
 
 .link {
@@ -68,6 +67,10 @@ h1 {
     width: 100%;
   }
    
-  .full-width {
+.full-width {
     width: 100%;
-  }
+}
+
+button {
+  margin-left: 5px;
+}

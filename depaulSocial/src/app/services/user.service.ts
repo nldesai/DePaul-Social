@@ -26,10 +26,10 @@ export class UserService {
       firstName: registrationForm.get('firstName').value,
       lastName: registrationForm.get('lastName').value,
       gender: registrationForm.get('gender').value,
-      userName: registrationForm.get('userName').value,
       password: registrationForm.get('password').value,
       birthdate: registrationForm.get('birthdate').value,
       age: registrationForm.get('age').value,
+      bio: registrationForm.get('bio').value,
       email: registrationForm.get('email').value.toString().trim()
     };
 
