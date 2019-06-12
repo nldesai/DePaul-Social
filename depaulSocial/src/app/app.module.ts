@@ -33,6 +33,7 @@ import { environment } from '../environments/environment';
 import { MeetupsService} from './services/meetups.service';
 import { TextBooksService } from './services/textbooks.service';
 import { StudyGroupService } from './services/studygroup.service';
+import { SocialIconsComponent } from './social-icons/social-icons.component';
 
 // AngularFire (Firebase modules).
 import { AngularFireAuthModule} from '@angular/fire/auth';
@@ -75,7 +76,8 @@ import {UserDetailService} from './services/user-detail.service';
     LoginComponent,
     LocationBarComponent,
     DiscountPageComponent,
-    TwitterComponent
+    TwitterComponent,
+    SocialIconsComponent
   ],
   imports: [
     BrowserModule,

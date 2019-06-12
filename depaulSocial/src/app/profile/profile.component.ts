@@ -10,7 +10,6 @@ import {LocalStorage} from '@ngx-pwa/local-storage';
 })
 export class ProfileComponent implements OnInit {
   defaultPic: string;
-  classes: string[];
 
    email: string;
    userID: string;
@@ -18,7 +17,6 @@ export class ProfileComponent implements OnInit {
   constructor(private userDetail: UserDetailService,
               private authService: AuthenticationService) {
     this.defaultPic = 'assets/t2.jpg';
-    this.classes = ['Class 1', 'Class 2', 'Class 3', 'Class 4'];
   }
 
   ngOnInit(): void {
