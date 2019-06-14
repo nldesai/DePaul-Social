@@ -28,7 +28,7 @@ export class CreateMeetupComponent implements OnInit {
       majors: [''],
       purpose: [''],
       location: ['']
-    })
+    });
   }
 
   addMeetup() {

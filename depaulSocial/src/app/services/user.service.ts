@@ -4,8 +4,9 @@ import {AngularFireAuth} from '@angular/fire/auth';
 import {UserDU} from '../models/userDU';
 import {FormGroup} from '@angular/forms';
 import UserCredential = firebase.auth.UserCredential;
-
+import {AuthenticationService} from '../services/authentication.service';
 import {Router} from '@angular/router';
+
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,8 @@ export class UserService {
 
   constructor(private DUSocialDB: AngularFireDatabase,
               private authService: AngularFireAuth,
-              private router: Router) {
+              private router: Router,
+              private aService: AuthenticationService) {
     this.userList = this.DUSocialDB.list('user-list');
   }
 
@@ -42,15 +44,19 @@ export class UserService {
       // 2) add it to the database.
       .then((onSuccess: UserCredential) => {
         console.log('Success registering new user for Firebase authentication. UserDU:'
-          + onSuccess.additionalUserInfo.username);
+          + onSuccess.additionalUserInfo.username);          
         alert('Check your email for email address verification.');
         this.authService.authState.subscribe((currentUser) => {
           currentUser.sendEmailVerification();
         });
-        // push it to the user list.
-        this.userList.push(newUser);
-        this.router.navigateByUrl('login');
+        // push it to the user list
+
+        const id = this.authService.auth.currentUser.uid;
+        this.usersList.set(id, newUser);
+        this.aService.setVerifiedUserStatus(true);
+        this.router.navigateByUrl('home');
       });
+
   }
 
 
