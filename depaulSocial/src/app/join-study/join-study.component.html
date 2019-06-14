@@ -34,10 +34,8 @@
   </form>
 
   <div class="card-deck-horizontal cards" *ngIf="submitted">
-
     <div align="center" class="studyGroupCard cards" *ngFor="let studyGroup of filtered">
-      <div class="card mb-3">
-        <div class="row no-gutters">
+      <div class="card mb-3" style="max-width: 540px;">
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="studygroup-title">{{ studyGroup.name }}</h5>
@@ -102,14 +100,13 @@
               </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
 
   <div class="card-deck-horizontal cards" *ngIf="all">
     <div align="center" class="studyGroupCard cards" *ngFor="let studyGroup of studyGroups">
-      <div class="card mb-3">
+      <div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-8">
             <div class="card-body">
@@ -179,6 +176,4 @@
       </div>
     </div>
   </div>
-
-
 </div>
