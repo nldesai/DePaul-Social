@@ -6,4 +6,6 @@ export interface Meetup {
     purpose: string;
     location: string;
     $key: string;
+    creator: string;
+    contact: string;
 }

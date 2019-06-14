@@ -3,11 +3,14 @@ import { MeetupsService } from '../services/meetups.service';
 import { MAJORS } from '../meetup/meetup-majors';
 import { Meetup } from '../meetup/meetup';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-find-meetup',
   templateUrl: './find-meetup.component.html',
-  styleUrls: ['./find-meetup.component.css']
+  styleUrls: ['./find-meetup.component.css'],
+  providers: [NgbModalConfig, NgbModal]
 })
 
 export class FindMeetupComponent implements OnInit {
@@ -18,7 +21,12 @@ export class FindMeetupComponent implements OnInit {
   filtered: Array<Meetup>;
   public meetup: FormGroup;
 
-  constructor(private meetupsService: MeetupsService, public fb: FormBuilder) { }
+  constructor(private meetupsService: MeetupsService, public fb: FormBuilder,
+    config: NgbModalConfig, private modalService: NgbModal, private router: Router) {
+
+      config.backdrop = 'static';
+      config.keyboard = false;
+     }
 
   ngOnInit() {
     let s = this.meetupsService.getMeetupsList();
@@ -50,9 +58,16 @@ export class FindMeetupComponent implements OnInit {
     return console.table(this.meetup.get('major').value, this.meetup.get('interests').value, this.meetup.get('location').value);
   }
 
+  join(content) {
+    this.modalService.open(content);
+    this.router.navigateByUrl('/home');
+  }
+
   search() {
     if (this.meetup.get('interests').value) {
-      this.filtered = this.meetups.filter(meetup => this.contains(meetup) && meetup.purpose === this.meetup.get('interests').value && meetup.location === this.meetup.get('location').value);
+      this.filtered = this.meetups.filter(meetup => this.contains(meetup) &&
+        meetup.purpose === this.meetup.get('interests').value && meetup.location === this.meetup.get('location').value);
+
     } else {
       this.filtered = this.meetups.filter(meetup => this.contains(meetup) && meetup.location === this.meetup.get('location').value);
     }    

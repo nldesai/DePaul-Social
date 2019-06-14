@@ -71,17 +71,33 @@
               <div class="card-bottom">
                 <div class="row">
                   <div class="column">
-                    <h5 class="student">Heather Duke</h5>
-                    <div id="social">
-                      <a href="#" class="fa fa-facebook"></a>
-                      <a href="#" class="fa fa-twitter"></a>
-                      <a href="#" class="fa fa-snapchat"></a>
-                    </div>
+                    <p class="student">Contact: {{ meetup.contact }}</p>
                   </div>
                   
                   <div class="column">
                     <div align="center">
-                      <button type="button" class="btn btn-primary">Join Group</button>
+
+                        <ng-template #content let-c="close" let-d="dismiss">
+                            <div class="modal-header">
+                              <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+                              <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <p>You have successfully joined this meetup!</p>
+                              <p><strong>Meetup Name:</strong> {{ meetup.name }}</p>
+                              <p><strong>Location:</strong> {{ meetup.location }}</p>
+                              <p><strong>Date:</strong> {{ meetup.date.month }}-{{ meetup.date.day }}-{{ meetup.date.year }}</p>
+                              <p><strong>Time:</strong> {{ meetup.time.hour}}:{{ meetup.time.minute}}</p>
+                              <p><strong>Contact:</strong> {{ meetup.contact }}</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary" (click)="c('Save click')">Close</button>
+                            </div>
+                          </ng-template>
+
+                      <button type="button" class="btn btn-primary" (click)="join(content)">Join Group</button>
                     </div>
                   </div>
                 </div>

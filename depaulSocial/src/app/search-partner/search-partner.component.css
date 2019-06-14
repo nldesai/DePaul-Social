@@ -16,8 +16,32 @@ h1 {
 
 .btn {
     background-color: #1034A6;
+    margin-bottom: 20px;
 }
+
+.btn-secondary {
+    margin-right: 1em;
+    margin-left: 4.3em;
+  }
 
 .form-group {
     width: 50%;
 }
+
+.cards {
+    padding-bottom: 20px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 1px;
+    /*height: 30px;  Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

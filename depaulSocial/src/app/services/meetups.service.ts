@@ -1,18 +1,21 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';  // Firebase modules for Database, Data list and Single object
 import { Meetup } from '../meetup/meetup';
+import {AngularFireAuth} from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MeetupsService {
 
-  constructor(private db: AngularFireDatabase) { }
+  constructor(private db: AngularFireDatabase, private authService: AngularFireAuth) { }
 
   meetups: AngularFireList<any>;
   meetup: AngularFireObject<any>;
 
   addMeetup(meetup: Meetup) {
+    meetup.creator = this.authService.auth.currentUser.uid;
+    meetup.contact = this.authService.auth.currentUser.email;
     this.meetups.push(meetup);
   }
 
