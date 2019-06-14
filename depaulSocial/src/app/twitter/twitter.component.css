@@ -11,4 +11,6 @@
 
 .card.mb-4 {
   width: fit-content;
+  margin-right: 20em;
+  margin-left: 20em;
 }
