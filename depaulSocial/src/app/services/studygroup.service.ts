@@ -17,6 +17,7 @@ export class StudyGroupService {
     studyGroup.creator = this.authService.auth.currentUser.uid;
     studyGroup.contact = this.authService.auth.currentUser.email;
     this.studyGroups.push(studyGroup);
+    alert('Your group was created!');
   }
 
   // Fetch Single StudyGroup Object
