@@ -29,6 +29,7 @@
     <div class="buttons">
       <button type="button" class="btn btn-secondary gap-right" (click)="resetForm()">Reset</button>
       <button type="submit" class="btn btn-success" [disabled]="!studyGroup.valid">Find Study Groups</button>
+      <button type="button" class="btn btn-secondary" (click)="findAll()">Find All</button>
     </div>
   </form>
 
@@ -40,45 +41,65 @@
           <div class="col-md-4">
             <img src="../../assets/JavaConcepts.png" class="card-img" alt="Responsive image">
           </div>
-          
+
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="studygroup-title">{{ studyGroup.name }}</h5>
               <div class="class-info">
                 <p class="class-number">Class: {{ studyGroup.class }}</p>
               </div>
-             
+
               <div class="meeting-topic">
                 <p class="class-number">Topic: {{ studyGroup.topic }}</p>
               </div>
-              
+
               <div class="meeting-info">
                 <p class="campus">Location: {{ studyGroup.location }}</p>
                 <div class="row">
                   <div class="column">
-                    <p class="day">Date: {{ studyGroup.date.month }}-{{ studyGroup.date.day }}-{{ studyGroup.date.year }}</p>
+                    <p class="day">Date:
+                      {{ studyGroup.date.month }}-{{ studyGroup.date.day }}-{{ studyGroup.date.year }}</p>
                   </div>
-                  
+
                   <div class="column">
                     <p class="times">Time: {{ studyGroup.time.hour}}:{{ studyGroup.time.minute}}</p>
                   </div>
                 </div>
               </div>
-              
+
               <div class="card-bottom">
                 <div class="row">
                   <div class="column">
-                    <h5 class="student">Heather Duke</h5>
-                    <div id="social">
-                      <a href="#" class="fa fa-facebook"></a>
-                      <a href="#" class="fa fa-twitter"></a>
-                      <a href="#" class="fa fa-snapchat"></a>
-                    </div>
+                    <p class="student">Contact: {{ studyGroup.contact }}</p>
                   </div>
-                  
+
                   <div class="column">
                     <div align="center">
-                      <button type="button" class="btn btn-primary">Join Group</button>
+
+                      <ng-template #content let-c="close" let-d="dismiss">
+                        <div class="modal-header">
+                          <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+                          <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p>You have successfully joined this study group!</p>
+                          <p><strong>Study Group Name:</strong> {{ studyGroup.name }}</p>
+                          <p><strong>Class:</strong> {{ studyGroup.class }}</p>
+                          <p><strong>Topic:</strong> {{ studyGroup.topic }}</p>
+                          <p><strong>Location:</strong> {{ studyGroup.location }}</p>
+                          <p><strong>Date:</strong>
+                            {{ studyGroup.date.month }}-{{ studyGroup.date.day }}-{{ studyGroup.date.year }}</p>
+                          <p><strong>Time:</strong> {{ studyGroup.time.hour}}:{{ studyGroup.time.minute}}</p>
+                          <p><strong>Contact:</strong> {{ studyGroup.contact }}</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary" (click)="c('Save click')">Close</button>
+                        </div>
+                      </ng-template>
+
+                      <button type="button" class="btn btn-primary" (click)="join(content)">Join Group</button>
                     </div>
                   </div>
                 </div>
@@ -88,4 +109,85 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="card-deck-horizontal cards" *ngIf="all">
+
+    <div align="center" class="studyGroupCard cards" *ngFor="let studyGroup of studyGroups">
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="../../assets/JavaConcepts.png" class="card-img" alt="Responsive image">
+          </div>
+
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="studygroup-title">{{ studyGroup.name }}</h5>
+              <div class="class-info">
+                <p class="class-number">Class: {{ studyGroup.class }}</p>
+              </div>
+
+              <div class="meeting-topic">
+                <p class="class-number">Topic: {{ studyGroup.topic }}</p>
+              </div>
+
+              <div class="meeting-info">
+                <p class="campus">Location: {{ studyGroup.location }}</p>
+                <div class="row">
+                  <div class="column">
+                    <p class="day">Date:
+                      {{ studyGroup.date.month }}-{{ studyGroup.date.day }}-{{ studyGroup.date.year }}</p>
+                  </div>
+
+                  <div class="column">
+                    <p class="times">Time: {{ studyGroup.time.hour}}:{{ studyGroup.time.minute}}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-bottom">
+                <div class="row">
+                  <div class="column">
+                    <p class="student">Contact: {{ studyGroup.contact }}</p>
+                  </div>
+
+                  <div class="column">
+                    <div align="center">
+
+                      <ng-template #content let-c="close" let-d="dismiss">
+                        <div class="modal-header">
+                          <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+                          <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p>You have successfully joined this study group!</p>
+                          <p><strong>Study Group Name:</strong> {{ studyGroup.name }}</p>
+                          <p><strong>Class:</strong> {{ studyGroup.class }}</p>
+                          <p><strong>Topic:</strong> {{ studyGroup.topic }}</p>
+                          <p><strong>Location:</strong> {{ studyGroup.location }}</p>
+                          <p><strong>Date:</strong>
+                            {{ studyGroup.date.month }}-{{ studyGroup.date.day }}-{{ studyGroup.date.year }}</p>
+                          <p><strong>Time:</strong> {{ studyGroup.time.hour}}:{{ studyGroup.time.minute}}</p>
+                          <p><strong>Contact:</strong> {{ studyGroup.contact }}</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary" (click)="c('Save click')">Close</button>
+                        </div>
+                      </ng-template>
+
+                      <button type="button" class="btn btn-primary" (click)="join(content)">Join Group</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </div>

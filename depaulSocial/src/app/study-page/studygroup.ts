@@ -6,4 +6,6 @@ export interface StudyGroup {
     class: string;
     location: string;
     $key: string;
+    creator: string;
+    contact: string;
 }

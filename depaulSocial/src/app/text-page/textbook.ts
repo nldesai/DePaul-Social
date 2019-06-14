@@ -4,4 +4,6 @@ export interface TextBook {
     isbn: number;
     price: number;
     $key: string;
+    userid: string;
+    contact: string;
 }
