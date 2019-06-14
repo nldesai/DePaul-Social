@@ -33,9 +33,13 @@ p.table{
   background-color: #1034A6;
 }
 
-.btn-secondary {
+.reset {
   margin-right: 2.5em;
   margin-left: .7em;
+}
+
+.find {
+  margin-left: 2.5em;
 }
 
 .badge {

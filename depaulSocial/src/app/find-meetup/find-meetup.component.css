@@ -27,9 +27,13 @@ h1 {
     margin-bottom: 20px;
 }
 
-.btn-secondary {
+.reset {
     margin-right: 1em;
-    margin-left: 4.3em;
+    margin-left: 1em;
+  }
+
+  .find {
+    margin-left: 1em;
   }
 
 .table {
@@ -38,6 +42,10 @@ h1 {
 
 .cards {
     padding-bottom: 20px;
+}
+
+.card-body {
+  margin-right: -15em;
 }
 
 .column {

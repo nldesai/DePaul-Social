@@ -27,21 +27,17 @@
     </div>
 
     <div class="buttons">
-      <button type="button" class="btn btn-secondary gap-right" (click)="resetForm()">Reset</button>
+      <button type="button" class="btn btn-secondary gap-right reset" (click)="resetForm()">Reset</button>
       <button type="submit" class="btn btn-success" [disabled]="!studyGroup.valid">Find Study Groups</button>
-      <button type="button" class="btn btn-secondary" (click)="findAll()">Find All</button>
+      <button type="button" class="btn btn-secondary find" (click)="findAll()">Find All</button>
     </div>
   </form>
 
   <div class="card-deck-horizontal cards" *ngIf="submitted">
 
     <div align="center" class="studyGroupCard cards" *ngFor="let studyGroup of filtered">
-      <div class="card mb-3" style="max-width: 540px;">
+      <div class="card mb-3">
         <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="../../assets/JavaConcepts.png" class="card-img" alt="Responsive image">
-          </div>
-
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="studygroup-title">{{ studyGroup.name }}</h5>
@@ -116,10 +112,6 @@
     <div align="center" class="studyGroupCard cards" *ngFor="let studyGroup of studyGroups">
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="../../assets/JavaConcepts.png" class="card-img" alt="Responsive image">
-          </div>
-
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="studygroup-title">{{ studyGroup.name }}</h5>
