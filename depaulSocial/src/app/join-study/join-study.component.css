@@ -29,13 +29,22 @@ h1 {
    /* padding-bottom: 20px;*/
 }
 
-.btn-secondary {
+.reset {
   margin-right: 1em;
-  margin-left: 6em;
+  margin-left: 1em;
+}
+
+.find {
+  margin-left: 1em;
 }
 
 .cards {
     padding-bottom: 20px;
+}
+
+.card-body {
+  margin-right: -10em;
+  margin-left: 1em;
 }
 
 .column {
