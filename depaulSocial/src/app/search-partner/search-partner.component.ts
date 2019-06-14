@@ -18,10 +18,14 @@ export class SearchPartnerComponent implements OnInit {
   search = false;
   partners: Array<Partner>;
   filtered: Array<Partner>;
+  all = false;
 
   
   constructor(private studyPartnerService: StudyPartnerService, public fb: FormBuilder,
-    config: NgbModalConfig, private modalService: NgbModal, private router: Router) { }
+    config: NgbModalConfig, private modalService: NgbModal, private router: Router) {
+      config.backdrop = 'static';
+      config.keyboard = false;
+     }
 
   ngOnInit() {
     let s = this.studyPartnerService.getPartners();
@@ -46,7 +50,13 @@ export class SearchPartnerComponent implements OnInit {
     });
   }
 
+  findAll() {
+    this.search = false;
+    this.all = true;
+  }
+
   searchPartners() {
+    this.all = false;
     this.filtered = this.partners.filter(partner => partner.class === this.searchByClass.get('class').value);
     this.search = true;
   }
@@ -74,6 +84,7 @@ export class SearchPartnerComponent implements OnInit {
     this.searchByClass.reset();
     this.newPartner.reset();
     this.search = false;
+    this.all = false;
   }
 
 }

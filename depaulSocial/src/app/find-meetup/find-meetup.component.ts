@@ -20,6 +20,7 @@ export class FindMeetupComponent implements OnInit {
   submitted = false;
   filtered: Array<Meetup>;
   public meetup: FormGroup;
+  all = false;
 
   constructor(private meetupsService: MeetupsService, public fb: FormBuilder,
     config: NgbModalConfig, private modalService: NgbModal, private router: Router) {
@@ -49,9 +50,15 @@ export class FindMeetupComponent implements OnInit {
     })
   }
 
+  findAll() {
+    this.submitted = false;
+    this.all = true;
+  }
+
   resetForm() {
     this.meetup.reset();
     this.submitted = false;
+    this.all = false;
   }
 
   get print() {
@@ -64,6 +71,9 @@ export class FindMeetupComponent implements OnInit {
   }
 
   search() {
+
+    this.all = false;
+
     if (this.meetup.get('interests').value) {
       this.filtered = this.meetups.filter(meetup => this.contains(meetup) &&
         meetup.purpose === this.meetup.get('interests').value && meetup.location === this.meetup.get('location').value);

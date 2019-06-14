@@ -1,18 +1,21 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';  // Firebase modules for Database, Data list and Single object
 import { StudyGroup } from '../study-page/studygroup';
+import {AngularFireAuth} from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudyGroupService {
 
-  constructor(private db: AngularFireDatabase) { }
+  constructor(private db: AngularFireDatabase, private authService: AngularFireAuth) { }
 
   studyGroups: AngularFireList<any>;
   studyGroup: AngularFireObject<any>;
 
   addStudyGroup(studyGroup: StudyGroup) {
+    studyGroup.creator = this.authService.auth.currentUser.uid;
+    studyGroup.contact = this.authService.auth.currentUser.email;
     this.studyGroups.push(studyGroup);
   }
 

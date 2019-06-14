@@ -26,6 +26,7 @@
       <div class="buttons">
         <button type="button" class="btn btn-secondary gap-right" (click)="resetForm()">Reset</button>
         <button type="submit" class="btn btn-success" [disabled]="!textBook.valid">Search</button>
+        <button type="button" class="btn btn-secondary gap-left" (click)="findAll()">Find All</button>
       </div>
     </form>
   </div>
@@ -46,20 +47,84 @@
           <div class="col-md-4">
             <img src="../../assets/JavaConcepts.png" class="card-img" alt="Responsive image">
           </div>
-          
+
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="book-title">Title: {{ textBook.title }}</h5>
               <p class="book-ISBN">ISBN: {{ textBook.isbn }}</p>
               <p class="class-number">Class: {{ textBook.class }}</p>
               <p class="book-price">${{ textBook.price }}</p>
-              <h5 class="student">Heather Duke</h5>
-              <a href="#" class="card-link">Email</a>
-              <a href="#" class="card-link">Facebook</a>
+              <p class="student">Contact: {{ textBook.contact }}</p>
+
+              <ng-template #content let-c="close" let-d="dismiss">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+                  <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>You have successfully bought this book!</p>
+                  <p><strong>Title:</strong> {{ textBook.title }}</p>
+                  <p><strong>ISBN:</strong> {{ textBook.isbn }}</p>
+                  <p><strong>Class:</strong> {{ textBook.class }}</p>
+                  <p><strong>Price:</strong> ${{ textBook.price }}</p>
+                  <p><strong>Contact:</strong> {{ textBook.contact }}</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" (click)="c('Save click')">Close</button>
+                </div>
+              </ng-template>
+
+              <button type="button" class="btn btn-primary" (click)="buyBook(content, textBook.$key)">Buy Book</button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="card-deck-horizontal" *ngIf="all">
+      <div align="center" class="bookCard" *ngFor="let textBook of textBooks">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="../../assets/JavaConcepts.png" class="card-img" alt="Responsive image">
+            </div>
+  
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="book-title">Title: {{ textBook.title }}</h5>
+                <p class="book-ISBN">ISBN: {{ textBook.isbn }}</p>
+                <p class="class-number">Class: {{ textBook.class }}</p>
+                <p class="book-price">${{ textBook.price }}</p>
+                <p class="student">Contact: {{ textBook.contact }}</p>
+  
+                <ng-template #content let-c="close" let-d="dismiss">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>You have successfully bought this book!</p>
+                    <p><strong>Title:</strong> {{ textBook.title }}</p>
+                    <p><strong>ISBN:</strong> {{ textBook.isbn }}</p>
+                    <p><strong>Class:</strong> {{ textBook.class }}</p>
+                    <p><strong>Price:</strong> ${{ textBook.price }}</p>
+                    <p><strong>Contact:</strong> {{ textBook.contact }}</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" (click)="c('Save click')">Close</button>
+                  </div>
+                </ng-template>
+  
+                <button type="button" class="btn btn-primary" (click)="buyBook(content, textBook.$key)">Buy Book</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>

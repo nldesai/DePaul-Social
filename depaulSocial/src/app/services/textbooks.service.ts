@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';  // Firebase modules for Database, Data list and Single object
 import { TextBook } from '../text-page/textbook';
+import {AngularFireAuth} from '@angular/fire/auth';
+import { text } from '@angular/core/src/render3';
 
 
 @Injectable({
@@ -11,9 +13,11 @@ export class TextBooksService {
   textBooks: AngularFireList<any>;
   textBook: AngularFireObject<any>;
 
-  constructor(private db: AngularFireDatabase) { }
+  constructor(private db: AngularFireDatabase, private authService: AngularFireAuth) { }
 
   addTextBook(textBook: TextBook) {
+    textBook.contact = this.authService.auth.currentUser.email;
+    textBook.userid = this.authService.auth.currentUser.uid;
     this.textBooks.push(textBook);
   }
 

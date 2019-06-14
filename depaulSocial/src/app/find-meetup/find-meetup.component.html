@@ -37,6 +37,7 @@
     <div class="buttons">
       <button type="button" class="btn btn-secondary gap-right" (click)="resetForm()">Reset</button>
       <button type="submit" class="btn btn-success" [disabled]="!meetup.valid">Find Meetups</button>
+      <button type="button" class="btn btn-secondary" (click)="findAll()">Find All</button>
     </div>
   </form>
 
@@ -108,4 +109,73 @@
       </div>
     </div>
   </div>
+
+  <div class="card-deck-horizontal cards" *ngIf="all">
+      <div align="center" class="studyGroupCard cards" *ngFor="let meetup of meetups">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="../../assets/JavaConcepts.png" class="card-img" alt="Responsive image">
+            </div>
+            
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="studygroup-title">{{ meetup.name }}</h5>
+                <div class="class-info">
+                  <p class="class-number">Majors: {{ printArray(meetup) }}</p>
+                </div>
+                
+                <div class="meeting-info">
+                  <p class="campus">Location: {{ meetup.location }}</p>
+                  <div class="row">
+                    <div class="column">
+                      <p class="day">Date: {{ meetup.date.month }}-{{ meetup.date.day }}-{{ meetup.date.year }}</p>
+                    </div>
+                    
+                    <div class="column">
+                      <p class="times">Time: {{ meetup.time.hour}}:{{ meetup.time.minute}}</p>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="card-bottom">
+                  <div class="row">
+                    <div class="column">
+                      <p class="student">Contact: {{ meetup.contact }}</p>
+                    </div>
+                    
+                    <div class="column">
+                      <div align="center">
+  
+                          <ng-template #content let-c="close" let-d="dismiss">
+                              <div class="modal-header">
+                                <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+                                <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <p>You have successfully joined this meetup!</p>
+                                <p><strong>Meetup Name:</strong> {{ meetup.name }}</p>
+                                <p><strong>Location:</strong> {{ meetup.location }}</p>
+                                <p><strong>Date:</strong> {{ meetup.date.month }}-{{ meetup.date.day }}-{{ meetup.date.year }}</p>
+                                <p><strong>Time:</strong> {{ meetup.time.hour}}:{{ meetup.time.minute}}</p>
+                                <p><strong>Contact:</strong> {{ meetup.contact }}</p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" (click)="c('Save click')">Close</button>
+                              </div>
+                            </ng-template>
+  
+                        <button type="button" class="btn btn-primary" (click)="join(content)">Join Group</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
