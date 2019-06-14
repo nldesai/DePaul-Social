@@ -19,6 +19,7 @@ export class TextBooksService {
     textBook.contact = this.authService.auth.currentUser.email;
     textBook.userid = this.authService.auth.currentUser.uid;
     this.textBooks.push(textBook);
+    alert('Your book was added!');
   }
 
   // Fetch Single TextBook Object

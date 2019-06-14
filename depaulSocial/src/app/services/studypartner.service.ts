@@ -17,6 +17,7 @@ export class StudyPartnerService {
     partner.contact = this.authService.auth.currentUser.email;
     partner.userid = this.authService.auth.currentUser.uid;
     this.partners.push(partner);
+    alert('Partner has been registered!');
   }
 
   getPartner(id: string) {

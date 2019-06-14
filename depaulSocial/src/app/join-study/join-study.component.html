@@ -3,11 +3,11 @@
   <div class="jumbotron">
     <h1>Look for a Study Group!</h1>
   </div>
-
   <form [formGroup]="studyGroup" (ngSubmit)="search()" novalidate>
     <div class="form-group">
-      <label for="ClassNameFormControlInput">Course Section:</label>
-      <input type="text" class="form-control" id="ClassNameFormControlInput" placeholder="CSC360"
+      <label for="ClassNameFormControlInput">Course Section:</label> <br>
+      <span style="color:rebeccapurple"><em>This is a Case sensitive field.</em></span>
+      <input type="text" class="form-control" id="ClassNameFormControlInput" placeholder="e.g.,CSC360..."
         formControlName="class" required name="class">
     </div>
 

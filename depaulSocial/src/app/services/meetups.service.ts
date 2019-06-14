@@ -17,6 +17,7 @@ export class MeetupsService {
     meetup.creator = this.authService.auth.currentUser.uid;
     meetup.contact = this.authService.auth.currentUser.email;
     this.meetups.push(meetup);
+    alert('Your meetup was created!');
   }
 
   // Fetch Single Meetup Object
