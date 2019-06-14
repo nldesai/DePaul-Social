@@ -4,9 +4,12 @@
   }
 
 .container-fluid {
-    margin-top: 40px;
+    margin-top: 52px;
     margin-bottom: 20px;
-    width: 50%;
+}
+
+.form-group {
+  width: 50%;
 }
     
 h1 {
